@@ -16,9 +16,9 @@ USE ece411.LC3b_types.all;
 
 ENTITY BR_add IS
    PORT( 
-      ADJ9out_EX : IN     LC3b_word;
-      PCPlus2_EX : IN     lc3b_word;
-      BR_add_EX  : OUT    lc3b_word
+      F            : IN     LC3b_word;
+      LEFTSHIFTOUT : IN     LC3b_word;
+      BR_add_EX    : OUT    lc3b_word
    );
 
 -- Declarations
