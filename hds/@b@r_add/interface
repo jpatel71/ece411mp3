@@ -25,7 +25,7 @@ appVersion "2005.3 (Build 75)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
-suid 15,0
+suid 18,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
@@ -69,34 +69,34 @@ port (LogicalPort
 decl (Decl
 n "ADDRESSMUX1Out"
 t "LC3b_word"
-o 63
-suid 13,0
+o 4
+suid 16,0
 )
 )
-uid 229,0
+uid 262,0
 )
 *15 (LogPort
+port (LogicalPort
+decl (Decl
+n "ADDRESSMUX2Out"
+t "LC3b_word"
+o 11
+suid 17,0
+)
+)
+uid 264,0
+)
+*16 (LogPort
 port (LogicalPort
 m 1
 decl (Decl
 n "BR_add_EX"
 t "lc3b_word"
-o 13
-suid 14,0
+o 19
+suid 18,0
 )
 )
-uid 231,0
-)
-*16 (LogPort
-port (LogicalPort
-decl (Decl
-n "LEFTSHIFTOUT"
-t "LC3b_word"
-o 59
-suid 15,0
-)
-)
-uid 233,0
+uid 266,0
 )
 ]
 )
@@ -152,19 +152,19 @@ uid 92,0
 litem &14
 pos 0
 dimension 20
-uid 230,0
+uid 263,0
 )
 *23 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 232,0
+uid 265,0
 )
 *24 (MRCItem
 litem &16
 pos 2
 dimension 20
-uid 234,0
+uid 267,0
 )
 ]
 )
@@ -283,19 +283,19 @@ value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/BR_add"
 )
 (vvPair
 variable "date"
-value "10/20/10"
+value "10/21/10"
 )
 (vvPair
 variable "day"
-value "Wed"
+value "Thu"
 )
 (vvPair
 variable "day_long"
-value "Wednesday"
+value "Thursday"
 )
 (vvPair
 variable "dd"
-value "20"
+value "21"
 )
 (vvPair
 variable "entity_name"
@@ -323,7 +323,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx28.ews.illinois.edu"
+value "eelnx6.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -399,7 +399,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "23:26:25"
+value "16:17:15"
 )
 (vvPair
 variable "unit"
@@ -434,10 +434,10 @@ optionalChildren [
 uid 8,0
 optionalChildren [
 *34 (CptPort
-uid 214,0
+uid 247,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 215,0
+uid 248,0
 ro 90
 va (VaSet
 vasetType 1
@@ -446,11 +446,11 @@ fg "0,65535,0"
 xt "112250,1625,113000,2375"
 )
 tg (CPTG
-uid 216,0
+uid 249,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 217,0
+uid 250,0
 va (VaSet
 font "courier,8,0"
 )
@@ -461,7 +461,7 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 218,0
+uid 251,0
 va (VaSet
 font "courier,8,0"
 )
@@ -473,16 +473,61 @@ thePort (LogicalPort
 decl (Decl
 n "ADDRESSMUX1Out"
 t "LC3b_word"
-o 63
-suid 13,0
+o 4
+suid 16,0
 )
 )
 )
 *35 (CptPort
-uid 219,0
+uid 252,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 220,0
+uid 253,0
+ro 90
+va (VaSet
+vasetType 1
+fg "0,65535,0"
+)
+xt "112250,5625,113000,6375"
+)
+tg (CPTG
+uid 254,0
+ps "CptPortTextPlaceStrategy"
+stg "VerticalLayoutStrategy"
+f (Text
+uid 255,0
+va (VaSet
+font "courier,8,0"
+)
+xt "114000,5550,121500,6450"
+st "ADDRESSMUX2Out"
+blo "114000,6250"
+tm "CptPortNameMgr"
+)
+)
+dt (MLText
+uid 256,0
+va (VaSet
+font "courier,8,0"
+)
+xt "44000,2900,62500,3800"
+st "ADDRESSMUX2Out : IN     LC3b_word  ;
+"
+)
+thePort (LogicalPort
+decl (Decl
+n "ADDRESSMUX2Out"
+t "LC3b_word"
+o 11
+suid 17,0
+)
+)
+)
+*36 (CptPort
+uid 257,0
+ps "OnEdgeStrategy"
+shape (Triangle
+uid 258,0
 ro 90
 va (VaSet
 vasetType 1
@@ -491,11 +536,11 @@ fg "0,65535,0"
 xt "119000,3625,119750,4375"
 )
 tg (CPTG
-uid 221,0
+uid 259,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 222,0
+uid 260,0
 va (VaSet
 font "courier,8,0"
 )
@@ -507,7 +552,7 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 223,0
+uid 261,0
 va (VaSet
 font "courier,8,0"
 )
@@ -520,53 +565,8 @@ m 1
 decl (Decl
 n "BR_add_EX"
 t "lc3b_word"
-o 13
-suid 14,0
-)
-)
-)
-*36 (CptPort
-uid 224,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 225,0
-ro 90
-va (VaSet
-vasetType 1
-fg "0,65535,0"
-)
-xt "112250,5625,113000,6375"
-)
-tg (CPTG
-uid 226,0
-ps "CptPortTextPlaceStrategy"
-stg "VerticalLayoutStrategy"
-f (Text
-uid 227,0
-va (VaSet
-font "courier,8,0"
-)
-xt "114000,5550,120500,6450"
-st "LEFTSHIFTOUT"
-blo "114000,6250"
-tm "CptPortNameMgr"
-)
-)
-dt (MLText
-uid 228,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,2900,62500,3800"
-st "LEFTSHIFTOUT   : IN     LC3b_word  ;
-"
-)
-thePort (LogicalPort
-decl (Decl
-n "LEFTSHIFTOUT"
-t "LC3b_word"
-o 59
-suid 15,0
+o 19
+suid 18,0
 )
 )
 )
@@ -1232,5 +1232,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 234,0
+lastUid 267,0
 )

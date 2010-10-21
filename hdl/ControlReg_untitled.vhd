@@ -16,9 +16,10 @@ USE ece411.LC3b_types.all;
 
 ENTITY ControlReg IS
    PORT( 
-      reset_L     : IN     std_logic;
-      output_word : OUT    std_logic_vector (10 DOWNTO 0);
-      Opcode_ID   : IN     LC3B_Opcode
+      reset_L        : IN     std_logic;
+      IR_Bit5        : IN     std_logic;
+      IR_Bit11       : IN     std_logic;
+      ControlWord_ID : OUT    LC3B_ControlWord
    );
 
 -- Declarations
@@ -28,19 +29,19 @@ END ControlReg ;
 --
 ARCHITECTURE untitled OF ControlReg IS
 BEGIN
-  PROCESS(opcode)
-    variable state : std_logic_vector (7 DOWNTO 0);
+  PROCESS(opcode_ID, IR_Bit5, IR_Bit11)
+    variable state : LC3b_ControlWord;
     --  1RegWrite-2ALUop-2ALUMuxSel-1LoadNZP-2RFMuxSel-XXX
   BEGIN
-    case opcode is
-    when "0000" =>
+    case (opcode_ID & IR_Bit5 & IR_Bit11) is
+    when "000000" =>
       state := "00000000000";
-    when "0001" =>
+    when "000001" =>
       state := "10000101000";
     when others =>
     end case;
     
-    output_word <= state after delay_control; 
+    ControlWord_ID <= state after delay_control; 
   END PROCESS;
 END ARCHITECTURE untitled;
 

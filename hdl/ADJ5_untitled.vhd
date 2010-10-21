@@ -16,7 +16,6 @@ USE ece411.LC3b_types.all;
 
 ENTITY ADJ5 IS
    PORT( 
-      clk    : IN     std_logic;
       ADJ5out : OUT    LC3b_word;
       imm5   : IN     LC3b_imm5
    );

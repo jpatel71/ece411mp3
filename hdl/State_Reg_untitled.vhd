@@ -16,28 +16,21 @@ USE ece411.LC3b_types.all;
 
 ENTITY State_Reg IS
    PORT( 
-      Opcode_IF     : IN     LC3B_Opcode;
       PCPlus2out_IF : IN     LC3b_word;
-      SrcA_IF       : IN     LC3b_reg;
-      SrcB_IF       : IN     LC3b_reg;
-      bit11_IF      : IN     std_logic;
-      bit5_IF       : IN     std_logic;
-      dest_IF       : IN     LC3b_reg;
-      imm4_IF       : IN     LC3b_imm4;
-      imm5_IF       : IN     LC3b_imm5;
-      index6_IF     : IN     LC3b_index6;
-      offset11_IF   : IN     LC3b_offset11;
-      offset9_IF    : IN     LC3b_offset9;
-      trapvect8_IF  : IN     lc3b_trapvect8;
-      DestMuxout    : OUT    LC3b_reg;
-      Opcode_ID     : OUT    LC3B_Opcode;
       PCPlus2_ID    : OUT    lc3b_word;
-      SrcA_ID       : OUT    LC3b_reg;
-      SrcB_ID       : OUT    LC3b_reg;
       index6_ID     : OUT    LC3b_index6;
       offset9_ID    : OUT    LC3b_offset9;
       offset11      : OUT    LC3b_offset11;
-      reset_L       : IN     std_logic
+      reset_L       : IN     std_logic;
+      IDATAIn       : IN     LC3b_word;
+      IR_Bit5       : OUT    std_logic;
+      IR_Bit11      : OUT    std_logic;
+      imm5          : OUT    LC3b_imm5;
+      trapvect8     : OUT    lc3b_trapvect8;
+      IR_2_0_ID     : OUT    STD_LOGIC_VECTOR (2 DOWNTO 0);
+      IR_11_9_ID    : OUT    LC3b_reg (2 DOWNTO 0);
+      SR2MuxSel_ID  : OUT    std_logic;
+      IR8_6_ID      : OUT    LC3B_REG
    );
 
 -- Declarations

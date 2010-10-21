@@ -16,23 +16,28 @@ USE ece411.LC3b_types.all;
 
 ENTITY State_Reg1 IS
    PORT( 
-      ADJ11_ID   : IN     LC3b_word;
-      ADJ6_ID    : IN     lc3b_word;
-      ADJ9_ID    : IN     LC3b_word;
-      PCPlus2_ID : IN     lc3b_word;
-      RFAout_ID  : IN     LC3b_word;
-      RFBout_ID  : IN     LC3b_word;
-      IR5_4_EX   : OUT    lc3b_shfop (1 DOWNTO 0);
-      RFAout_EX  : OUT    LC3b_word;
-      RFBOut_EX  : OUT    LC3b_word;
-      SEXTimm11  : OUT    LC3b_word;
-      SEXTimm6   : OUT    LC3b_word;
-      SEXTimm9   : OUT    LC3b_word;
-      SHFTAMT    : OUT    STD_LOGIC_VECTOR (3 DOWNTO 0);
-      imm5SEXT   : OUT    LC3b_word;
-      imm8       : OUT    LC3b_imm8;
-      PCPlus2_EX : OUT    lc3b_word;
-      reset_L    : IN     std_logic
+      ADJ11_ID       : IN     LC3b_word;
+      ADJ6_ID        : IN     lc3b_word;
+      ADJ9_ID        : IN     LC3b_word;
+      PCPlus2_ID     : IN     lc3b_word;
+      RFAout_ID      : IN     LC3b_word;
+      RFBout_ID      : IN     LC3b_word;
+      IR5_4_EX       : OUT    lc3b_shfop (1 DOWNTO 0);
+      RFAout_EX      : OUT    LC3b_word;
+      RFBOut_EX      : OUT    LC3b_word;
+      SHFTAMT        : OUT    STD_LOGIC_VECTOR (3 DOWNTO 0);
+      imm5SEXT       : OUT    LC3b_word;
+      PCPlus2_EX     : OUT    lc3b_word;
+      reset_L        : IN     std_logic;
+      Opcode_ID      : IN     LC3B_Opcode;
+      Opcode_EX      : OUT    LC3b_word;
+      ADJ6_EX        : OUT    LC3b_word;
+      ADJ11_EX       : OUT    LC3b_word;
+      ADJ9_EX        : OUT    LC3b_word;
+      ADJ5out        : IN     LC3b_word;
+      ADJ8out        : IN     lc3b_word;
+      ADJ8out_EX     : OUT    LC3b_word;
+      DestinationReg : IN     STD_LOGIC_VECTOR (2 DOWNTO 0)
    );
 
 -- Declarations

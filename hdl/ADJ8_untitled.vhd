@@ -16,7 +16,6 @@ USE ece411.LC3b_types.all;
 
 ENTITY ADJ8 IS
    PORT( 
-      clk       : IN     std_logic;
       trapvect8 : IN     lc3b_trapvect8;
       ADJ8out   : OUT    lc3b_word
    );

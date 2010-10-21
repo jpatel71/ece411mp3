@@ -17,7 +17,7 @@ USE ece411.LC3b_types.all;
 ENTITY BR_add IS
    PORT( 
       ADDRESSMUX1Out : IN     LC3b_word;
-      LEFTSHIFTOUT   : IN     LC3b_word;
+      ADDRESSMUX2Out : IN     LC3b_word;
       BR_add_EX      : OUT    lc3b_word
    );
 
