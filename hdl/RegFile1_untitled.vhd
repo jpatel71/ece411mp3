@@ -16,7 +16,7 @@ USE ece411.LC3b_types.all;
 
 ENTITY RegFile1 IS
    PORT( 
-      RESET_L     : IN     std_logic;
+      reset_L     : IN     std_logic;
       RegWrite    : IN     std_logic;
       clk         : IN     std_logic;
       DestMuxout  : IN     LC3b_reg;

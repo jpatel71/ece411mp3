@@ -16,7 +16,7 @@ USE ece411.LC3b_types.all;
 
 ENTITY ControlReg IS
    PORT( 
-      RESET_L     : IN     std_logic;
+      reset_L     : IN     std_logic;
       output_word : OUT    std_logic_vector (10 DOWNTO 0);
       Opcode_ID   : IN     LC3B_Opcode
    );

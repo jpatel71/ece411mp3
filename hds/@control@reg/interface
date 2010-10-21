@@ -26,7 +26,7 @@ model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
 ordering 1
-suid 6,0
+suid 9,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
@@ -71,10 +71,10 @@ decl (Decl
 n "Opcode_ID"
 t "LC3B_Opcode"
 o 3
-suid 4,0
+suid 7,0
 )
 )
-uid 141,0
+uid 174,0
 )
 *15 (LogPort
 port (LogicalPort
@@ -85,22 +85,21 @@ n "output_word"
 t "std_logic_vector"
 b "(10 downto 0)"
 o 2
-suid 5,0
+suid 8,0
 )
 )
-uid 143,0
+uid 176,0
 )
 *16 (LogPort
 port (LogicalPort
-lang 2
 decl (Decl
-n "RESET_L"
+n "reset_L"
 t "std_logic"
 o 1
-suid 6,0
+suid 9,0
 )
 )
-uid 145,0
+uid 178,0
 )
 ]
 )
@@ -156,19 +155,19 @@ uid 71,0
 litem &14
 pos 0
 dimension 20
-uid 142,0
+uid 175,0
 )
 *23 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 144,0
+uid 177,0
 )
 *24 (MRCItem
 litem &16
 pos 2
 dimension 20
-uid 146,0
+uid 179,0
 )
 ]
 )
@@ -247,23 +246,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/engr/bjohns38/ece411_G8.work/mp3/hdl"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/engr/bjohns38/ece411_G8.work/mp3/hds"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/engr/bjohns38/ece411_G8.work/mp3/hds/@control@reg/interface.info"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/@control@reg/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/engr/bjohns38/ece411_G8.work/mp3/hds/@control@reg/interface.user"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/@control@reg/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/engr/bjohns38/ece411_G8.work/mp3/hds"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -279,27 +278,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/engr/bjohns38/ece411_G8.work/mp3/hds/@control@reg"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/@control@reg"
 )
 (vvPair
 variable "d_logical"
-value "/home/engr/bjohns38/ece411_G8.work/mp3/hds/ControlReg"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/ControlReg"
 )
 (vvPair
 variable "date"
-value "10/20/10"
+value "10/21/10"
 )
 (vvPair
 variable "day"
-value "Wed"
+value "Thu"
 )
 (vvPair
 variable "day_long"
-value "Wednesday"
+value "Thursday"
 )
 (vvPair
 variable "dd"
-value "20"
+value "21"
 )
 (vvPair
 variable "entity_name"
@@ -323,11 +322,11 @@ value "interface"
 )
 (vvPair
 variable "group"
-value "ece411_G8"
+value "stdt"
 )
 (vvPair
 variable "host"
-value "gllnx6.ews.illinois.edu"
+value "eelnx34.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -359,11 +358,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/engr/bjohns38/ece411_G8.work/mp3/hds/@control@reg/interface"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/@control@reg/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/engr/bjohns38/ece411_G8.work/mp3/hds/ControlReg/interface"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/ControlReg/interface"
 )
 (vvPair
 variable "project_name"
@@ -383,7 +382,7 @@ value "<TBD>"
 )
 (vvPair
 variable "task_ModelSimPath"
-value "/apps/Linux/mentor/fpgadv72/Modeltech/bin"
+value "$HDS_HOME/../Modeltech/linux"
 )
 (vvPair
 variable "task_NC-SimPath"
@@ -403,7 +402,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "16:23:07"
+value "12:21:10"
 )
 (vvPair
 variable "unit"
@@ -411,7 +410,7 @@ value "ControlReg"
 )
 (vvPair
 variable "user"
-value "bjohns38"
+value "jpatel71"
 )
 (vvPair
 variable "version"
@@ -438,10 +437,10 @@ optionalChildren [
 uid 8,0
 optionalChildren [
 *34 (CptPort
-uid 126,0
+uid 159,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 127,0
+uid 160,0
 ro 90
 va (VaSet
 vasetType 1
@@ -450,24 +449,26 @@ fg "0,65535,0"
 xt "14250,8625,15000,9375"
 )
 tg (CPTG
-uid 128,0
+uid 161,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 129,0
+uid 162,0
 va (VaSet
+font "courier,8,0"
 )
-xt "16000,8500,21400,9500"
+xt "16000,8550,20500,9450"
 st "Opcode_ID"
-blo "16000,9300"
+blo "16000,9250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 130,0
+uid 163,0
 va (VaSet
+font "courier,8,0"
 )
-xt "44000,4000,64400,5000"
+xt "44000,3800,61000,4700"
 st "Opcode_ID   : IN     LC3B_Opcode 
 "
 )
@@ -476,15 +477,15 @@ decl (Decl
 n "Opcode_ID"
 t "LC3B_Opcode"
 o 3
-suid 4,0
+suid 7,0
 )
 )
 )
 *35 (CptPort
-uid 131,0
+uid 164,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 132,0
+uid 165,0
 ro 90
 va (VaSet
 vasetType 1
@@ -493,25 +494,27 @@ fg "0,65535,0"
 xt "23000,6625,23750,7375"
 )
 tg (CPTG
-uid 133,0
+uid 166,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 134,0
+uid 167,0
 va (VaSet
+font "courier,8,0"
 )
-xt "14800,6500,22000,7500"
+xt "16000,6550,22000,7450"
 st "output_word"
 ju 2
-blo "22000,7300"
+blo "22000,7250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 135,0
+uid 168,0
 va (VaSet
+font "courier,8,0"
 )
-xt "44000,3000,76400,4000"
+xt "44000,2900,71000,3800"
 st "output_word : OUT    std_logic_vector (10 downto 0) ;
 "
 )
@@ -523,51 +526,52 @@ n "output_word"
 t "std_logic_vector"
 b "(10 downto 0)"
 o 2
-suid 5,0
+suid 8,0
 )
 )
 )
 *36 (CptPort
-uid 136,0
+uid 169,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 137,0
+uid 170,0
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "14250,12625,15000,13375"
+xt "14250,13625,15000,14375"
 )
 tg (CPTG
-uid 138,0
+uid 171,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 139,0
+uid 172,0
 va (VaSet
+font "courier,8,0"
 )
-xt "16000,12500,20200,13500"
-st "RESET_L"
-blo "16000,13300"
+xt "16000,13550,19500,14450"
+st "reset_L"
+blo "16000,14250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 140,0
+uid 173,0
 va (VaSet
+font "courier,8,0"
 )
-xt "44000,2000,64400,3000"
-st "RESET_L     : IN     std_logic  ;
+xt "44000,2000,61000,2900"
+st "reset_L     : IN     std_logic  ;
 "
 )
 thePort (LogicalPort
-lang 2
 decl (Decl
-n "RESET_L"
+n "reset_L"
 t "std_logic"
 o 1
-suid 6,0
+suid 9,0
 )
 )
 )
@@ -1204,9 +1208,9 @@ externalLabel (Text
 uid 4,0
 va (VaSet
 )
-xt "42000,5000,45000,6000"
+xt "42000,4700,45000,5700"
 st "User:"
-blo "42000,5800"
+blo "42000,5500"
 )
 internalLabel (Text
 uid 6,0
@@ -1221,7 +1225,7 @@ externalText (MLText
 uid 5,0
 va (VaSet
 )
-xt "44000,6000,44000,6000"
+xt "44000,5700,44000,5700"
 tm "SyDeclarativeTextMgr"
 )
 internalText (MLText
@@ -1233,5 +1237,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 146,0
+lastUid 179,0
 )
