@@ -1,1 +1,0 @@
- -do "do wave.do" -L ece411 -l transcript.txt -i -t ns -multisource_delay latest +typdelays ece411.mp2_cpu(struct)
