@@ -28,9 +28,10 @@ ENTITY State_Reg IS
       imm5          : OUT    LC3b_imm5;
       trapvect8     : OUT    lc3b_trapvect8;
       IR_2_0_ID     : OUT    STD_LOGIC_VECTOR (2 DOWNTO 0);
-      IR_11_9_ID    : OUT    LC3b_reg (2 DOWNTO 0);
       SR2MuxSel_ID  : OUT    std_logic;
-      IR8_6_ID      : OUT    LC3B_REG
+      IR8_6_ID      : OUT    LC3B_REG;
+      opcode_ID     : OUT    LC3B_Opcode;
+      DEST_ID       : OUT    LC3b_reg
    );
 
 -- Declarations
@@ -55,7 +56,7 @@ SIGNAL PCPlus2 : lc3b_trapvect8;
 BEGIN
 	
 	-------------------------------------------------------------------
-	VHDL_REGFILE1_WRITE: PROCESS(CLK, dest_IF, srcA_IF, srcB_IF, opcode_IF, bit11_IF, RESET_L)
+	VHDL_REGFILE1_WRITE: PROCESS(CLK, RESET_L)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
@@ -68,28 +69,29 @@ BEGIN
 		
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
-				dest <= dest_IF;
-				srcA <= srcA_IF;
-				srcB <= srcB_IF;
-				opcode <= opcode_IF;
-				bit11 <= bit11_IF;
-				bit5 <= bit5_IF;
-				imm4 <= imm4_IF;
-				imm5 <= imm5_IF;
-				index6 <= index6_IF;
-				offset11 <= offset11_IF;
-				offset9 <= offset9_IF;
-				trapvect8 <= trapvect8_IF;
+				dest <= IDataIN(11 downto 9);
+				srcA <= IDataIn(8 downto 6);
+				srcB <= IDataIn(2 downto 0);
+				opcode <= IDataIn(15 downto 12);
+				bit11 <= IDataIn(11);
+				bit5 <= IDataIn(5);
+				imm4 <= IDataIn(3 downto 0);
+				imm5 <= IDataIn(4 downto 0);
+				index6 <= IDataIn(5 downto 0);
+				offset11 <= IDataIn(10 downto 0);
+				offset9 <= IDataIn(8 downto 0);
+				trapvect8 <= IDataIn(7 downto 0);
 				pcplus2 <= pcplus2out_IF;
 		END IF;
 	END PROCESS;
-	destmuxout <= dest AFTER DELAY_REGFILE_READ;
-	srcA_ID <= srcA AFTER DELAY_REGFILE_READ;
-	srcB_ID <= srcB after DELAY_REGFILE_READ;
+	IR11_9_ID <= dest AFTER DELAY_REGFILE_READ;
+	IR8_6_ID <= srcA AFTER DELAY_REGFILE_READ;
+	IR2_0_ID <= srcB after DELAY_REGFILE_READ;
 	index6_ID <= index6 after DELAY_REGFILE_READ;
 	opcode_ID <= opcode after DELAY_REGFILE_READ;
 	offset9_ID <= offset9 after DELAY_REGFILE_READ;
 	pcplus2_ID <= pcplus2 after DELAY_REGFILE_READ;
+	imm5_ID <= imm5 after DELAY_REGFILE_READ;
 END UNTITLED;
 
 

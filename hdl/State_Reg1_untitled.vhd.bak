@@ -37,7 +37,7 @@ ENTITY State_Reg1 IS
       ADJ5out    : IN     LC3b_word;
       ADJ8out    : IN     lc3b_word;
       ADJ8out_EX : OUT    LC3b_word;
-      destReg_EX : OUT    lc3b_reg;
+      sig0       : OUT    lc3b_reg;
       DestReg_ID : IN     lc3b_reg
    );
 
@@ -56,7 +56,6 @@ SIGNAL rfa : lc3b_word;
 SIGNAL rfb : lc3b_word;
 signal opcode : lc3b_opcode;
 signal AD : std_logic_vector(1 downto 0);
-signal destreg : lc3b_reg;
 
 BEGIN
 	
@@ -79,7 +78,6 @@ BEGIN
 				pcplus2 <= pcplus2_ID;
 				rfa <= rfaout_ID;
 				rfb <= rfbout_ID;
-				destreg <= destreg_ID;
 				--imm5
 				--ir5_4 <= ir5_4_ID;
 				--shft
@@ -96,6 +94,5 @@ BEGIN
   rfbout_EX <= rfb after DELAY_REGFILE_READ;
   --imm5
   opcode_EX <= opcode AFTER DELAY_REGFILE_READ;
-  destreg_EX<= destreg after DELAY_REGFILE_READ;
 END ARCHITECTURE untitled;
 
