@@ -1,0 +1,222 @@
+DESIGN mp3_cpu
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN mp3_cpu
+VIEW symbol.sb
+GRAPHIC 50,0 8 0 
+DESIGN mp3_cpu
+VIEW symbol.sb
+GRAPHIC 85,0 17 0 
+DESIGN mp3_cpu
+VIEW symbol.sb
+GRAPHIC 90,0 18 0 
+DESIGN mp3_cpu
+VIEW symbol.sb
+GRAPHIC 1,0 21 0 
+DESIGN mp3_cpu
+VIEW symbol.sb
+GRAPHIC 1,0 22 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+NO_GRAPHIC 25
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 41,0 34 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+NO_GRAPHIC 40
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 0,0 44 2 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 348,0 49 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 324,0 50 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 354,0 51 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 480,0 52 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 474,0 53 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 342,0 54 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 330,0 55 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 492,0 56 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 462,0 57 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 468,0 58 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+NO_GRAPHIC 59
+DESIGN mp3_cpu
+VIEW struct.bd
+NO_GRAPHIC 60
+LIBRARY ece411
+DESIGN @pipe@line
+VIEW struct
+GRAPHIC 135,0 62 0 
+DESIGN @pipe@line
+VIEW symbol.sb
+GRAPHIC 482,0 64 0 
+DESIGN @pipe@line
+VIEW symbol.sb
+GRAPHIC 472,0 65 0 
+DESIGN @pipe@line
+VIEW symbol.sb
+GRAPHIC 1538,0 66 0 
+DESIGN @pipe@line
+VIEW symbol.sb
+GRAPHIC 1386,0 67 0 
+DESIGN @pipe@line
+VIEW symbol.sb
+GRAPHIC 477,0 68 0 
+DESIGN @pipe@line
+VIEW symbol.sb
+GRAPHIC 487,0 69 0 
+DESIGN @pipe@line
+VIEW symbol.sb
+GRAPHIC 1276,0 70 0 
+DESIGN @pipe@line
+VIEW symbol.sb
+GRAPHIC 467,0 71 0 
+DESIGN @pipe@line
+VIEW symbol.sb
+GRAPHIC 1295,0 72 0 
+DESIGN @pipe@line
+VIEW symbol.sb
+GRAPHIC 688,0 73 0 
+DESIGN @pipe@line
+VIEW symbol.sb
+GRAPHIC 693,0 74 0 
+LIBRARY mp3lib
+DESIGN @d@r@a@m16_@d@p
+VIEW untitled
+GRAPHIC 286,0 77 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+NO_GRAPHIC 90
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 449,0 92 0 
+DESIGN @o@r2
+VIEW untitled
+GRAPHIC 52,0 94 0 
+DESIGN @o@r2
+VIEW untitled
+GRAPHIC 57,0 95 0 
+DESIGN @o@r2
+VIEW untitled
+GRAPHIC 62,0 96 0 
+LIBRARY ece411
+DESIGN mp3_cpu
+VIEW struct.bd
+NO_GRAPHIC 99
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 286,0 102 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 449,0 103 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 135,0 104 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+NO_GRAPHIC 107
+DESIGN mp3_cpu
+VIEW struct.bd
+NO_GRAPHIC 109
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 135,0 111 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 326,0 113 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 332,0 114 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 429,0 115 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 508,0 116 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 350,0 117 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 356,0 118 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 482,0 119 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 344,0 120 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 494,0 121 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 464,0 122 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 470,0 123 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 286,0 125 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 350,0 127 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 356,0 128 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 482,0 129 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 476,0 130 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 344,0 131 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 494,0 132 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 486,0 133 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 326,0 134 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 332,0 136 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 449,0 139 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 464,0 141 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 470,0 142 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+GRAPHIC 476,0 143 0 
+DESIGN mp3_cpu
+VIEW struct.bd
+NO_GRAPHIC 146
