@@ -18,6 +18,7 @@ ENTITY BR_add IS
    PORT( 
       ADDRESSMUX1Out : IN     LC3b_word;
       ADDRESSMUX2Out : IN     LC3b_word;
+      clk        : IN     std_logic;
       BR_add_EX      : OUT    lc3b_word
    );
 
@@ -27,7 +28,14 @@ END BR_add ;
 
 --
 ARCHITECTURE untitled OF BR_add IS
+
 BEGIN
-  BR_add_EX <= PCPlus2_EX + ADJ9out_EX;
+  PROCESS(ADDRESSMUX1Out, ADDRESSMUX2Out,clk)
+    VARIABLE ADDRESS : LC3b_WORD;
+  BEGIN
+      ADDRESS := STD_LOGIC_VECTOR(UNSIGNED(ADDRESSMUX1Out) + UNSIGNED(ADDRESSMUX2Out));
+  
+  BR_ADD_EX <= ADDRESS after delay_ALU;
+  END PROCESS;
 END ARCHITECTURE untitled;
 

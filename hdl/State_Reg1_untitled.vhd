@@ -16,19 +16,19 @@ USE ece411.LC3b_types.all;
 
 ENTITY State_Reg1 IS
    PORT( 
+      clk        : IN     std_logic;
       ADJ11_ID   : IN     LC3b_word;
       ADJ6_ID    : IN     lc3b_word;
       ADJ9_ID    : IN     LC3b_word;
       PCPlus2_ID : IN     lc3b_word;
       RFAout_ID  : IN     LC3b_word;
       RFBout_ID  : IN     LC3b_word;
-      IR5_4_EX   : OUT    lc3b_shfop (1 DOWNTO 0);
+      IR5_4_EX   : OUT    lc3b_shfop;
       RFAout_EX  : OUT    LC3b_word;
       RFBOut_EX  : OUT    LC3b_word;
-      SHFTAMT    : OUT    STD_LOGIC_VECTOR (3 DOWNTO 0);
       imm5SEXT   : OUT    LC3b_word;
       PCPlus2_EX : OUT    lc3b_word;
-      reset_L    : IN     std_logic;
+      RESET_L    : IN     std_logic;
       opcode_ID  : IN     LC3B_Opcode;
       Opcode_EX  : OUT    lc3b_opcode;
       ADJ6_EX    : OUT    LC3b_word;
@@ -38,7 +38,11 @@ ENTITY State_Reg1 IS
       ADJ8out    : IN     lc3b_word;
       ADJ8out_EX : OUT    LC3b_word;
       destReg_EX : OUT    lc3b_reg;
-      DestReg_ID : IN     lc3b_reg
+      DestReg_ID : IN     lc3b_reg;
+      Imm4_EX    : OUT    lc3b_imm4;
+      IMM4_ID    : IN     lc3b_imm4;
+      INSCC_ID   : IN     lc3b_nzp;
+      INSCC_EX   : OUT    lc3b_nzp
    );
 
 -- Declarations
@@ -47,6 +51,7 @@ END State_Reg1 ;
 
 --
 ARCHITECTURE untitled OF State_Reg1 IS
+SIGNAL adj5 : lc3b_word;
 SIGNAL adj6 : lc3b_word;
 SIGNAL adj9 : lc3b_word;
 signal adj8 : lc3b_word;
@@ -66,7 +71,15 @@ BEGIN
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
 		IF (RESET_L = '0') THEN
-
+      adj6 <= x"0000";
+      adj9 <= x"0000";
+      adj11 <= x"0000";
+      adj8 <= x"0000";
+      adj5 <= x"0000";
+      pcplus2 <= x"0000";
+      rfa <= x"0000";
+      rfb <= x"0000";
+      destreg <= "000";
 		END IF;
 		
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE

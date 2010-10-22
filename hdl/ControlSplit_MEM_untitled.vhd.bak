@@ -14,21 +14,21 @@ USE ieee.std_logic_1164.all;
 LIBRARY ece411;
 USE ece411.LC3b_types.all;
 
-ENTITY ControlSplit_EX IS
+ENTITY ControlSplit_MEM IS
    PORT( 
       ControlWord_MEM : IN     LC3b_ControlWord;
-      MEMMUX_MEMSel  :  OUT    std_logic;
-      MEMMUX_MEM1Sel :  OUT    std_logic
+      MEMMUX_MEMSel  :  OUT    std_logic
    );
 
 -- Declarations
 
-END ControlSplit_EX ;
+END ControlSplit_MEM ;
 
 --
-ARCHITECTURE untitled OF ControlSplit_EX IS
+ARCHITECTURE untitled OF ControlSplit_MEM IS
 BEGIN
-  MEMMUX_MEMSel <= ControlWord_MEM(7);
-  MEMMUX_MEM1Sel <= ControlWord_MEM(8);
+ --  1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
+  
+  MEMMUX_MEMSel <= ControlWord_MEM(3);
 END ARCHITECTURE untitled;
 

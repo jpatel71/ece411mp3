@@ -26,7 +26,7 @@ model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
 ordering 1
-suid 3,0
+suid 8,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
@@ -72,34 +72,34 @@ decl (Decl
 n "ControlWord_MEM"
 t "LC3b_ControlWord"
 o 1
-suid 1,0
+suid 6,0
 )
 )
-uid 108,0
+uid 167,0
 )
 *15 (LogPort
 port (LogicalPort
+lang 2
 m 1
 decl (Decl
-n "MEMMUX_MEM1sel"
+n "MEMMUX_MEMSel"
 t "std_logic"
-o 3
-suid 2,0
+o 2
+suid 7,0
 )
 )
-uid 110,0
+uid 169,0
 )
 *16 (LogPort
 port (LogicalPort
-m 1
 decl (Decl
-n "MEMMUX_MEMsel"
+n "clk"
 t "std_logic"
-o 2
-suid 3,0
+o 3
+suid 8,0
 )
 )
-uid 112,0
+uid 171,0
 )
 ]
 )
@@ -155,19 +155,19 @@ uid 71,0
 litem &14
 pos 0
 dimension 20
-uid 109,0
+uid 168,0
 )
 *23 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 111,0
+uid 170,0
 )
 *24 (MRCItem
 litem &16
 pos 2
 dimension 20
-uid 113,0
+uid 172,0
 )
 ]
 )
@@ -286,19 +286,19 @@ value "/home/engr/bjohns38/ece411/ece411mp3/hds/ControlSplit_MEM"
 )
 (vvPair
 variable "date"
-value "10/21/10"
+value "10/22/10"
 )
 (vvPair
 variable "day"
-value "Thu"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Thursday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "21"
+value "22"
 )
 (vvPair
 variable "entity_name"
@@ -402,7 +402,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "19:40:14"
+value "00:23:39"
 )
 (vvPair
 variable "unit"
@@ -437,33 +437,35 @@ optionalChildren [
 uid 8,0
 optionalChildren [
 *34 (CptPort
-uid 93,0
+uid 152,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 94,0
-ro 90
+uid 153,0
+ro 180
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "14250,6625,15000,7375"
+xt "17625,5250,18375,6000"
 )
 tg (CPTG
-uid 95,0
+uid 154,0
 ps "CptPortTextPlaceStrategy"
-stg "VerticalLayoutStrategy"
+stg "RightVerticalLayoutStrategy"
 f (Text
-uid 96,0
+uid 155,0
+ro 270
 va (VaSet
 )
-xt "16000,6500,25600,7500"
+xt "17500,7000,18500,16600"
 st "ControlWord_MEM"
-blo "16000,7300"
+ju 2
+blo "18300,7000"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 97,0
+uid 156,0
 va (VaSet
 )
 )
@@ -473,91 +475,90 @@ decl (Decl
 n "ControlWord_MEM"
 t "LC3b_ControlWord"
 o 1
-suid 1,0
+suid 6,0
 )
 )
 )
 *35 (CptPort
-uid 98,0
+uid 157,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 99,0
+uid 158,0
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "23000,6625,23750,7375"
+xt "26000,7625,26750,8375"
 )
 tg (CPTG
-uid 100,0
+uid 159,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 101,0
+uid 160,0
 va (VaSet
 )
-xt "13000,6500,22000,7500"
-st "MEMMUX_MEM1sel"
+xt "16600,7500,25000,8500"
+st "MEMMUX_MEMSel"
 ju 2
-blo "22000,7300"
+blo "25000,8300"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 102,0
+uid 161,0
 va (VaSet
 )
 )
 thePort (LogicalPort
+lang 2
 m 1
 decl (Decl
-n "MEMMUX_MEM1sel"
+n "MEMMUX_MEMSel"
 t "std_logic"
-o 3
-suid 2,0
+o 2
+suid 7,0
 )
 )
 )
 *36 (CptPort
-uid 103,0
+uid 162,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 104,0
+uid 163,0
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "23000,7625,23750,8375"
+xt "14250,6625,15000,7375"
 )
 tg (CPTG
-uid 105,0
+uid 164,0
 ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
+stg "VerticalLayoutStrategy"
 f (Text
-uid 106,0
+uid 165,0
 va (VaSet
 )
-xt "13600,7500,22000,8500"
-st "MEMMUX_MEMsel"
-ju 2
-blo "22000,8300"
+xt "16000,6500,17800,7500"
+st "clk"
+blo "16000,7300"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 107,0
+uid 166,0
 va (VaSet
 )
 )
 thePort (LogicalPort
-m 1
 decl (Decl
-n "MEMMUX_MEMsel"
+n "clk"
 t "std_logic"
-o 2
-suid 3,0
+o 3
+suid 8,0
 )
 )
 )
@@ -570,8 +571,9 @@ fg "0,65535,0"
 lineColor "0,32896,0"
 lineWidth 2
 )
-xt "15000,6000,23000,16000"
+xt "15000,6000,26000,13000"
 )
+oxt "15000,6000,23000,16000"
 biTextGroup (BiTextGroup
 uid 10,0
 ps "CenterOffsetStrategy"
@@ -580,17 +582,17 @@ first (Text
 uid 11,0
 va (VaSet
 )
-xt "13900,10000,17500,11000"
+xt "15400,8500,19000,9500"
 st "ece411"
-blo "13900,10800"
+blo "15400,9300"
 )
 second (Text
 uid 12,0
 va (VaSet
 )
-xt "13900,11000,24100,12000"
+xt "15400,9500,25600,10500"
 st "ControlSplit_MEM"
-blo "13900,11800"
+blo "15400,10300"
 )
 )
 gi *37 (GenericInterface
@@ -602,7 +604,7 @@ text (MLText
 uid 15,0
 va (VaSet
 )
-xt "-9500,7000,3100,8000"
+xt "-8000,5500,4600,6500"
 st "Generic Declarations"
 )
 header "Generic Declarations"
@@ -1223,5 +1225,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 113,0
+lastUid 172,0
 )
