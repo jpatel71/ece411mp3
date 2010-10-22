@@ -16,29 +16,28 @@ USE ece411.LC3b_types.all;
 
 ENTITY State_Reg1 IS
    PORT( 
-      ADJ11_ID   : IN     LC3b_word;
-      ADJ6_ID    : IN     lc3b_word;
-      ADJ9_ID    : IN     LC3b_word;
-      PCPlus2_ID : IN     lc3b_word;
-      RFAout_ID  : IN     LC3b_word;
-      RFBout_ID  : IN     LC3b_word;
-      IR5_4_EX   : OUT    lc3b_shfop (1 DOWNTO 0);
-      RFAout_EX  : OUT    LC3b_word;
-      RFBOut_EX  : OUT    LC3b_word;
-      SHFTAMT    : OUT    STD_LOGIC_VECTOR (3 DOWNTO 0);
-      imm5SEXT   : OUT    LC3b_word;
-      PCPlus2_EX : OUT    lc3b_word;
-      reset_L    : IN     std_logic;
-      opcode_ID  : IN     LC3B_Opcode;
-      Opcode_EX  : OUT    lc3b_opcode;
-      ADJ6_EX    : OUT    LC3b_word;
-      ADJ11_EX   : OUT    LC3b_word;
-      ADJ9_EX    : OUT    LC3b_word;
-      ADJ5out    : IN     LC3b_word;
-      ADJ8out    : IN     lc3b_word;
-      ADJ8out_EX : OUT    LC3b_word;
-      destReg_EX : OUT    lc3b_reg;
-      DestReg_ID : IN     lc3b_reg
+      ADJ11_ID       : IN     LC3b_word;
+      ADJ6_ID        : IN     lc3b_word;
+      ADJ9_ID        : IN     LC3b_word;
+      PCPlus2_ID     : IN     lc3b_word;
+      RFAout_ID      : IN     LC3b_word;
+      RFBout_ID      : IN     LC3b_word;
+      IR5_4_EX       : OUT    lc3b_shfop (1 DOWNTO 0);
+      RFAout_EX      : OUT    LC3b_word;
+      RFBOut_EX      : OUT    LC3b_word;
+      SHFTAMT        : OUT    STD_LOGIC_VECTOR (3 DOWNTO 0);
+      imm5SEXT       : OUT    LC3b_word;
+      PCPlus2_EX     : OUT    lc3b_word;
+      reset_L        : IN     std_logic;
+      Opcode_ID      : IN     LC3B_Opcode;
+      Opcode_EX      : OUT    LC3b_word;
+      ADJ6_EX        : OUT    LC3b_word;
+      ADJ11_EX       : OUT    LC3b_word;
+      ADJ9_EX        : OUT    LC3b_word;
+      ADJ5out        : IN     LC3b_word;
+      ADJ8out        : IN     lc3b_word;
+      ADJ8out_EX     : OUT    LC3b_word;
+      DestinationReg : IN     STD_LOGIC_VECTOR (2 DOWNTO 0)
    );
 
 -- Declarations
@@ -49,19 +48,15 @@ END State_Reg1 ;
 ARCHITECTURE untitled OF State_Reg1 IS
 SIGNAL adj6 : lc3b_word;
 SIGNAL adj9 : lc3b_word;
-signal adj8 : lc3b_word;
 SIGNAL adj11 : lc3b_word;
 SIGNAL pcplus2 : lc3b_word;
 SIGNAL rfa : lc3b_word;
 SIGNAL rfb : lc3b_word;
-signal opcode : lc3b_opcode;
-signal AD : std_logic_vector(1 downto 0);
-signal destreg : lc3b_reg;
 
 BEGIN
 	
 	-------------------------------------------------------------------
-	PROCESS(CLK, RESET_L)
+	PROCESS(CLK, adj6_ID, adj9_ID, adj11_ID, pcplus2_ID, rfaout_ID, rfbout_ID, RESET_L)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
@@ -74,28 +69,16 @@ BEGIN
 				adj6 <= adj6_ID;
 				adj9 <= adj9_ID;
 				adj11 <= adj11_ID;
-				adj8 <= adj8out;
-				adj5 <= adj5out;
 				pcplus2 <= pcplus2_ID;
 				rfa <= rfaout_ID;
 				rfb <= rfbout_ID;
-				destreg <= destreg_ID;
-				--imm5
-				--ir5_4 <= ir5_4_ID;
-				--shft
 		END IF;
 	END PROCESS;
+	SEXTimm6 <= adj6 AFTER DELAY_REGFILE_READ;
+  SEXTimm9 <= adj9 AFTER DELAY_REGFILE_READ;
+  SEXTimm11  <= adj11 AFTER DELAY_REGFILE_READ;
   pcplus2_EX <= pcplus2 after DELAY_REGFILE_READ;
- 	ADJ6_EX <= adj6 AFTER DELAY_REGFILE_READ;
- 	ADJ9_EX <= adj9 AFTER DELAY_REGFILE_READ;
- 	ADJ11_EX  <= adj11 AFTER DELAY_REGFILE_READ;
- 	ADJ8out_EX <= adj8 AFTER DELAY_REGFILE_READ;
   rfaout_EX <= rfa after DELAY_REGFILE_READ;
-  ir5_4_EX <= AD after DELAY_REGFILE_READ;
-  --shft
   rfbout_EX <= rfb after DELAY_REGFILE_READ;
-  --imm5
-  opcode_EX <= opcode AFTER DELAY_REGFILE_READ;
-  destreg_EX<= destreg after DELAY_REGFILE_READ;
 END ARCHITECTURE untitled;
 

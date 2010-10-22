@@ -19,8 +19,7 @@ ENTITY ControlReg IS
       reset_L        : IN     std_logic;
       IR_Bit5        : IN     std_logic;
       IR_Bit11       : IN     std_logic;
-      ControlWord_ID : OUT    LC3B_ControlWord;
-      opcode_ID      : IN     LC3B_Opcode
+      ControlWord_ID : OUT    LC3B_ControlWord
    );
 
 -- Declarations
@@ -32,19 +31,13 @@ ARCHITECTURE untitled OF ControlReg IS
 BEGIN
   PROCESS(opcode_ID, IR_Bit5, IR_Bit11)
     variable state : LC3b_ControlWord;
-    --  1RegWrite-ADDRESSMUX1Sel-ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-ALUop-ALUSHFSel-MEMMUX_MEMSel-MEMMUX_MEM1Sel
+    --  1RegWrite-2ALUop-2ALUMuxSel-1LoadNZP-2RFMuxSel-XXX
   BEGIN
     case (opcode_ID & IR_Bit5 & IR_Bit11) is
     when "000000" =>
       state := "00000000000";
-    when "000100" =>  --addreg
-      state := "10000" & alu_add & "1";
-    when "000101" =>  --addreg
-      state := "10000" & alu_add & "1";
-    when "000110" =>  --addimm
-      state := "10001" & alu_add & "1";
-    when "000111" =>  --addimm
-      state := "10001" & alu_add & "1";
+    when "000001" =>
+      state := "10000101000";
     when others =>
     end case;
     

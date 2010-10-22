@@ -316,23 +316,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/engr/bjohns38/ece411/ece411mp3/hdl"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/engr/bjohns38/ece411/ece411mp3/hds"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/engr/bjohns38/ece411/ece411mp3/hds/@pipe@line/symbol.sb.info"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/@pipe@line/symbol.sb.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/engr/bjohns38/ece411/ece411mp3/hds/@pipe@line/symbol.sb.user"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/@pipe@line/symbol.sb.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/engr/bjohns38/ece411/ece411mp3/hds"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -348,11 +348,11 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/engr/bjohns38/ece411/ece411mp3/hds/@pipe@line"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/@pipe@line"
 )
 (vvPair
 variable "d_logical"
-value "/home/engr/bjohns38/ece411/ece411mp3/hds/PipeLine"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/PipeLine"
 )
 (vvPair
 variable "date"
@@ -396,7 +396,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "gllnx19.ews.illinois.edu"
+value "eelnx6.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -428,11 +428,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/engr/bjohns38/ece411/ece411mp3/hds/@pipe@line/symbol.sb"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/@pipe@line/symbol.sb"
 )
 (vvPair
 variable "p_logical"
-value "/home/engr/bjohns38/ece411/ece411mp3/hds/PipeLine/symbol.sb"
+value "/home/engr/jpatel71/ece411/untitled folder/mp3/hds/PipeLine/symbol.sb"
 )
 (vvPair
 variable "project_name"
@@ -452,7 +452,7 @@ value "<TBD>"
 )
 (vvPair
 variable "task_ModelSimPath"
-value "/apps/Linux/mentor/fpgadv72/Modeltech/bin"
+value "$HDS_HOME/../Modeltech/linux"
 )
 (vvPair
 variable "task_NC-SimPath"
@@ -472,7 +472,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "19:45:02"
+value "17:32:53"
 )
 (vvPair
 variable "unit"
@@ -480,7 +480,7 @@ value "PipeLine"
 )
 (vvPair
 variable "user"
-value "bjohns38"
+value "jpatel71"
 )
 (vvPair
 variable "version"
@@ -538,7 +538,8 @@ uid 471,0
 va (VaSet
 )
 xt "44000,6000,65000,7000"
-st "IDATAAddress : OUT    LC3b_word  ;"
+st "IDATAAddress : OUT    LC3b_word  ;
+"
 )
 thePort (LogicalPort
 lang 2
@@ -582,7 +583,8 @@ uid 476,0
 va (VaSet
 )
 xt "44000,3000,65000,4000"
-st "IDATAIn      : IN     LC3b_word  ;"
+st "IDATAIn      : IN     LC3b_word  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
@@ -625,7 +627,8 @@ uid 481,0
 va (VaSet
 )
 xt "44000,4000,65000,5000"
-st "D_ADDRESSOut : OUT    LC3b_word  ;"
+st "D_ADDRESSOut : OUT    LC3b_word  ;
+"
 )
 thePort (LogicalPort
 m 1
@@ -668,7 +671,8 @@ uid 486,0
 va (VaSet
 )
 xt "44000,2000,65000,3000"
-st "D_DATAIN     : IN     lc3b_word  ;"
+st "D_DATAIN     : IN     lc3b_word  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
@@ -711,7 +715,8 @@ uid 491,0
 va (VaSet
 )
 xt "44000,5000,65000,6000"
-st "D_DATAOUt    : OUT    LC3b_word  ;"
+st "D_DATAOUt    : OUT    LC3b_word  ;
+"
 )
 thePort (LogicalPort
 m 1
@@ -755,7 +760,8 @@ uid 692,0
 va (VaSet
 )
 xt "44000,7000,65000,8000"
-st "MWRITEL_H    : OUT    std_logic  ;"
+st "MWRITEL_H    : OUT    std_logic  ;
+"
 )
 thePort (LogicalPort
 m 1
@@ -799,7 +805,8 @@ uid 697,0
 va (VaSet
 )
 xt "44000,8000,63800,9000"
-st "MWRITEL_L    : OUT    std_logic "
+st "MWRITEL_L    : OUT    std_logic 
+"
 )
 thePort (LogicalPort
 m 1
@@ -1471,5 +1478,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 1021,0
+lastUid 697,0
 )
