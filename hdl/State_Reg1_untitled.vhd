@@ -38,11 +38,11 @@ ENTITY State_Reg1 IS
       ADJ8out    : IN     lc3b_word;
       ADJ8out_EX : OUT    LC3b_word;
       destReg_EX : OUT    lc3b_reg;
-      DestReg_ID : IN     lc3b_reg;
       Imm4_EX    : OUT    lc3b_imm4;
       IMM4_ID    : IN     lc3b_imm4;
       INSCC_ID   : IN     lc3b_nzp;
-      INSCC_EX   : OUT    lc3b_nzp
+      INSCC_EX   : OUT    lc3b_nzp;
+      DEST_ID    : IN     LC3b_reg
    );
 
 -- Declarations
@@ -62,6 +62,7 @@ SIGNAL rfb : lc3b_word;
 signal opcode : lc3b_opcode;
 signal AD : std_logic_vector(1 downto 0);
 signal destreg : lc3b_reg;
+signal inscc : lc3b_nzp;
 
 BEGIN
 	
@@ -80,6 +81,7 @@ BEGIN
       rfa <= x"0000";
       rfb <= x"0000";
       destreg <= "000";
+      inscc <= "000";
 		END IF;
 		
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE
@@ -92,8 +94,9 @@ BEGIN
 				pcplus2 <= pcplus2_ID;
 				rfa <= rfaout_ID;
 				rfb <= rfbout_ID;
-				destreg <= destreg_ID;
-				--imm5
+				destreg <= dest_ID;
+				opcode <= opcode_ID;
+				inscc <= inscc_ID;
 				--ir5_4 <= ir5_4_ID;
 				--shft
 		END IF;
@@ -107,8 +110,9 @@ BEGIN
   ir5_4_EX <= AD after DELAY_REGFILE_READ;
   --shft
   rfbout_EX <= rfb after DELAY_REGFILE_READ;
-  --imm5
+  imm5SEXT <= adj5 after delay_regfile_read;
   opcode_EX <= opcode AFTER DELAY_REGFILE_READ;
   destreg_EX<= destreg after DELAY_REGFILE_READ;
+  inscc_EX <= inscc; 
 END ARCHITECTURE untitled;
 

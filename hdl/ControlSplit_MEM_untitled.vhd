@@ -18,7 +18,8 @@ ENTITY ControlSplit_MEM IS
    PORT( 
       ControlWord_MEM : IN     LC3b_ControlWord;
       clk        : IN     std_logic;
-      MEMMUX_MEMSel  :  OUT    std_logic
+      MEMMUX_MEMSel  :  OUT    std_logic;
+      LoadNZP : OUT  std_logic
    );
 
 -- Declarations
@@ -31,5 +32,6 @@ BEGIN
  --  1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
   
   MEMMUX_MEMSel <= ControlWord_MEM(3);
+  LoadNZP <= ControlWord_MEM(13);
 END ARCHITECTURE untitled;
 

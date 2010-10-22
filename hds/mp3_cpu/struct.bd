@@ -17,7 +17,7 @@ unitName "LC3b_types"
 ]
 instances [
 (Instance
-name "U_0"
+name "thePipeline"
 duLibraryName "ece411"
 duName "PipeLine"
 elements [
@@ -137,7 +137,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "gllnx19.ews.illinois.edu"
+value "eelnx24.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -213,7 +213,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "01:02:22"
+value "11:25:12"
 )
 (vvPair
 variable "unit"
@@ -719,7 +719,7 @@ m 1
 decl (Decl
 n "IDATAAddress"
 t "LC3b_word"
-o 8
+o 10
 suid 5,0
 )
 )
@@ -759,78 +759,6 @@ suid 6,0
 )
 )
 *18 (CptPort
-uid 316,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 317,0
-ro 90
-va (VaSet
-vasetType 1
-fg "0,65535,0"
-)
-xt "31000,16625,31750,17375"
-)
-tg (CPTG
-uid 318,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 319,0
-va (VaSet
-)
-xt "24600,16500,30000,17500"
-st "MWRITEL_H"
-ju 2
-blo "30000,17300"
-)
-)
-thePort (LogicalPort
-m 1
-decl (Decl
-n "MWRITEL_H"
-t "std_logic"
-o 10
-suid 10,0
-)
-)
-)
-*19 (CptPort
-uid 320,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 321,0
-ro 90
-va (VaSet
-vasetType 1
-fg "0,65535,0"
-)
-xt "31000,18625,31750,19375"
-)
-tg (CPTG
-uid 322,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 323,0
-va (VaSet
-)
-xt "24600,18500,30000,19500"
-st "MWRITEL_L"
-ju 2
-blo "30000,19300"
-)
-)
-thePort (LogicalPort
-m 1
-decl (Decl
-n "MWRITEL_L"
-t "std_logic"
-o 11
-suid 11,0
-)
-)
-)
-*20 (CptPort
 uid 388,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -864,7 +792,7 @@ suid 14,0
 )
 )
 )
-*21 (CptPort
+*19 (CptPort
 uid 392,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -900,7 +828,7 @@ suid 12,0
 )
 )
 )
-*22 (CptPort
+*20 (CptPort
 uid 396,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -931,12 +859,12 @@ m 1
 decl (Decl
 n "I_MREAD_L"
 t "std_logic"
-o 9
+o 11
 suid 13,0
 )
 )
 )
-*23 (CptPort
+*21 (CptPort
 uid 400,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -967,6 +895,78 @@ n "RESET_L"
 t "std_logic"
 o 3
 suid 15,0
+)
+)
+)
+*22 (CptPort
+uid 539,0
+ps "OnEdgeStrategy"
+shape (Triangle
+uid 540,0
+ro 90
+va (VaSet
+vasetType 1
+fg "0,65535,0"
+)
+xt "31000,16625,31750,17375"
+)
+tg (CPTG
+uid 541,0
+ps "CptPortTextPlaceStrategy"
+stg "RightVerticalLayoutStrategy"
+f (Text
+uid 542,0
+va (VaSet
+)
+xt "22800,16500,30000,17500"
+st "D_MWRITEH_L"
+ju 2
+blo "30000,17300"
+)
+)
+thePort (LogicalPort
+m 1
+decl (Decl
+n "D_MWRITEH_L"
+t "std_logic"
+o 8
+suid 16,0
+)
+)
+)
+*23 (CptPort
+uid 543,0
+ps "OnEdgeStrategy"
+shape (Triangle
+uid 544,0
+ro 90
+va (VaSet
+vasetType 1
+fg "0,65535,0"
+)
+xt "31000,18625,31750,19375"
+)
+tg (CPTG
+uid 545,0
+ps "CptPortTextPlaceStrategy"
+stg "RightVerticalLayoutStrategy"
+f (Text
+uid 546,0
+va (VaSet
+)
+xt "22800,18500,30000,19500"
+st "D_MWRITEL_L"
+ju 2
+blo "30000,19300"
+)
+)
+thePort (LogicalPort
+m 1
+decl (Decl
+n "D_MWRITEL_L"
+t "std_logic"
+o 9
+suid 17,0
 )
 )
 )
@@ -1009,8 +1009,8 @@ tm "CptNameMgr"
 uid 140,0
 va (VaSet
 )
-xt "19800,22000,21600,23000"
-st "U_0"
+xt "19800,22000,27000,23000"
+st "thePipeline"
 blo "19800,22800"
 tm "InstanceNameMgr"
 )
@@ -1535,7 +1535,7 @@ declText (MLText
 uid 331,0
 va (VaSet
 )
-xt "22000,11000,41200,12000"
+xt "22000,13000,41200,14000"
 st "SIGNAL I_DATAOUT    : LC3b_word
 "
 )
@@ -1553,7 +1553,7 @@ declText (MLText
 uid 343,0
 va (VaSet
 )
-xt "22000,10000,41200,11000"
+xt "22000,12000,41200,13000"
 st "SIGNAL IDATAAddress : LC3b_word
 "
 )
@@ -1960,40 +1960,6 @@ selT 0
 archFileType "UNKNOWN"
 )
 *59 (Net
-uid 462,0
-decl (Decl
-n "MWRITEL_H"
-t "std_logic"
-o 8
-suid 14,0
-)
-declText (MLText
-uid 463,0
-va (VaSet
-)
-xt "22000,13000,41200,14000"
-st "SIGNAL MWRITEL_H    : std_logic
-"
-)
-)
-*60 (Net
-uid 468,0
-decl (Decl
-n "MWRITEL_L"
-t "std_logic"
-o 9
-suid 15,0
-)
-declText (MLText
-uid 469,0
-va (VaSet
-)
-xt "22000,14000,41200,15000"
-st "SIGNAL MWRITEL_L    : std_logic
-"
-)
-)
-*61 (Net
 uid 474,0
 decl (Decl
 n "F"
@@ -2005,12 +1971,12 @@ declText (MLText
 uid 475,0
 va (VaSet
 )
-xt "22000,9000,41200,10000"
+xt "22000,11000,41200,12000"
 st "SIGNAL F            : STD_LOGIC
 "
 )
 )
-*62 (Net
+*60 (Net
 uid 480,0
 decl (Decl
 n "D_MREAD_L"
@@ -2027,7 +1993,7 @@ st "SIGNAL D_MREAD_L    : std_logic
 "
 )
 )
-*63 (Net
+*61 (Net
 uid 492,0
 decl (Decl
 n "I_MREAD_L"
@@ -2039,8 +2005,42 @@ declText (MLText
 uid 493,0
 va (VaSet
 )
-xt "22000,12000,41200,13000"
+xt "22000,14000,41200,15000"
 st "SIGNAL I_MREAD_L    : std_logic
+"
+)
+)
+*62 (Net
+uid 547,0
+decl (Decl
+n "D_MWRITEH_L"
+t "std_logic"
+o 11
+suid 19,0
+)
+declText (MLText
+uid 548,0
+va (VaSet
+)
+xt "22000,9000,41200,10000"
+st "SIGNAL D_MWRITEH_L  : std_logic
+"
+)
+)
+*63 (Net
+uid 553,0
+decl (Decl
+n "D_MWRITEL_L"
+t "std_logic"
+o 12
+suid 20,0
+)
+declText (MLText
+uid 554,0
+va (VaSet
+)
+xt "22000,10000,41200,11000"
+st "SIGNAL D_MWRITEL_L  : std_logic
 "
 )
 )
@@ -2307,7 +2307,7 @@ pts [
 ]
 )
 start &50
-end &23
+end &21
 sat 32
 eat 32
 stc 0
@@ -2332,76 +2332,6 @@ tm "WireNameMgr"
 on &51
 )
 *73 (Wire
-uid 464,0
-shape (OrthoPolyLine
-uid 465,0
-va (VaSet
-vasetType 3
-)
-xt "31750,17000,36701,17000"
-pts [
-"31750,17000"
-"36701,17000"
-]
-)
-start &18
-end &53
-sat 32
-eat 32
-st 0
-sf 1
-tg (WTG
-uid 466,0
-ps "ConnStartEndStrategy"
-stg "STSignalDisplayStrategy"
-f (Text
-uid 467,0
-va (VaSet
-)
-xt "33750,16000,39150,17000"
-st "MWRITEL_H"
-blo "33750,16800"
-tm "WireNameMgr"
-)
-)
-on &59
-)
-*74 (Wire
-uid 470,0
-shape (OrthoPolyLine
-uid 471,0
-va (VaSet
-vasetType 3
-)
-xt "31750,19000,36700,19000"
-pts [
-"31750,19000"
-"36700,19000"
-]
-)
-start &19
-end &54
-sat 32
-eat 32
-st 0
-sf 1
-tg (WTG
-uid 472,0
-ps "ConnStartEndStrategy"
-stg "STSignalDisplayStrategy"
-f (Text
-uid 473,0
-va (VaSet
-)
-xt "33750,18000,39150,19000"
-st "MWRITEL_L"
-blo "33750,18800"
-tm "WireNameMgr"
-)
-)
-on &60
-)
-*75 (Wire
 uid 476,0
 shape (OrthoPolyLine
 uid 477,0
@@ -2436,6 +2366,7 @@ blo "44750,17800"
 tm "WireNameMgr"
 )
 s (Text
+uid 526,0
 va (VaSet
 isHidden 1
 )
@@ -2444,9 +2375,9 @@ blo "44750,18000"
 tm "SignalTypeMgr"
 )
 )
-on &61
+on &59
 )
-*76 (Wire
+*74 (Wire
 uid 482,0
 shape (OrthoPolyLine
 uid 483,0
@@ -2459,7 +2390,7 @@ pts [
 "46250,28000"
 ]
 )
-start &21
+start &19
 end &30
 sat 32
 eat 32
@@ -2479,9 +2410,9 @@ blo "33750,27800"
 tm "WireNameMgr"
 )
 )
-on &62
+on &60
 )
-*77 (Wire
+*75 (Wire
 uid 486,0
 shape (OrthoPolyLine
 uid 487,0
@@ -2523,7 +2454,7 @@ tm "WireNameMgr"
 )
 on &51
 )
-*78 (Wire
+*76 (Wire
 uid 494,0
 shape (OrthoPolyLine
 uid 495,0
@@ -2536,7 +2467,7 @@ pts [
 "46250,29000"
 ]
 )
-start &22
+start &20
 end &33
 sat 32
 eat 32
@@ -2556,9 +2487,9 @@ blo "33750,28800"
 tm "WireNameMgr"
 )
 )
-on &63
+on &61
 )
-*79 (Wire
+*77 (Wire
 uid 508,0
 shape (OrthoPolyLine
 uid 509,0
@@ -2573,7 +2504,7 @@ pts [
 ]
 )
 start &70
-end &20
+end &18
 sat 32
 eat 32
 stc 0
@@ -2595,6 +2526,76 @@ tm "WireNameMgr"
 )
 )
 on &49
+)
+*78 (Wire
+uid 549,0
+shape (OrthoPolyLine
+uid 550,0
+va (VaSet
+vasetType 3
+)
+xt "31750,17000,36701,17000"
+pts [
+"31750,17000"
+"36701,17000"
+]
+)
+start &22
+end &53
+sat 32
+eat 32
+st 0
+sf 1
+tg (WTG
+uid 551,0
+ps "ConnStartEndStrategy"
+stg "STSignalDisplayStrategy"
+f (Text
+uid 552,0
+va (VaSet
+)
+xt "33750,16000,40950,17000"
+st "D_MWRITEH_L"
+blo "33750,16800"
+tm "WireNameMgr"
+)
+)
+on &62
+)
+*79 (Wire
+uid 555,0
+shape (OrthoPolyLine
+uid 556,0
+va (VaSet
+vasetType 3
+)
+xt "31750,19000,36700,19000"
+pts [
+"31750,19000"
+"36700,19000"
+]
+)
+start &23
+end &54
+sat 32
+eat 32
+st 0
+sf 1
+tg (WTG
+uid 557,0
+ps "ConnStartEndStrategy"
+stg "STSignalDisplayStrategy"
+f (Text
+uid 558,0
+va (VaSet
+)
+xt "33750,18000,40950,19000"
+st "D_MWRITEL_L"
+blo "33750,18800"
+tm "WireNameMgr"
+)
+)
+on &63
 )
 ]
 bg "65535,65535,65535"
@@ -2704,13 +2705,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "170,194,1185,884"
-viewArea "-38081,-4545,41919,48081"
+windowSize "-8,25,1608,1182"
+viewArea "-10282,449,102284,80126"
 cachedDiagramExtent "-4200,0,70150,51000"
 hasePageBreakOrigin 1
-pageBreakOrigin "0,0"
+pageBreakOrigin "-69000,0"
 active 1
-lastUid 513,0
+lastUid 562,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -3702,7 +3703,7 @@ tm "BdDeclarativeTextMgr"
 )
 commonDM (CommonDM
 ldm (LogicalDM
-suid 18,0
+suid 20,0
 usingSuid 1
 emptyRow *112 (LEmptyRow
 )
@@ -3828,30 +3829,6 @@ uid 435,0
 port (LogicalPort
 m 4
 decl (Decl
-n "MWRITEL_H"
-t "std_logic"
-o 8
-suid 14,0
-)
-)
-uid 498,0
-)
-*133 (LeafLogPort
-port (LogicalPort
-m 4
-decl (Decl
-n "MWRITEL_L"
-t "std_logic"
-o 9
-suid 15,0
-)
-)
-uid 500,0
-)
-*134 (LeafLogPort
-port (LogicalPort
-m 4
-decl (Decl
 n "F"
 t "STD_LOGIC"
 o 10
@@ -3860,7 +3837,7 @@ suid 16,0
 )
 uid 502,0
 )
-*135 (LeafLogPort
+*133 (LeafLogPort
 port (LogicalPort
 m 4
 decl (Decl
@@ -3872,7 +3849,7 @@ suid 17,0
 )
 uid 504,0
 )
-*136 (LeafLogPort
+*134 (LeafLogPort
 port (LogicalPort
 m 4
 decl (Decl
@@ -3883,6 +3860,30 @@ suid 18,0
 )
 )
 uid 506,0
+)
+*135 (LeafLogPort
+port (LogicalPort
+m 4
+decl (Decl
+n "D_MWRITEH_L"
+t "std_logic"
+o 11
+suid 19,0
+)
+)
+uid 559,0
+)
+*136 (LeafLogPort
+port (LogicalPort
+m 4
+decl (Decl
+n "D_MWRITEL_L"
+t "std_logic"
+o 12
+suid 20,0
+)
+)
+uid 561,0
 )
 ]
 )
@@ -3980,31 +3981,31 @@ uid 436,0
 litem &132
 pos 7
 dimension 20
-uid 499,0
+uid 503,0
 )
 *150 (MRCItem
 litem &133
 pos 8
 dimension 20
-uid 501,0
+uid 505,0
 )
 *151 (MRCItem
 litem &134
 pos 9
 dimension 20
-uid 503,0
+uid 507,0
 )
 *152 (MRCItem
 litem &135
 pos 10
 dimension 20
-uid 505,0
+uid 560,0
 )
 *153 (MRCItem
 litem &136
 pos 11
 dimension 20
-uid 507,0
+uid 562,0
 )
 ]
 )

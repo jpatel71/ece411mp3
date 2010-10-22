@@ -23,7 +23,8 @@ ENTITY ControlSplit_EX IS
       SR2MuxSel      : OUT    std_logic;
       ALUop          : OUT    lc3b_aluop;
       ALUSHFSel      : OUT    std_logic;
-      clk            : IN     std_logic
+      clk            : IN     std_logic;
+      StoreMux      :   out std_logic
    );
 
 -- Declarations
@@ -41,5 +42,6 @@ BEGIN
   SR2MuxSel <= ControlWord_EX(8);
   ALUop <= ControlWord_EX(7 downto 5);
   ALUSHFSel <= ControlWord_EX(4);
+  storemux <= ControlWord_EX(15);
 END ARCHITECTURE untitled;
 

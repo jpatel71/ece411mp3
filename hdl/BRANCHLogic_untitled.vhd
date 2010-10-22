@@ -32,6 +32,7 @@ ARCHITECTURE untitled OF BRANCHLogic IS
 BEGIN
   PROCESS(INSCC_MEM, nzp_MEM, opcode_MEM, clk)
     BEGIN
+      BRANCHLOAD_MEM <= '0';
       IF(opcode_MEM = "0000" and nzp_MEM = INSCC_MEM) THEN
         BRANCHLOAD_MEM <= '1' after 1ns;
       END IF;

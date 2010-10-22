@@ -1,51 +1,46 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate -format Logic /mp2_cpu/clk
-add wave -noupdate -format Literal /mp2_cpu/thedatapath/pcout
-add wave -noupdate -format Literal /mp2_cpu/address
-add wave -noupdate -format Literal /mp2_cpu/dram/cache_dp/alinejoiner/wcdata
-add wave -noupdate -format Literal /mp2_cpu/dram/cache_dp/alru/data
-add wave -noupdate -divider Regs
-add wave -noupdate -format Literal -expand /mp2_cpu/thedatapath/aregfile/ram
-add wave -noupdate -divider States
-add wave -noupdate -format Literal /mp2_cpu/controlunit/current_state
-add wave -noupdate -divider Way0
-add wave -noupdate -format Literal -expand /mp2_cpu/dram/cache_dp/way0/adataarray/data
-add wave -noupdate -format Literal -expand /mp2_cpu/dram/cache_dp/way0/adirtyarray/dirty
-add wave -noupdate -format Literal /mp2_cpu/dram/cache_dp/way0/dataout
-add wave -noupdate -format Logic /mp2_cpu/dram/cache_dp/prehit0
-add wave -noupdate -divider Way1
-add wave -noupdate -format Literal -expand /mp2_cpu/dram/cache_dp/way1/adataarray/data
-add wave -noupdate -format Literal /mp2_cpu/dram/cache_dp/way1/dataout
-add wave -noupdate -format Literal -expand /mp2_cpu/dram/cache_dp/way1/adirtyarray/dirty
-add wave -noupdate -format Logic /mp2_cpu/dram/cache_dp/prehit1
-add wave -noupdate -format Literal -expand /mp2_cpu/dram/cache_dp/alru/data
-add wave -noupdate -divider {Memory Stuff}
-add wave -noupdate -format Literal /mp2_cpu/dram/address
-add wave -noupdate -format Literal /mp2_cpu/dram/dataout
-add wave -noupdate -format Literal /mp2_cpu/dram/datain
-add wave -noupdate -format Logic /mp2_cpu/dram/mread_l
-add wave -noupdate -format Logic /mp2_cpu/dram/mwriteh_l
-add wave -noupdate -format Logic /mp2_cpu/dram/mwritel_l
-add wave -noupdate -format Logic /mp2_cpu/dram/mresp_h
-add wave -noupdate -divider {PM Stuff}
-add wave -noupdate -format Literal /mp2_cpu/dram/cache_cont/current_state
-add wave -noupdate -format Literal /mp2_cpu/dram/pmdatain
-add wave -noupdate -format Literal /mp2_cpu/dram/pmaddress
-add wave -noupdate -format Literal /mp2_cpu/dram/address
-add wave -noupdate -format Literal /mp2_cpu/dram/cache_dp/aaddrjoin/b
-add wave -noupdate -format Literal /mp2_cpu/dram/cache_dp/atagmux/tagout1
-add wave -noupdate -format Literal /mp2_cpu/dram/cache_dp/atagmux/tagmuxout
-add wave -noupdate -format Logic /mp2_cpu/dram/cache_dp/atagmux/lruout
-add wave -noupdate -format Literal /mp2_cpu/dram/cache_dp/atagmux/tagout0
-add wave -noupdate -format Literal /mp2_cpu/dram/pmdataout
-add wave -noupdate -format Logic /mp2_cpu/dram/pmread_l
-add wave -noupdate -format Logic /mp2_cpu/dram/pmresp_h
-add wave -noupdate -format Logic /mp2_cpu/dram/pmwrite_l
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/clk
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/idataaddress
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcmuxout
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/branchload_mem
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/idatain
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/theif_reg/opcode_id
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/theid_reg/opcode_ex
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/theex_reg/opcode_mem
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/themem_reg/opcode_wb
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/controlword_id
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/controlword_ex
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/controlword_mem
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/controlword_wb
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/inscc_mem
+add wave -noupdate -format Literal -expand /mp3_cpu/thepipeline/theregfile/ram
+add wave -noupdate -divider ID
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/adj6_id
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/srcb
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/ir8_6_id
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/index6_id
+add wave -noupdate -divider EX
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/alushfmuxout
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/addressmuxout
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/br_add_ex
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/addressmuxsel
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/addressmux1out
+add wave -noupdate -divider MEM
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/d_mread_l
+add wave -noupdate -format Logic /mp3_cpu/u_1/d_mwrite_l
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/d_datain
+add wave -noupdate -format Literal /mp3_cpu/d_addressout
+add wave -noupdate -format Literal /mp3_cpu/u_1/d_address
+add wave -noupdate -format Literal /mp3_cpu/u_1/d_dataout
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/dest
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/dest_id
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/destreg_ex
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/destreg_mem
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {17457 ns} 0}
-configure wave -namecolwidth 376
-configure wave -valuecolwidth 343
+WaveRestoreCursors {{Cursor 1} {1144 ns} 0}
+configure wave -namecolwidth 293
+configure wave -valuecolwidth 40
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -57,4 +52,4 @@ configure wave -gridperiod 1
 configure wave -griddelta 40
 configure wave -timeline 0
 update
-WaveRestoreZoom {15441 ns} {20073 ns}
+WaveRestoreZoom {864 ns} {1326 ns}

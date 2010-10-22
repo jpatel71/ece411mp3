@@ -17,7 +17,7 @@ unitName "LC3b_types"
 ]
 instances [
 (Instance
-name "U_0"
+name "thePipeline"
 duLibraryName "ece411"
 duName "PipeLine"
 elements [
@@ -137,7 +137,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "gllnx19.ews.illinois.edu"
+value "eelnx24.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -213,7 +213,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "01:02:02"
+value "10:11:43"
 )
 (vvPair
 variable "unit"
@@ -1009,8 +1009,8 @@ tm "CptNameMgr"
 uid 140,0
 va (VaSet
 )
-xt "19800,22000,21600,23000"
-st "U_0"
+xt "19800,22000,27000,23000"
+st "thePipeline"
 blo "19800,22800"
 tm "InstanceNameMgr"
 )
@@ -1656,7 +1656,7 @@ tm "WireNameMgr"
 uid 419,0
 decl (Decl
 n "CLK"
-t "lc3b_4mux_sel"
+t "std_logic"
 o 6
 suid 12,0
 )
@@ -1664,8 +1664,8 @@ declText (MLText
 uid 420,0
 va (VaSet
 )
-xt "22000,2000,39400,3000"
-st "CLK          : lc3b_4mux_sel"
+xt "22000,2000,37000,3000"
+st "CLK          : std_logic"
 )
 )
 *50 (PortIoIn
@@ -2424,6 +2424,7 @@ blo "44750,17800"
 tm "WireNameMgr"
 )
 s (Text
+uid 526,0
 va (VaSet
 isHidden 1
 )
@@ -2692,13 +2693,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "170,194,1185,884"
-viewArea "-38081,-4545,41919,48081"
+windowSize "167,194,1182,884"
+viewArea "-38100,-4500,41900,48126"
 cachedDiagramExtent "-4200,0,70150,51000"
 hasePageBreakOrigin 1
-pageBreakOrigin "0,0"
+pageBreakOrigin "-69000,0"
 active 1
-lastUid 513,0
+lastUid 526,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -3794,7 +3795,7 @@ uid 374,0
 port (LogicalPort
 decl (Decl
 n "CLK"
-t "lc3b_4mux_sel"
+t "std_logic"
 o 6
 suid 12,0
 )

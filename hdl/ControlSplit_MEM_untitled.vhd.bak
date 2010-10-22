@@ -17,6 +17,7 @@ USE ece411.LC3b_types.all;
 ENTITY ControlSplit_MEM IS
    PORT( 
       ControlWord_MEM : IN     LC3b_ControlWord;
+      clk        : IN     std_logic;
       MEMMUX_MEMSel  :  OUT    std_logic
    );
 

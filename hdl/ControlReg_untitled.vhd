@@ -33,21 +33,29 @@ ARCHITECTURE untitled OF ControlReg IS
 BEGIN
   PROCESS(opcode_ID, IR_Bit5, IR_Bit11, clk)
     variable state : LC3b_ControlWord;
-    --  1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
+    --  SRCMuxSel-LoadNZP-1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-3ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
   BEGIN
     case (opcode_ID) is
-   -- when "0000" =>
-    --  state := "000000" & alu_pass & "00000";
     when "0001" =>  --addreg
-      state := "10000"& IR_Bit5 & alu_add & "10001";
+      if(IR_bit5 = '1') then
+        state := "01100001" & alu_add & "10001";
+      else 
+        state := "01100000" & alu_add & "10001";
+    end if;
     when "0101" =>  --and
-      state := "10000"& IR_Bit5 & alu_and & "10001";
+      if(IR_bit5 = '1') then
+        state := "01100001" & alu_and & "10001";
+      else
+        state := "01100000" & alu_and & "10001";       
+      end if;
     when "0110" =>  --ldr
-      state := "110000" & alu_pass & "00010";
+      state := "01110000" & alu_pass & "00010";
     when "0111" =>  --str
-      state := "010000" & alu_pass & "10000";    
+      state := "10010000" & alu_pass & "10000";    
     when "0000" =>  --br
-      state := "000000" & alu_pass & "00000";
+      state := "00000000" & alu_pass & "00000";
+    when "1001" =>  --not
+      state := "01100000" & alu_not & "10001";
     when others =>
     end case;
     

@@ -16,24 +16,24 @@ USE ece411.LC3b_types.all;
 
 ENTITY State_Reg IS
    PORT( 
-      PCPlus2out_IF : IN     LC3b_word;
-      PCPlus2_ID    : OUT    lc3b_word;
-      index6_ID     : OUT    LC3b_index6;
-      offset9_ID    : OUT    LC3b_offset9;
-      offset11_ID   : OUT    LC3b_offset11;
-      RESET_L       : IN     std_logic;
-      IDATAIn       : IN     LC3b_word;
-      IR_Bit5       : OUT    std_logic;
-      IR_Bit11      : OUT    std_logic;
-      IR_2_0_ID     : OUT    STD_LOGIC_VECTOR (2 DOWNTO 0);
-      IR8_6_ID      : OUT    LC3B_REG;
-      opcode_ID     : OUT    LC3B_Opcode;
-      DEST_ID       : OUT    LC3b_reg;
-      IMM4_ID       : OUT    lc3b_imm4;
-      INSCC_ID      : OUT    lc3b_nzp;
-      clk           : IN     std_logic;
-      imm5_ID       : OUT    LC3b_imm5;
-      trapvect8_ID  : OUT    lc3b_trapvect8
+      PCPlus2_ID   : OUT    lc3b_word;
+      index6_ID    : OUT    LC3b_index6;
+      offset9_ID   : OUT    LC3b_offset9;
+      offset11_ID  : OUT    LC3b_offset11;
+      RESET_L      : IN     std_logic;
+      IDATAIn      : IN     LC3b_word;
+      IR_Bit5      : OUT    std_logic;
+      IR_Bit11     : OUT    std_logic;
+      IR_2_0_ID    : OUT    STD_LOGIC_VECTOR (2 DOWNTO 0);
+      IR8_6_ID     : OUT    LC3B_REG;
+      opcode_ID    : OUT    LC3B_Opcode;
+      DEST_ID      : OUT    LC3b_reg;
+      IMM4_ID      : OUT    lc3b_imm4;
+      INSCC_ID     : OUT    lc3b_nzp;
+      clk          : IN     std_logic;
+      imm5_ID      : OUT    LC3b_imm5;
+      trapvect8_ID : OUT    lc3b_trapvect8;
+      IDATAAddress : IN     LC3b_word
    );
 
 -- Declarations
@@ -55,10 +55,11 @@ SIGNAL offset11 : lc3b_offset11;
 SIGNAL offset9 : lc3b_offset9;
 SIGNAL trapvect8 : lc3b_trapvect8;
 SIGNAL PCPlus2 : lc3b_word;
+signal inscc : lc3b_nzp;
 BEGIN
 	
 	-------------------------------------------------------------------
-	VHDL_REGFILE1_WRITE: PROCESS(CLK, RESET_L, IDATAIN, PCPLUS2OUT_IF)
+	VHDL_REGFILE1_WRITE: PROCESS(CLK, RESET_L)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
@@ -67,6 +68,7 @@ BEGIN
 			srcA <= "000";
 			srcB <= "000";
 			opcode <= "0000";
+			inscc <= "000";
 		END IF;
 		
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE
@@ -83,10 +85,11 @@ BEGIN
 				offset11 <= IDataIn(10 downto 0);
 				offset9 <= IDataIn(8 downto 0);
 				trapvect8 <= IDataIn(7 downto 0);
-				pcplus2 <= pcplus2out_IF;
+				pcplus2 <= idataaddress;
+				inscc <= IDATAIn(11 downto 9);
 		END IF;
 	END PROCESS;
-	INSCC_ID <= dest AFTER DELAY_REGFILE_READ;
+	dest_ID <= dest AFTER DELAY_REGFILE_READ;
 	IR8_6_ID <= srcA AFTER DELAY_REGFILE_READ;
 	IR_2_0_ID <= srcB after DELAY_REGFILE_READ;
 	index6_ID <= index6 after DELAY_REGFILE_READ;
@@ -97,6 +100,8 @@ BEGIN
 	imm4_ID <= imm4 after DELAY_REGFILE_READ;
 	offset11_ID <= offset11 after DELAY_REGFILE_READ;
 	trapvect8_ID <= trapvect8 after DELAY_REGFILE_READ;
+	inscc_ID <= inscc;
+	IR_BIT5 <= bit5 after delay_reg;
 END UNTITLED;
 
 

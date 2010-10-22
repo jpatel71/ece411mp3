@@ -18,6 +18,7 @@ ENTITY NZP IS
    PORT( 
       GenCCout : IN     LC3b_cc;
       LoadNZP  : IN     std_logic;
+      RESET_L  :  IN  STD_LOGIC;
       clk      : IN     std_logic;
       n        : OUT    std_logic;
       p        : OUT    std_logic;
@@ -36,6 +37,9 @@ BEGIN
 	VHDL_NZP : PROCESS (CLK, GENCCOUT)
 	------------------------------
 	BEGIN
+	  if(RESET_L = '0') then
+	    PRE_NZP <= "000";
+	  end if;
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
 			IF (LOADNZP = '1') THEN
 				PRE_NZP <= GENCCOUT;

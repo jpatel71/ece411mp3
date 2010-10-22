@@ -16,8 +16,7 @@ USE ece411.LC3b_types.all;
 
 ENTITY GenCC IS
    PORT( 
-      ByteMaskout : IN     lc3b_word;
-      clk         : IN     std_logic;
+      INput : IN     lc3b_word;
       GenCCout    : OUT    LC3b_cc
    );
 
@@ -28,11 +27,11 @@ END GenCC ;
 --
 ARCHITECTURE UNTITLED OF GENCC IS
 BEGIN
-	VHDL_GENCC : PROCESS (ByteMaskout)
+	VHDL_GENCC : PROCESS (input)
 	BEGIN    
-		IF (ByteMaskout = "0000000000000000") THEN
+		IF (input = "0000000000000000") THEN
 			GENCCOUT <= "010" AFTER DELAY_GENCC;
-		ELSIF (ByteMaskout(15) = '1') THEN
+		ELSIF (input(15) = '1') THEN
 			GENCCOUT <= "100" AFTER DELAY_GENCC;
 		ELSE
 			GENCCOUT <= "001" AFTER DELAY_GENCC;

@@ -39,7 +39,7 @@ END State_Reg3 ;
 --
 ARCHITECTURE untitled OF State_Reg3 IS
 
-  SIGNAL ALUSHFMuxOut : lc3b_opcode;
+  SIGNAL ALUSHFMuxOut : lc3b_word;
   SIGNAL ADDRESSMUXOut : lc3b_word;
   SIGNAL DATAIN : lc3b_word;
   SIGNAL destreg : lc3b_reg;
@@ -48,12 +48,17 @@ ARCHITECTURE untitled OF State_Reg3 IS
  BEGIN 
 	  
 	  -------------------------------------------------------------------
-	  PROCESS(CLK, RESET_L)
+	  PROCESS(CLK, RESET_L) --, ADDRESSMUXOut_MEM, ALUSHFMUXOUT_MEM, D_DATAIN, PCPLUS2_MEM,DESTREG_MEM,OPCODE_MEM)
 	  -------------------------------------------------------------------
 	  BEGIN
 		  -- ON RESET, CLEAR THE REGISTER FILE CONTENTS
 		  IF (RESET_L = '0') THEN
-  
+        opcode <= "0000";
+        ADDRESSMuxOut <= x"0000";
+        ALUSHFmuxOUT <= x"0000";
+        DESTREG <= "000";		
+        DATAIN <= x"0000";
+        PCPlus2 <= x"0000";
 		  END IF;
 		  
 		  -- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE

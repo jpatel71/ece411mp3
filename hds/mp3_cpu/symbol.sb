@@ -305,7 +305,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "gllnx19.ews.illinois.edu"
+value "eelnx24.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -381,7 +381,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "01:02:22"
+value "11:25:12"
 )
 (vvPair
 variable "unit"
@@ -446,8 +446,7 @@ uid 89,0
 va (VaSet
 )
 xt "44000,2000,62000,3000"
-st "CLK     : IN     std_logic  ;
-"
+st "CLK     : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -489,8 +488,7 @@ uid 94,0
 va (VaSet
 )
 xt "44000,3000,60800,4000"
-st "RESET_L : IN     std_logic 
-"
+st "RESET_L : IN     std_logic "
 )
 thePort (LogicalPort
 decl (Decl
@@ -1161,5 +1159,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 130,0
+lastUid 154,0
 )
