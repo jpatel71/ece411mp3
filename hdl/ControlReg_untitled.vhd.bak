@@ -32,7 +32,7 @@ ARCHITECTURE untitled OF ControlReg IS
 BEGIN
   PROCESS(opcode_ID, IR_Bit5, IR_Bit11)
     variable state : LC3b_ControlWord;
-    --  1RegWrite-ADDRESSMUX1Sel-ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-ALUop-ALUSHFSel-MEMMUX_MEMSel-MEMMUX_MEM1Sel
+    --  1RegWrite-ADDRESSMUX1Sel-ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-ALUop-ALUSHFSel
   BEGIN
     case (opcode_ID & IR_Bit5 & IR_Bit11) is
     when "000000" =>
