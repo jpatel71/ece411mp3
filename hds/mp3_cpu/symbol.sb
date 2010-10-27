@@ -381,7 +381,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "22:05:47"
+value "22:32:15"
 )
 (vvPair
 variable "unit"
@@ -446,8 +446,7 @@ uid 89,0
 va (VaSet
 )
 xt "44000,3000,60800,4000"
-st "clk     : IN     std_logic 
-"
+st "clk     : IN     std_logic "
 )
 thePort (LogicalPort
 decl (Decl
@@ -489,8 +488,7 @@ uid 377,0
 va (VaSet
 )
 xt "44000,2000,62000,3000"
-st "RESET_L : IN     std_logic  ;
-"
+st "RESET_L : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1161,5 +1159,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 377,0
+lastUid 389,0
 )

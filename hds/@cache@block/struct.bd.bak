@@ -210,7 +210,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "22:12:56"
+value "22:13:13"
 )
 (vvPair
 variable "unit"
@@ -1364,8 +1364,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,7400,-12000,8300"
-st "I_MREAD_L     : std_logic
-"
+st "I_MREAD_L     : std_logic"
 )
 )
 *30 (Net
@@ -1382,8 +1381,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,6500,-12000,7400"
-st "I_DATAAddress : lc3b_word
-"
+st "I_DATAAddress : lc3b_word"
 )
 )
 *31 (Net
@@ -1400,8 +1398,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,8300,-11500,9200"
-st "I_PMDATAIN    : lc3b_oword
-"
+st "I_PMDATAIN    : lc3b_oword"
 )
 )
 *32 (Net
@@ -1418,8 +1415,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,2900,-12000,3800"
-st "D_MWRITEH_L   : std_logic
-"
+st "D_MWRITEH_L   : std_logic"
 )
 )
 *33 (Net
@@ -1436,8 +1432,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,3800,-12000,4700"
-st "D_MWRITEL_L   : std_logic
-"
+st "D_MWRITEL_L   : std_logic"
 )
 )
 *34 (Net
@@ -1454,8 +1449,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,2000,-12000,2900"
-st "D_MREAD_L     : std_logic
-"
+st "D_MREAD_L     : std_logic"
 )
 )
 *35 (Net
@@ -1472,8 +1466,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,200,-12000,1100"
-st "D_Address     : lc3b_word
-"
+st "D_Address     : lc3b_word"
 )
 )
 *36 (Net
@@ -1490,8 +1483,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,1100,-12000,2000"
-st "D_DATAOUT     : lc3b_word
-"
+st "D_DATAOUT     : lc3b_word"
 )
 )
 *37 (Net
@@ -1508,8 +1500,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,4700,-11500,5600"
-st "D_PMDATAIN    : lc3b_oword
-"
+st "D_PMDATAIN    : lc3b_oword"
 )
 )
 *38 (Net
@@ -1526,8 +1517,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,17300,-12000,18200"
-st "I_MRESP_H     : std_logic
-"
+st "I_MRESP_H     : std_logic"
 )
 )
 *39 (Net
@@ -1544,8 +1534,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,16400,-12000,17300"
-st "I_DATAIN      : lc3b_word
-"
+st "I_DATAIN      : lc3b_word"
 )
 )
 *40 (Net
@@ -1562,8 +1551,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,18200,-12000,19100"
-st "I_PMADDRESS   : lc3b_word
-"
+st "I_PMADDRESS   : lc3b_word"
 )
 )
 *41 (Net
@@ -1580,8 +1568,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,11900,-12000,12800"
-st "D_MRESP_H     : std_logic
-"
+st "D_MRESP_H     : std_logic"
 )
 )
 *42 (Net
@@ -1598,8 +1585,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,11000,-12000,11900"
-st "D_DATAIN      : lc3b_word
-"
+st "D_DATAIN      : lc3b_word"
 )
 )
 *43 (Net
@@ -1616,8 +1602,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,13700,-11500,14600"
-st "D_PMDATAOUT   : lc3b_oword
-"
+st "D_PMDATAOUT   : lc3b_oword"
 )
 )
 *44 (Net
@@ -1634,8 +1619,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,12800,-12000,13700"
-st "D_PMADDRESS   : lc3b_word
-"
+st "D_PMADDRESS   : lc3b_word"
 )
 )
 *45 (PortIoIn
@@ -1744,8 +1728,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,9200,-12000,10100"
-st "I_PMMRESP_H   : std_logic
-"
+st "I_PMMRESP_H   : std_logic"
 )
 )
 *48 (Net
@@ -1762,8 +1745,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,5600,-12000,6500"
-st "D_PMMRESP_H   : std_logic
-"
+st "D_PMMRESP_H   : std_logic"
 )
 )
 *49 (SaComponent
@@ -3052,8 +3034,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,19100,-12000,20000"
-st "I_PMREAD_L    : std_logic
-"
+st "I_PMREAD_L    : std_logic"
 )
 )
 *88 (PortIoOut
@@ -3115,8 +3096,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,15500,-12000,16400"
-st "D_PMWRITE_L   : std_logic
-"
+st "D_PMWRITE_L   : std_logic"
 )
 )
 *90 (Net
@@ -3133,8 +3113,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,14600,-12000,15500"
-st "D_PMREAD_L    : std_logic
-"
+st "D_PMREAD_L    : std_logic"
 )
 )
 *91 (Net
@@ -3151,8 +3130,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,10100,-12000,11000"
-st "clk           : std_logic
-"
+st "clk           : std_logic"
 )
 )
 *92 (HdlText
@@ -3257,8 +3235,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,20900,-8500,21800"
-st "SIGNAL ONE           : std_logic
-"
+st "SIGNAL ONE           : std_logic"
 )
 )
 *97 (Net
@@ -3275,8 +3252,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-25000,21800,-8500,22700"
-st "SIGNAL ONES          : lc3b_word
-"
+st "SIGNAL ONES          : lc3b_word"
 )
 )
 *98 (Wire
