@@ -94,7 +94,7 @@ lang 2
 m 1
 decl (Decl
 n "ValidOUT"
-t "lc3b_oword"
+t "std_logic"
 o 4
 suid 3,0
 )
@@ -272,11 +272,11 @@ value "/home/engr/tmurray5/ece411mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/engr/tmurray5/ece411mp3/hds/valid@array2k/interface.info"
+value "/home/engr/tmurray5/ece411mp3/hds/valid@array2k/symbol.sb.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/engr/tmurray5/ece411mp3/hds/valid@array2k/interface.user"
+value "/home/engr/tmurray5/ece411mp3/hds/valid@array2k/symbol.sb.user"
 )
 (vvPair
 variable "SourceDir"
@@ -288,7 +288,7 @@ value "HDL Designer"
 )
 (vvPair
 variable "arch_name"
-value "interface"
+value "symbol"
 )
 (vvPair
 variable "config"
@@ -304,19 +304,19 @@ value "/home/engr/tmurray5/ece411mp3/hds/validArray2k"
 )
 (vvPair
 variable "date"
-value "10/26/10"
+value "10/27/10"
 )
 (vvPair
 variable "day"
-value "Tue"
+value "Wed"
 )
 (vvPair
 variable "day_long"
-value "Tuesday"
+value "Wednesday"
 )
 (vvPair
 variable "dd"
-value "26"
+value "27"
 )
 (vvPair
 variable "entity_name"
@@ -328,15 +328,15 @@ value "<TBD>"
 )
 (vvPair
 variable "f"
-value "interface"
+value "symbol.sb"
 )
 (vvPair
 variable "f_logical"
-value "interface"
+value "symbol.sb"
 )
 (vvPair
 variable "f_noext"
-value "interface"
+value "symbol"
 )
 (vvPair
 variable "group"
@@ -344,7 +344,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx25.ews.illinois.edu"
+value "eelnx29.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -376,11 +376,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/engr/tmurray5/ece411mp3/hds/valid@array2k/interface"
+value "/home/engr/tmurray5/ece411mp3/hds/valid@array2k/symbol.sb"
 )
 (vvPair
 variable "p_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/validArray2k/interface"
+value "/home/engr/tmurray5/ece411mp3/hds/validArray2k/symbol.sb"
 )
 (vvPair
 variable "project_name"
@@ -420,7 +420,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "23:18:25"
+value "13:42:08"
 )
 (vvPair
 variable "unit"
@@ -436,7 +436,7 @@ value "2005.3 (Build 75)"
 )
 (vvPair
 variable "view"
-value "interface"
+value "symbol"
 )
 (vvPair
 variable "year"
@@ -486,6 +486,9 @@ uid 97,0
 va (VaSet
 font "courier,8,0"
 )
+xt "44000,1800,61000,2700"
+st "index     : IN     lc3b_index7  ;
+"
 )
 thePort (LogicalPort
 lang 2
@@ -529,6 +532,9 @@ uid 102,0
 va (VaSet
 font "courier,8,0"
 )
+xt "44000,2700,60000,3600"
+st "reset_l   : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
@@ -572,13 +578,16 @@ uid 107,0
 va (VaSet
 font "courier,8,0"
 )
+xt "44000,4500,59000,5400"
+st "ValidOUT  : OUT    std_logic 
+"
 )
 thePort (LogicalPort
 lang 2
 m 1
 decl (Decl
 n "ValidOUT"
-t "lc3b_oword"
+t "std_logic"
 o 4
 suid 3,0
 )
@@ -616,6 +625,9 @@ uid 112,0
 va (VaSet
 font "courier,8,0"
 )
+xt "44000,3600,60000,4500"
+st "writeData : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 lang 2
@@ -998,7 +1010,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "32200,49050,47200,49950"
+xt "32200,49050,45700,49950"
 st "
 %library/%unit/%view
 "
@@ -1277,9 +1289,9 @@ uid 4,0
 va (VaSet
 font "courier,8,1"
 )
-xt "42000,1800,44500,2700"
+xt "42000,5400,44500,6300"
 st "User:"
-blo "42000,2500"
+blo "42000,6100"
 )
 internalLabel (Text
 uid 6,0
@@ -1296,7 +1308,7 @@ uid 5,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,2700,44000,2700"
+xt "44000,6300,44000,6300"
 tm "SyDeclarativeTextMgr"
 )
 internalText (MLText
@@ -1309,5 +1321,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 120,0
+lastUid 132,0
 )

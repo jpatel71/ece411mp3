@@ -67,9 +67,9 @@ tm "EolColHdrMgr"
 *14 (LogPort
 port (LogicalPort
 decl (Decl
-n "MWRITEH_L"
+n "mwriteh_l"
 t "std_logic"
-o 3
+o 7
 suid 1,0
 )
 )
@@ -78,9 +78,9 @@ uid 136,0
 *15 (LogPort
 port (LogicalPort
 decl (Decl
-n "MWRITEL_L"
+n "mwritel_l"
 t "std_logic"
-o 4
+o 8
 suid 2,0
 )
 )
@@ -102,7 +102,7 @@ port (LogicalPort
 decl (Decl
 n "MREAD_L"
 t "std_logic"
-o 2
+o 3
 suid 4,0
 )
 )
@@ -110,11 +110,10 @@ uid 142,0
 )
 *18 (LogPort
 port (LogicalPort
-lang 2
 decl (Decl
-n "dataOUT"
-t "lc3b_oword"
-o 8
+n "DataOut"
+t "lc3b_word"
+o 2
 suid 5,0
 )
 )
@@ -125,7 +124,7 @@ port (LogicalPort
 decl (Decl
 n "PMDATAIN"
 t "lc3b_oword"
-o 5
+o 4
 suid 7,0
 )
 )
@@ -185,7 +184,7 @@ port (LogicalPort
 decl (Decl
 n "PMMRESP_H"
 t "std_logic"
-o 6
+o 5
 suid 15,0
 )
 )
@@ -220,7 +219,7 @@ port (LogicalPort
 decl (Decl
 n "clk"
 t "std_logic"
-o 7
+o 6
 suid 20,0
 )
 )
@@ -493,19 +492,19 @@ value "/home/engr/tmurray5/ece411mp3/hds/D_Mapped_Cache"
 )
 (vvPair
 variable "date"
-value "10/26/10"
+value "10/27/10"
 )
 (vvPair
 variable "day"
-value "Tue"
+value "Wed"
 )
 (vvPair
 variable "day_long"
-value "Tuesday"
+value "Wednesday"
 )
 (vvPair
 variable "dd"
-value "26"
+value "27"
 )
 (vvPair
 variable "entity_name"
@@ -533,7 +532,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx25.ews.illinois.edu"
+value "eelnx29.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -609,7 +608,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "23:19:38"
+value "15:38:03"
 )
 (vvPair
 variable "unit"
@@ -665,7 +664,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "16000,7550,20500,8450"
-st "MWRITEH_L"
+st "mwriteh_l"
 blo "16000,8250"
 tm "CptPortNameMgr"
 )
@@ -675,14 +674,14 @@ uid 85,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,3600,60000,4500"
-st "MWRITEH_L : IN     std_logic  ;"
+xt "44000,7200,60000,8100"
+st "mwriteh_l : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
-n "MWRITEH_L"
+n "mwriteh_l"
 t "std_logic"
-o 3
+o 7
 suid 1,0
 )
 )
@@ -709,7 +708,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "16000,9550,20500,10450"
-st "MWRITEL_L"
+st "mwritel_l"
 blo "16000,10250"
 tm "CptPortNameMgr"
 )
@@ -719,14 +718,14 @@ uid 90,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,4500,60000,5400"
-st "MWRITEL_L : IN     std_logic  ;"
+xt "44000,8100,60000,9000"
+st "mwritel_l : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
-n "MWRITEL_L"
+n "mwritel_l"
 t "std_logic"
-o 4
+o 8
 suid 2,0
 )
 )
@@ -807,14 +806,14 @@ uid 100,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,2700,60000,3600"
+xt "44000,3600,60000,4500"
 st "MREAD_L   : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "MREAD_L"
 t "std_logic"
-o 2
+o 3
 suid 4,0
 )
 )
@@ -841,7 +840,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "16000,17550,19500,18450"
-st "dataOUT"
+st "DataOut"
 blo "16000,18250"
 tm "CptPortNameMgr"
 )
@@ -851,15 +850,14 @@ uid 105,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,8100,60500,9000"
-st "dataOUT   : IN     lc3b_oword  ;"
+xt "44000,2700,60000,3600"
+st "DataOut   : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
-lang 2
 decl (Decl
-n "dataOUT"
-t "lc3b_oword"
-o 8
+n "DataOut"
+t "lc3b_word"
+o 2
 suid 5,0
 )
 )
@@ -896,14 +894,14 @@ uid 110,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,5400,60500,6300"
+xt "44000,4500,60500,5400"
 st "PMDATAIN  : IN     lc3b_oword  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "PMDATAIN"
 t "lc3b_oword"
-o 5
+o 4
 suid 7,0
 )
 )
@@ -1125,14 +1123,14 @@ uid 172,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,6300,60000,7200"
+xt "44000,5400,60000,6300"
 st "PMMRESP_H : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "PMMRESP_H"
 t "std_logic"
-o 6
+o 5
 suid 15,0
 )
 )
@@ -1263,14 +1261,14 @@ uid 217,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,7200,60000,8100"
+xt "44000,6300,60000,7200"
 st "clk       : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "clk"
 t "std_logic"
-o 7
+o 6
 suid 20,0
 )
 )
@@ -2004,6 +2002,6 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 490,0
+lastUid 994,0
 okToSyncOnLoad 1
 )

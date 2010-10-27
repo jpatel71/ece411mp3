@@ -19,7 +19,7 @@ ENTITY ValidArray2K IS
     index  : IN  lc3b_index7;
     reset_l: IN  std_logic;
     writeData : IN std_logic;
-    ValidOUT: OUT lc3b_oword
+    ValidOUT: OUT std_logic
   );
 -- Declarations
 
