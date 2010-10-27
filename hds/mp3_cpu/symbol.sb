@@ -25,7 +25,7 @@ appVersion "2005.3 (Build 75)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
-suid 2,0
+suid 3,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
@@ -67,9 +67,9 @@ tm "EolColHdrMgr"
 *14 (LogPort
 port (LogicalPort
 decl (Decl
-n "CLK"
+n "clk"
 t "std_logic"
-o 1
+o 2
 suid 1,0
 )
 )
@@ -80,11 +80,11 @@ port (LogicalPort
 decl (Decl
 n "RESET_L"
 t "std_logic"
-o 2
-suid 2,0
+o 1
+suid 3,0
 )
 )
-uid 84,0
+uid 372,0
 )
 ]
 )
@@ -146,7 +146,7 @@ uid 81,0
 litem &15
 pos 1
 dimension 20
-uid 83,0
+uid 371,0
 )
 ]
 )
@@ -381,7 +381,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "21:17:53"
+value "22:05:47"
 )
 (vvPair
 variable "unit"
@@ -436,7 +436,7 @@ uid 88,0
 va (VaSet
 )
 xt "16000,6500,17800,7500"
-st "CLK"
+st "clk"
 blo "16000,7300"
 tm "CptPortNameMgr"
 )
@@ -445,23 +445,24 @@ dt (MLText
 uid 89,0
 va (VaSet
 )
-xt "44000,2000,62000,3000"
-st "CLK     : IN     std_logic  ;"
+xt "44000,3000,60800,4000"
+st "clk     : IN     std_logic 
+"
 )
 thePort (LogicalPort
 decl (Decl
-n "CLK"
+n "clk"
 t "std_logic"
-o 1
+o 2
 suid 1,0
 )
 )
 )
 *33 (CptPort
-uid 90,0
+uid 373,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 91,0
+uid 374,0
 ro 90
 va (VaSet
 vasetType 1
@@ -470,11 +471,11 @@ fg "0,65535,0"
 xt "14250,7625,15000,8375"
 )
 tg (CPTG
-uid 92,0
+uid 375,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 93,0
+uid 376,0
 va (VaSet
 )
 xt "16000,7500,20200,8500"
@@ -484,18 +485,19 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 94,0
+uid 377,0
 va (VaSet
 )
-xt "44000,3000,60800,4000"
-st "RESET_L : IN     std_logic "
+xt "44000,2000,62000,3000"
+st "RESET_L : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
 n "RESET_L"
 t "std_logic"
-o 2
-suid 2,0
+o 1
+suid 3,0
 )
 )
 )
@@ -1159,5 +1161,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 214,0
+lastUid 377,0
 )
