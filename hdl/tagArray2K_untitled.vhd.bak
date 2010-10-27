@@ -1,0 +1,26 @@
+--
+-- VHDL Architecture ece411.tagArray2K.untitled
+--
+-- Created:
+--          by - tmurray5.stdt (eelnx25.ews.illinois.edu)
+--          at - 23:10:43 10/26/10
+--
+-- using Mentor Graphics HDL Designer(TM) 2005.3 (Build 75)
+--
+LIBRARY ieee;
+USE ieee.NUMERIC_STD.all;
+USE ieee.std_logic_1164.all;
+
+LIBRARY ece411;
+USE ece411.LC3b_types.all;
+
+ENTITY tagArray2K IS
+-- Declarations
+
+END tagArray2K ;
+
+--
+ARCHITECTURE untitled OF tagArray2K IS
+BEGIN
+END ARCHITECTURE untitled;
+
