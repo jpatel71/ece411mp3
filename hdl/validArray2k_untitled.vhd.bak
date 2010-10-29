@@ -14,20 +14,21 @@ USE ieee.std_logic_1164.all;
 LIBRARY ece411;
 USE ece411.LC3b_types.all;
 
-ENTITY ValidArray2K IS
-  PORT(
-    index  : IN  lc3b_index7;
-    reset_l: IN  std_logic;
-    writeData : IN std_logic;
-    ValidOUT: OUT lc3b_oword
-  );
+ENTITY validArray1k IS
+   PORT( 
+      index     : IN     lc3b_index6;
+      reset_l   : IN     std_logic;
+      writeData : IN     std_logic;
+      ValidOUT  : OUT    std_logic
+   );
+
 -- Declarations
 
-END ValidArray2K ;
+END validArray1k ;
 
 --
-ARCHITECTURE untitled OF ValidArray2K IS
-  TYPE ValidArray2K IS array (127 downto 0) of std_logic;
+ARCHITECTURE untitled OF validArray1k IS
+  TYPE ValidArray2K IS array (63 downto 0) of std_logic;
   SIGNAL Valid : ValidArray2k;
   
   BEGIN
@@ -38,7 +39,7 @@ ARCHITECTURE untitled OF ValidArray2K IS
 		  VARIABLE ValidIndex : integer;
 		  BEGIN
 			  ValidIndex := to_integer(unsigned(Index));
-			  ValidOut <= Valid(ValidIndex) after 20 ns;
+			  ValidOut <= Valid(ValidIndex) after DELAY_1KB_SINGLE;
 	  
 	  END PROCESS ReadFromValidArray;
 	  
@@ -49,7 +50,7 @@ ARCHITECTURE untitled OF ValidArray2K IS
 		  BEGIN
 			  ValidIndex := to_integer(unsigned(index));
 		  IF RESET_L = '0' THEN
-		    for i in 127 downto 0 loop
+		    for i in 63 downto 0 loop
 		      Valid(i) <= 'X';
         end loop;
 		  END IF;

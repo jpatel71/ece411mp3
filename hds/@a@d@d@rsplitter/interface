@@ -26,7 +26,7 @@ model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
 ordering 1
-suid 8,0
+suid 12,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
@@ -71,10 +71,10 @@ decl (Decl
 n "Address"
 t "lc3b_word"
 o 4
-suid 5,0
+suid 9,0
 )
 )
-uid 153,0
+uid 193,0
 )
 *15 (LogPort
 port (LogicalPort
@@ -82,12 +82,12 @@ lang 2
 m 1
 decl (Decl
 n "index"
-t "lc3b_index7"
+t "lc3b_index6"
 o 2
-suid 6,0
+suid 10,0
 )
 )
-uid 155,0
+uid 195,0
 )
 *16 (LogPort
 port (LogicalPort
@@ -97,10 +97,10 @@ decl (Decl
 n "offset"
 t "lc3b_offset"
 o 3
-suid 7,0
+suid 11,0
 )
 )
-uid 157,0
+uid 197,0
 )
 *17 (LogPort
 port (LogicalPort
@@ -110,10 +110,10 @@ decl (Decl
 n "tag"
 t "lc3b_l1tag"
 o 1
-suid 8,0
+suid 12,0
 )
 )
-uid 159,0
+uid 199,0
 )
 ]
 )
@@ -169,25 +169,25 @@ uid 71,0
 litem &14
 pos 0
 dimension 20
-uid 154,0
+uid 194,0
 )
 *24 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 156,0
+uid 196,0
 )
 *25 (MRCItem
 litem &16
 pos 2
 dimension 20
-uid 158,0
+uid 198,0
 )
 *26 (MRCItem
 litem &17
 pos 3
 dimension 20
-uid 160,0
+uid 200,0
 )
 ]
 )
@@ -306,19 +306,19 @@ value "/home/engr/tmurray5/ece411mp3/hds/ADDRsplitter"
 )
 (vvPair
 variable "date"
-value "10/26/10"
+value "10/28/10"
 )
 (vvPair
 variable "day"
-value "Tue"
+value "Thu"
 )
 (vvPair
 variable "day_long"
-value "Tuesday"
+value "Thursday"
 )
 (vvPair
 variable "dd"
-value "26"
+value "28"
 )
 (vvPair
 variable "entity_name"
@@ -346,7 +346,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx25.ews.illinois.edu"
+value "eelnx29.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -422,7 +422,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "22:47:57"
+value "15:48:06"
 )
 (vvPair
 variable "unit"
@@ -457,10 +457,10 @@ optionalChildren [
 uid 8,0
 optionalChildren [
 *36 (CptPort
-uid 133,0
+uid 173,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 134,0
+uid 174,0
 ro 90
 va (VaSet
 vasetType 1
@@ -469,11 +469,11 @@ fg "0,65535,0"
 xt "14250,7625,15000,8375"
 )
 tg (CPTG
-uid 135,0
+uid 175,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 136,0
+uid 176,0
 va (VaSet
 font "courier,8,0"
 )
@@ -484,76 +484,25 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 137,0
+uid 177,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,4500,58000,5400"
-st "Address : IN     lc3b_word 
-"
 )
 thePort (LogicalPort
 decl (Decl
 n "Address"
 t "lc3b_word"
 o 4
-suid 5,0
+suid 9,0
 )
 )
 )
 *37 (CptPort
-uid 138,0
+uid 178,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 139,0
-ro 90
-va (VaSet
-vasetType 1
-fg "0,65535,0"
-)
-xt "24000,6625,24750,7375"
-)
-tg (CPTG
-uid 140,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 141,0
-va (VaSet
-font "courier,8,0"
-)
-xt "20500,6550,23000,7450"
-st "index"
-ju 2
-blo "23000,7250"
-tm "CptPortNameMgr"
-)
-)
-dt (MLText
-uid 142,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,2700,60000,3600"
-st "index   : OUT    lc3b_index7  ;
-"
-)
-thePort (LogicalPort
-lang 2
-m 1
-decl (Decl
-n "index"
-t "lc3b_index7"
-o 2
-suid 6,0
-)
-)
-)
-*38 (CptPort
-uid 143,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 144,0
+uid 179,0
 ro 90
 va (VaSet
 vasetType 1
@@ -562,46 +511,43 @@ fg "0,65535,0"
 xt "24000,7625,24750,8375"
 )
 tg (CPTG
-uid 145,0
+uid 180,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 146,0
+uid 181,0
 va (VaSet
 font "courier,8,0"
 )
-xt "20000,7550,23000,8450"
-st "offset"
+xt "20500,7550,23000,8450"
+st "index"
 ju 2
 blo "23000,8250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 147,0
+uid 182,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,3600,60000,4500"
-st "offset  : OUT    lc3b_offset  ;
-"
 )
 thePort (LogicalPort
 lang 2
 m 1
 decl (Decl
-n "offset"
-t "lc3b_offset"
-o 3
-suid 7,0
+n "index"
+t "lc3b_index6"
+o 2
+suid 10,0
 )
 )
 )
-*39 (CptPort
-uid 148,0
+*38 (CptPort
+uid 183,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 149,0
+uid 184,0
 ro 90
 va (VaSet
 vasetType 1
@@ -610,29 +556,71 @@ fg "0,65535,0"
 xt "24000,8625,24750,9375"
 )
 tg (CPTG
-uid 150,0
+uid 185,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 151,0
+uid 186,0
 va (VaSet
 font "courier,8,0"
 )
-xt "21500,8550,23000,9450"
-st "tag"
+xt "20000,8550,23000,9450"
+st "offset"
 ju 2
 blo "23000,9250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 152,0
+uid 187,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,1800,59500,2700"
-st "tag     : OUT    lc3b_l1tag  ;
-"
+)
+thePort (LogicalPort
+lang 2
+m 1
+decl (Decl
+n "offset"
+t "lc3b_offset"
+o 3
+suid 11,0
+)
+)
+)
+*39 (CptPort
+uid 188,0
+ps "OnEdgeStrategy"
+shape (Triangle
+uid 189,0
+ro 90
+va (VaSet
+vasetType 1
+fg "0,65535,0"
+)
+xt "24000,6625,24750,7375"
+)
+tg (CPTG
+uid 190,0
+ps "CptPortTextPlaceStrategy"
+stg "RightVerticalLayoutStrategy"
+f (Text
+uid 191,0
+va (VaSet
+font "courier,8,0"
+)
+xt "21500,6550,23000,7450"
+st "tag"
+ju 2
+blo "23000,7250"
+tm "CptPortNameMgr"
+)
+)
+dt (MLText
+uid 192,0
+va (VaSet
+font "courier,8,0"
+)
 )
 thePort (LogicalPort
 lang 2
@@ -641,7 +629,7 @@ decl (Decl
 n "tag"
 t "lc3b_l1tag"
 o 1
-suid 8,0
+suid 12,0
 )
 )
 )
@@ -1327,5 +1315,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 160,0
+lastUid 200,0
 )

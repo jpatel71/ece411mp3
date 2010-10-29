@@ -14,22 +14,23 @@ USE ieee.std_logic_1164.all;
 LIBRARY ece411;
 USE ece411.LC3b_types.all;
 
-ENTITY TagArray2K IS
-  PORT(
-    index  : IN  lc3b_index7;
-    reset_l: IN  std_logic;
-    writeData : IN std_logic;
-    tagIN : IN  lc3b_l1tag;
-    tagOUT: OUT lc3b_l1tag
-  );
+ENTITY tagArray1K IS
+   PORT( 
+      index     : IN     lc3b_index7;
+      reset_l   : IN     std_logic;
+      writeData : IN     std_logic;
+      tagIN     : IN     lc3b_l1tag;
+      tagOUT    : OUT    lc3b_l1tag
+   );
+
 -- Declarations
 
-END TagArray2K ;
+END tagArray1K ;
 
 --
-ARCHITECTURE untitled OF TagArray2K IS
-  TYPE TagArray2K IS array (127 downto 0) of LC3B_l1tag;
-  SIGNAL Tag : TagArray2K;
+ARCHITECTURE untitled OF tagArray1K IS
+  TYPE TagArray1K IS array (63 downto 0) of LC3B_l1tag;
+  SIGNAL Tag : TagArray1K;
   
   BEGIN
     --------------------------------------------------------------
@@ -39,7 +40,7 @@ ARCHITECTURE untitled OF TagArray2K IS
 		  VARIABLE TagIndex : integer;
 		  BEGIN
 			  TagIndex := to_integer(unsigned(Index));
-			  TagOut <= Tag(TagIndex) after 20 ns;
+			  TagOut <= Tag(TagIndex) after DELAY_1KB_SINGLE;
 	  
 	  END PROCESS ReadFromTagArray;
 	  
@@ -50,7 +51,7 @@ ARCHITECTURE untitled OF TagArray2K IS
 		  BEGIN
 			  TagIndex := to_integer(unsigned(index));
 		  IF RESET_L = '0' THEN
-		    for i in 127 downto 0 loop
+		    for i in 63 downto 0 loop
 		      Tag(i) <= (OTHERS => 'X');
         end loop;
 		  END IF;

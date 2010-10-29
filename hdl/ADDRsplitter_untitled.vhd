@@ -17,7 +17,7 @@ USE ece411.LC3b_types.all;
 ENTITY ADDRsplitter IS
    PORT( 
       tag     : OUT    lc3b_l1tag;
-      index   : OUT    lc3b_index7;
+      index   : OUT    lc3b_index6;
       offset  : OUT    lc3b_offset;
       Address : IN     lc3b_word
    );
@@ -29,8 +29,8 @@ END ADDRsplitter ;
 --
 ARCHITECTURE untitled OF ADDRsplitter IS
 BEGIN
-  tag <= Address(15 downto 11);
-  index <= Address(10 downto 4);
+  tag <= Address(15 downto 10);
+  index <= Address(9 downto 4);
   offset <= Address(3 downto 0);
 END ARCHITECTURE untitled;
 

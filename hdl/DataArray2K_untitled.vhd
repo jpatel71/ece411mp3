@@ -14,22 +14,23 @@ USE ieee.std_logic_1164.all;
 LIBRARY ece411;
 USE ece411.LC3b_types.all;
 
-ENTITY DataArray2K IS
-  PORT(
-    index  : IN  lc3b_index7;
-    reset_l: IN  std_logic;
-    writeData : IN std_logic;
-    dataIN : IN  lc3b_oword;
-    dataOUT: OUT lc3b_oword
-  );
+ENTITY DataArray1K IS
+   PORT( 
+      index     : IN     lc3b_index6;
+      reset_l   : IN     std_logic;
+      writeData : IN     std_logic;
+      dataIN    : IN     lc3b_oword;
+      dataOUT   : OUT    lc3b_oword
+   );
+
 -- Declarations
 
-END DataArray2K ;
+END DataArray1K ;
 
 --
-ARCHITECTURE untitled OF DataArray2K IS
-  TYPE DataArray2K IS array (127 downto 0) of LC3B_oword;
-  SIGNAL Data : DataArray2K;
+ARCHITECTURE untitled OF DataArray1K IS
+  TYPE DataArray1K IS array (63 downto 0) of LC3B_oword;
+  SIGNAL Data : DataArray1K;
   
   BEGIN
     --------------------------------------------------------------
@@ -39,7 +40,7 @@ ARCHITECTURE untitled OF DataArray2K IS
 		  VARIABLE DataIndex : integer;
 		  BEGIN
 			  DataIndex := to_integer(unsigned(Index));
-			  DataOut <= Data(DataIndex) after 20 ns;
+			  DataOut <= Data(DataIndex) after DELAY_1KB_SINGLE;
 	  
 	  END PROCESS ReadFromDataArray;
 	  
@@ -50,7 +51,7 @@ ARCHITECTURE untitled OF DataArray2K IS
 		  BEGIN
 			  DataIndex := to_integer(unsigned(index));
 		  IF RESET_L = '0' THEN
-		    for i in 127 downto 0 loop
+		    for i in 63 downto 0 loop
 		      Data(i) <= (OTHERS => 'X');
         end loop;
 		  END IF;
