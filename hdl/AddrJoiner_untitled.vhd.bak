@@ -16,9 +16,9 @@ USE ece411.LC3b_types.all;
 
 ENTITY AddrJoiner IS
    PORT( 
-      Index     : IN     LC3b_index;
+      Index     : IN     LC3b_index6;
       tagMuxOut : IN     lc3b_tag;
-      b         : OUT    std_logic
+      b         : OUT    LC3b_word
    );
 
 -- Declarations

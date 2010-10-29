@@ -25,7 +25,7 @@ ENTITY State_Reg1 IS
       RFBout_ID  : IN     LC3b_word;
       IR5_4_EX   : OUT    lc3b_shfop;
       RFAout_EX  : OUT    LC3b_word;
-      RFBOut_EX  : OUT    LC3b_word;
+      rfbout_ex  : OUT    LC3b_word;
       imm5SEXT   : OUT    LC3b_word;
       PCPlus2_EX : OUT    lc3b_word;
       RESET_L    : IN     std_logic;
@@ -42,7 +42,8 @@ ENTITY State_Reg1 IS
       IMM4_ID    : IN     lc3b_imm4;
       INSCC_ID   : IN     lc3b_nzp;
       INSCC_EX   : OUT    lc3b_nzp;
-      DEST_ID    : IN     LC3b_reg
+      DEST_ID    : IN     LC3b_reg;
+      load       : IN     std_logic
    );
 
 -- Declarations
@@ -67,7 +68,7 @@ signal inscc : lc3b_nzp;
 BEGIN
 	
 	-------------------------------------------------------------------
-	PROCESS(CLK, RESET_L)
+	PROCESS(CLK, RESET_L, load)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
@@ -86,6 +87,7 @@ BEGIN
 		
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
+		  IF(load='1') then
 				adj6 <= adj6_ID;
 				adj9 <= adj9_ID;
 				adj11 <= adj11_ID;
@@ -99,6 +101,7 @@ BEGIN
 				inscc <= inscc_ID;
 				--ir5_4 <= ir5_4_ID;
 				--shft
+			end if;
 		END IF;
 	END PROCESS;
   pcplus2_EX <= pcplus2 after DELAY_REGFILE_READ;

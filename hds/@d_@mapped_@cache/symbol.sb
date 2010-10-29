@@ -25,7 +25,7 @@ appVersion "2005.3 (Build 75)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
-suid 23,0
+suid 24,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
@@ -132,11 +132,10 @@ uid 146,0
 )
 *20 (LogPort
 port (LogicalPort
-lang 2
 m 1
 decl (Decl
-n "dataIN"
-t "lc3b_oword"
+n "datain"
+t "lc3b_word"
 o 15
 suid 9,0
 )
@@ -181,17 +180,6 @@ uid 154,0
 )
 *24 (LogPort
 port (LogicalPort
-decl (Decl
-n "PMMRESP_H"
-t "std_logic"
-o 5
-suid 15,0
-)
-)
-uid 173,0
-)
-*25 (LogPort
-port (LogicalPort
 m 1
 decl (Decl
 n "PMWRITE_L"
@@ -202,7 +190,7 @@ suid 17,0
 )
 uid 197,0
 )
-*26 (LogPort
+*25 (LogPort
 port (LogicalPort
 m 1
 decl (Decl
@@ -214,7 +202,7 @@ suid 18,0
 )
 uid 199,0
 )
-*27 (LogPort
+*26 (LogPort
 port (LogicalPort
 decl (Decl
 n "clk"
@@ -225,7 +213,7 @@ suid 20,0
 )
 uid 218,0
 )
-*28 (LogPort
+*27 (LogPort
 port (LogicalPort
 decl (Decl
 n "reset_l"
@@ -235,6 +223,17 @@ suid 22,0
 )
 )
 uid 249,0
+)
+*28 (LogPort
+port (LogicalPort
+decl (Decl
+n "PMRESP_H"
+t "std_logic"
+o 5
+suid 24,0
+)
+)
+uid 1008,0
 )
 ]
 )
@@ -324,57 +323,57 @@ uid 147,0
 )
 *40 (MRCItem
 litem &20
-pos 6
+pos 13
 dimension 20
 uid 149,0
 )
 *41 (MRCItem
 litem &21
-pos 9
+pos 7
 dimension 20
 uid 151,0
 )
 *42 (MRCItem
 litem &22
-pos 8
+pos 6
 dimension 20
 uid 153,0
 )
 *43 (MRCItem
 litem &23
-pos 7
+pos 14
 dimension 20
 uid 155,0
 )
 *44 (MRCItem
 litem &24
-pos 10
-dimension 20
-uid 174,0
-)
-*45 (MRCItem
-litem &25
-pos 11
+pos 8
 dimension 20
 uid 198,0
 )
-*46 (MRCItem
-litem &26
-pos 12
+*45 (MRCItem
+litem &25
+pos 9
 dimension 20
 uid 200,0
 )
-*47 (MRCItem
-litem &27
-pos 13
+*46 (MRCItem
+litem &26
+pos 10
 dimension 20
 uid 219,0
 )
-*48 (MRCItem
-litem &28
-pos 14
+*47 (MRCItem
+litem &27
+pos 11
 dimension 20
 uid 250,0
+)
+*48 (MRCItem
+litem &28
+pos 12
+dimension 20
+uid 1007,0
 )
 ]
 )
@@ -492,19 +491,19 @@ value "/home/engr/tmurray5/ece411mp3/hds/D_Mapped_Cache"
 )
 (vvPair
 variable "date"
-value "10/27/10"
+value "10/29/10"
 )
 (vvPair
 variable "day"
-value "Wed"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Wednesday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "27"
+value "29"
 )
 (vvPair
 variable "entity_name"
@@ -532,7 +531,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx29.ews.illinois.edu"
+value "eelnx2.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -608,7 +607,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "15:38:03"
+value "12:33:32"
 )
 (vvPair
 variable "unit"
@@ -928,7 +927,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "35000,10550,38000,11450"
-st "dataIN"
+st "datain"
 ju 2
 blo "38000,11250"
 tm "CptPortNameMgr"
@@ -939,15 +938,14 @@ uid 115,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,14400,59500,15300"
-st "dataIN    : OUT    lc3b_oword "
+xt "44000,14400,59000,15300"
+st "datain    : OUT    lc3b_word "
 )
 thePort (LogicalPort
-lang 2
 m 1
 decl (Decl
-n "dataIN"
-t "lc3b_oword"
+n "datain"
+t "lc3b_word"
 o 15
 suid 9,0
 )
@@ -1092,50 +1090,6 @@ suid 12,0
 )
 )
 *68 (CptPort
-uid 168,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 169,0
-ro 90
-va (VaSet
-vasetType 1
-fg "0,65535,0"
-)
-xt "14250,21625,15000,22375"
-)
-tg (CPTG
-uid 170,0
-ps "CptPortTextPlaceStrategy"
-stg "VerticalLayoutStrategy"
-f (Text
-uid 171,0
-va (VaSet
-font "courier,8,0"
-)
-xt "16000,21550,20500,22450"
-st "PMMRESP_H"
-blo "16000,22250"
-tm "CptPortNameMgr"
-)
-)
-dt (MLText
-uid 172,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,5400,60000,6300"
-st "PMMRESP_H : IN     std_logic  ;"
-)
-thePort (LogicalPort
-decl (Decl
-n "PMMRESP_H"
-t "std_logic"
-o 5
-suid 15,0
-)
-)
-)
-*69 (CptPort
 uid 187,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1181,7 +1135,7 @@ suid 17,0
 )
 )
 )
-*70 (CptPort
+*69 (CptPort
 uid 192,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1227,7 +1181,7 @@ suid 18,0
 )
 )
 )
-*71 (CptPort
+*70 (CptPort
 uid 213,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1273,7 +1227,7 @@ suid 20,0
 )
 )
 )
-*72 (CptPort
+*71 (CptPort
 uid 244,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1316,6 +1270,50 @@ n "reset_l"
 t "std_logic"
 o 9
 suid 22,0
+)
+)
+)
+*72 (CptPort
+uid 1009,0
+ps "OnEdgeStrategy"
+shape (Triangle
+uid 1010,0
+ro 90
+va (VaSet
+vasetType 1
+fg "0,65535,0"
+)
+xt "14250,20625,15000,21375"
+)
+tg (CPTG
+uid 1011,0
+ps "CptPortTextPlaceStrategy"
+stg "VerticalLayoutStrategy"
+f (Text
+uid 1012,0
+va (VaSet
+font "courier,8,0"
+)
+xt "16000,20550,20000,21450"
+st "PMRESP_H"
+blo "16000,21250"
+tm "CptPortNameMgr"
+)
+)
+dt (MLText
+uid 1013,0
+va (VaSet
+font "courier,8,0"
+)
+xt "44000,5400,60000,6300"
+st "PMRESP_H  : IN     std_logic  ;"
+)
+thePort (LogicalPort
+decl (Decl
+n "PMRESP_H"
+t "std_logic"
+o 5
+suid 24,0
 )
 )
 )
@@ -2002,6 +2000,6 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 994,0
+lastUid 1145,0
 okToSyncOnLoad 1
 )

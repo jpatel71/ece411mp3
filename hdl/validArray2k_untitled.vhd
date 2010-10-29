@@ -33,7 +33,7 @@ ARCHITECTURE untitled OF validArray1k IS
   
   BEGIN
     --------------------------------------------------------------
-	  ReadFromValidArray : PROCESS (Data, index)
+	  ReadFromValidArray : PROCESS (Valid, index)
 	  --------------------------------------------------------------
     
 		  VARIABLE ValidIndex : integer;
@@ -51,12 +51,12 @@ ARCHITECTURE untitled OF validArray1k IS
 			  ValidIndex := to_integer(unsigned(index));
 		  IF RESET_L = '0' THEN
 		    for i in 63 downto 0 loop
-		      Valid(i) <= 'X';
+		      Valid(i) <= '0';
         end loop;
 		  END IF;
 
 		  IF (writeData = '1') THEN
-			  Valid(Index) <= '1';
+			  Valid(ValidIndex) <= '1';
 		  END IF;
 	  
 	  END PROCESS WriteToValidArray;

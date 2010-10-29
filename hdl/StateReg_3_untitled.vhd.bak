@@ -29,7 +29,8 @@ ENTITY StateReg_3 IS
       DEST              : OUT    LC3B_REG;
       D_DATAIN_WB       : OUT    LC3b_word;
       Opcode_WB         : OUT    LC3b_opcode;
-      PCPLus2_WB        : OUT    LC3b_word
+      PCPLus2_WB        : OUT    LC3b_word;
+      load              : OUT    std_logic
    );
 
 -- Declarations
@@ -46,7 +47,7 @@ signal opcode: lc3b_opcode;
 signal pcplus2:  lc3b_word;
 
 BEGIN
-  PROCESS(clk ,reset_L)
+  PROCESS(clk ,reset_L, load)
     begin
     IF (RESET_L = '0') THEN
       addressmuxout <= "0000000000000000";
@@ -56,12 +57,14 @@ BEGIN
       opcode <= "0000";
       pcplus2 <= "0000000000000000";
   		ELSIF (CLK'EVENT AND (CLK = '1')) THEN
-      addressmuxout<=addressmuxout_mem;
-      alushfmuxout<=alushfout_mem;
-      destreg<=destreg_mem;
-      datain<=d_datain;
-      opcode<=opcode_mem;
-      pcplus2<=pcplus2_mem;
+  		  if(load='1') then
+        addressmuxout<=addressmuxout_mem;
+        alushfmuxout<=alushfmuxout_mem;
+        destreg<=destreg_mem;
+        datain<=d_datain;
+        opcode<=opcode_mem;
+        pcplus2<=pcplus2_mem;
+      end if;
 		END IF;
 	end process;
 	addressmuxout_wb <= addressmuxout ;

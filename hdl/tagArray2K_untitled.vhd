@@ -16,7 +16,7 @@ USE ece411.LC3b_types.all;
 
 ENTITY tagArray1K IS
    PORT( 
-      index     : IN     lc3b_index7;
+      index     : IN     lc3b_index6;
       reset_l   : IN     std_logic;
       writeData : IN     std_logic;
       tagIN     : IN     lc3b_l1tag;
@@ -57,7 +57,7 @@ ARCHITECTURE untitled OF tagArray1K IS
 		  END IF;
 
 		  IF (writeData = '1') THEN
-			  Tag(DataIndex) <= TagIN;
+			  Tag(TagIndex) <= TagIN;
 		  END IF;
 	  
 	  END PROCESS WriteToTagArray;

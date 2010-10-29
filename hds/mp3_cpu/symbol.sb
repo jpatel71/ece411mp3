@@ -265,19 +265,19 @@ value "/home/engr/tmurray5/ece411mp3/hds/mp3_cpu"
 )
 (vvPair
 variable "date"
-value "10/26/10"
+value "10/28/10"
 )
 (vvPair
 variable "day"
-value "Tue"
+value "Thu"
 )
 (vvPair
 variable "day_long"
-value "Tuesday"
+value "Thursday"
 )
 (vvPair
 variable "dd"
-value "26"
+value "28"
 )
 (vvPair
 variable "entity_name"
@@ -381,7 +381,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "22:32:15"
+value "21:01:13"
 )
 (vvPair
 variable "unit"
@@ -1159,5 +1159,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 389,0
+lastUid 425,0
 )

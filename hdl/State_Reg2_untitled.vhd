@@ -19,7 +19,6 @@ ENTITY State_Reg2 IS
       clk               : IN     std_logic;
       RESET_L           : IN     std_logic;
       ADDRESSMUXout     : IN     LC3b_word;
-      arithout      : IN     lc3b_word;
       Opcode_EX         : IN     lc3b_opcode;
       ADDRESSMUXOut_MEM : OUT    lc3b_word;
       opcode_MEM        : OUT    lc3b_opcode;
@@ -29,7 +28,9 @@ ENTITY State_Reg2 IS
       PCPlus2_EX        : IN     lc3b_word;
       PCPlus2_MEM       : OUT    lc3b_word;
       INSCC_EX          : IN     lc3b_nzp;
-      INSCC_MEM         : OUT    lc3b_nzp
+      INSCC_MEM         : OUT    lc3b_nzp;
+      ArithOut          : IN     LC3B_WORD;
+      load              : IN     std_logic
    );
 
 -- Declarations
@@ -49,7 +50,7 @@ signal pcplus2 : lc3b_word;
 BEGIN
 	
 	-------------------------------------------------------------------
-	PROCESS(CLK, RESET_L)
+	PROCESS(CLK, RESET_L, load)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
@@ -63,12 +64,14 @@ BEGIN
 		
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE
 		ELSIF (CLK'EVENT AND (CLK = '1')) THEN
+		  IF(load='1') then
 				opcode <= Opcode_EX;
 				ADDRESSMux<= addressmuxout;
 				ALUSHFmux <= arithout;
 				DESTREG <= DESTREG_EX;		
 				inscc <= inscc_EX;
 				pcplus2 <= pcplus2_EX;
+			end if;
 		END IF;
 	END PROCESS;
 	addressmuxout_mem <= addressmux after DELAY_REGFILE_READ;

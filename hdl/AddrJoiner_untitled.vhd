@@ -16,8 +16,8 @@ USE ece411.LC3b_types.all;
 
 ENTITY AddrJoiner IS
    PORT( 
-      Index     : IN     LC3b_index;
-      tagMuxOut : IN     lc3b_tag;
+      Index     : IN     LC3b_index6;
+      tagMuxOut : IN     lc3b_l1tag;
       b         : OUT    LC3b_word
    );
 

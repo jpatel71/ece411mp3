@@ -33,7 +33,8 @@ ENTITY State_Reg IS
       clk          : IN     std_logic;
       imm5_ID      : OUT    LC3b_imm5;
       trapvect8_ID : OUT    lc3b_trapvect8;
-      IDATAAddress : IN     LC3b_word
+      IDATAAddress : IN     LC3b_word;
+      load         : IN     std_logic
    );
 
 -- Declarations
@@ -59,7 +60,7 @@ signal inscc : lc3b_nzp;
 BEGIN
 	
 	-------------------------------------------------------------------
-	VHDL_REGFILE1_WRITE: PROCESS(CLK, RESET_L)
+	VHDL_REGFILE1_WRITE: PROCESS(CLK, RESET_L, load)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
@@ -73,6 +74,7 @@ BEGIN
 		
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
+      if(load='1') then
 				dest <= IDataIN(11 downto 9);
 				srcA <= IDataIn(8 downto 6);
 				srcB <= IDataIn(2 downto 0);
@@ -87,6 +89,7 @@ BEGIN
 				trapvect8 <= IDataIn(7 downto 0);
 				pcplus2 <= idataaddress;
 				inscc <= IDATAIn(11 downto 9);
+			end if;
 		END IF;
 	END PROCESS;
 	dest_ID <= dest AFTER DELAY_REGFILE_READ;
