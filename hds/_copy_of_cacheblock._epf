@@ -1,0 +1,2 @@
+DEFAULT_FILE atom @copy_of_@cache@block/struct.bd
+DEFAULT_ARCHITECTURE atom struct

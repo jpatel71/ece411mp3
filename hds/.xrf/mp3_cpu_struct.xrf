@@ -133,16 +133,16 @@ VIEW symbol.sb
 GRAPHIC 509,0 83 0 
 DESIGN @cache@block
 VIEW symbol.sb
-GRAPHIC 597,0 84 0 
+GRAPHIC 745,0 84 0 
 DESIGN @cache@block
 VIEW symbol.sb
-GRAPHIC 582,0 85 0 
+GRAPHIC 740,0 85 0 
 DESIGN @cache@block
 VIEW symbol.sb
-GRAPHIC 587,0 86 0 
+GRAPHIC 714,0 86 0 
 DESIGN @cache@block
 VIEW symbol.sb
-GRAPHIC 592,0 87 0 
+GRAPHIC 719,0 87 0 
 DESIGN mp3_cpu
 VIEW struct.bd
 GRAPHIC 1571,0 90 0 

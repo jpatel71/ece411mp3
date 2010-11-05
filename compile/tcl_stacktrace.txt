@@ -1,0 +1,19 @@
+Fri Oct 29 12:39:03 CDT 2010
+Trace back: unmatched open brace in list
+    while executing
+"lsearch -exact $vsimPriv(cwd) $pwd"
+    (procedure "Layout::SavePaneData" line 15)
+    invoked from within
+"Layout::SavePaneData quit"
+    (procedure "really_quit" line 103)
+    invoked from within
+"really_quit -f"
+    (procedure "QuitDialog" line 6)
+    invoked from within
+"QuitDialog"
+    (procedure "quit" line 20)
+    invoked from within
+"quit"
+    (command for "WM_DELETE_WINDOW" window manager protocol)
+  2: ::tkerror {unmatched open brace in list}
+  1: ::bgerror {unmatched open brace in list}

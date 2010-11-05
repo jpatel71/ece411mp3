@@ -1,0 +1,9 @@
+DESIGN @load@generator1
+VIEW generated@instance
+NO_GRAPHIC 0
+DESIGN @load@generator1
+VIEW generated@instance
+GRAPHIC 43,0 8 0 
+DESIGN @load@generator1
+VIEW generated@instance
+GRAPHIC 11808,0 28 8 

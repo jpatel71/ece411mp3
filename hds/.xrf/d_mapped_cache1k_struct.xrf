@@ -1,0 +1,224 @@
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 50,0 8 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 170,0 17 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 180,0 18 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 190,0 19 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 195,0 20 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 200,0 21 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 215,0 22 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 210,0 23 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 175,0 24 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 185,0 25 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 205,0 26 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 1,0 29 0 
+DESIGN @d_@mapped_@cache1k
+VIEW symbol.sb
+GRAPHIC 1,0 30 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+NO_GRAPHIC 33
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 41,0 42 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+NO_GRAPHIC 48
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 0,0 51 2 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+NO_GRAPHIC 56
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+NO_GRAPHIC 57
+LIBRARY ece411
+DESIGN @data@array1@k
+VIEW untitled
+GRAPHIC 158,0 59 0 
+DESIGN @data@array1@k
+VIEW untitled
+GRAPHIC 150,0 61 0 
+DESIGN @data@array1@k
+VIEW untitled
+GRAPHIC 155,0 62 0 
+DESIGN @data@array1@k
+VIEW untitled
+GRAPHIC 160,0 63 0 
+DESIGN @data@array1@k
+VIEW untitled
+GRAPHIC 140,0 64 0 
+DESIGN @data@array1@k
+VIEW untitled
+GRAPHIC 145,0 65 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 188,0 68 0 
+DESIGN dirty@array1k
+VIEW untitled
+GRAPHIC 103,0 70 0 
+DESIGN dirty@array1k
+VIEW untitled
+GRAPHIC 108,0 71 0 
+DESIGN dirty@array1k
+VIEW untitled
+GRAPHIC 113,0 72 0 
+DESIGN dirty@array1k
+VIEW untitled
+GRAPHIC 93,0 73 0 
+DESIGN dirty@array1k
+VIEW untitled
+GRAPHIC 98,0 74 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 128,0 77 0 
+DESIGN tag@array1@k
+VIEW untitled
+GRAPHIC 93,0 79 0 
+DESIGN tag@array1@k
+VIEW untitled
+GRAPHIC 98,0 80 0 
+DESIGN tag@array1@k
+VIEW untitled
+GRAPHIC 113,0 81 0 
+DESIGN tag@array1@k
+VIEW untitled
+GRAPHIC 103,0 82 0 
+DESIGN tag@array1@k
+VIEW untitled
+GRAPHIC 108,0 83 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 98,0 86 0 
+DESIGN valid@array1k
+VIEW untitled
+GRAPHIC 93,0 88 0 
+DESIGN valid@array1k
+VIEW untitled
+GRAPHIC 98,0 89 0 
+DESIGN valid@array1k
+VIEW untitled
+GRAPHIC 108,0 90 0 
+DESIGN valid@array1k
+VIEW untitled
+GRAPHIC 103,0 91 0 
+LIBRARY ece411
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+NO_GRAPHIC 94
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 158,0 97 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 188,0 98 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 128,0 99 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 98,0 100 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+NO_GRAPHIC 103
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+NO_GRAPHIC 105
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 158,0 107 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 319,0 109 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 326,0 110 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 333,0 111 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 312,0 112 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 284,0 113 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 188,0 115 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 368,0 117 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 389,0 118 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 451,0 119 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 347,0 120 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 298,0 121 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 128,0 123 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 361,0 125 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 382,0 126 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 403,0 127 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 340,0 128 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 291,0 129 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 98,0 131 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 375,0 133 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 396,0 134 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 410,0 135 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+GRAPHIC 305,0 136 0 
+DESIGN @d_@mapped_@cache1k
+VIEW struct.bd
+NO_GRAPHIC 139

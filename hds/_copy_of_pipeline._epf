@@ -1,0 +1,2 @@
+DEFAULT_FILE atom @copy_of_@pipe@line/struct.bd
+DEFAULT_ARCHITECTURE atom struct

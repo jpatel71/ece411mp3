@@ -250,7 +250,7 @@ value "/home/engr/tmurray5/ece411mp3/hds/D_Mapped_Cache"
 )
 (vvPair
 variable "date"
-value "10/29/10"
+value "11/05/10"
 )
 (vvPair
 variable "day"
@@ -262,7 +262,7 @@ value "Friday"
 )
 (vvPair
 variable "dd"
-value "29"
+value "05"
 )
 (vvPair
 variable "entity_name"
@@ -290,7 +290,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx2.ews.illinois.edu"
+value "eelnx31.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -306,7 +306,7 @@ value "$HDS_PROJECT_DIR/compile"
 )
 (vvPair
 variable "mm"
-value "10"
+value "11"
 )
 (vvPair
 variable "module_name"
@@ -314,11 +314,11 @@ value "D_Mapped_Cache"
 )
 (vvPair
 variable "month"
-value "Oct"
+value "Nov"
 )
 (vvPair
 variable "month_long"
-value "October"
+value "November"
 )
 (vvPair
 variable "p"
@@ -366,7 +366,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "12:33:32"
+value "17:39:35"
 )
 (vvPair
 variable "unit"
@@ -1637,7 +1637,7 @@ lang 2
 decl (Decl
 n "index"
 t "lc3b_index6"
-o 31
+o 32
 suid 16,0
 )
 declText (MLText
@@ -1761,7 +1761,7 @@ lang 2
 decl (Decl
 n "offset"
 t "lc3b_offset"
-o 34
+o 35
 suid 19,0
 )
 declText (MLText
@@ -1780,7 +1780,7 @@ lang 2
 decl (Decl
 n "tag"
 t "lc3b_l1tag"
-o 35
+o 36
 suid 20,0
 )
 declText (MLText
@@ -2775,7 +2775,7 @@ lang 2
 decl (Decl
 n "tagOUT"
 t "lc3b_l1tag"
-o 36
+o 37
 suid 51,0
 )
 declText (MLText
@@ -2794,7 +2794,7 @@ lang 2
 decl (Decl
 n "match"
 t "std_logic"
-o 32
+o 33
 suid 52,0
 )
 declText (MLText
@@ -3365,7 +3365,7 @@ uid 1763,0
 decl (Decl
 n "wcData"
 t "lc3b_oword"
-o 37
+o 38
 suid 60,0
 )
 declText (MLText
@@ -4312,7 +4312,7 @@ lang 2
 decl (Decl
 n "hitgate"
 t "std_logic"
-o 27
+o 28
 suid 68,0
 )
 declText (MLText
@@ -4330,7 +4330,7 @@ uid 2057,0
 decl (Decl
 n "L1_Access"
 t "STD_LOGIC"
-o 20
+o 19
 suid 69,0
 )
 declText (MLText
@@ -4625,7 +4625,7 @@ uid 2120,0
 decl (Decl
 n "in_idleHit"
 t "STD_LOGIC"
-o 28
+o 29
 suid 73,0
 )
 declText (MLText
@@ -4643,7 +4643,7 @@ uid 2133,0
 decl (Decl
 n "in_writeBack"
 t "STD_LOGIC"
-o 30
+o 31
 suid 76,0
 )
 declText (MLText
@@ -4885,7 +4885,7 @@ uid 2212,0
 decl (Decl
 n "miss"
 t "STD_LOGIC"
-o 33
+o 34
 suid 80,0
 )
 declText (MLText
@@ -4903,7 +4903,7 @@ uid 2240,0
 decl (Decl
 n "in_load"
 t "std_logic"
-o 29
+o 30
 suid 83,0
 )
 declText (MLText
@@ -5162,7 +5162,7 @@ uid 2361,0
 decl (Decl
 n "F"
 t "STD_LOGIC"
-o 18
+o 17
 suid 87,0
 )
 declText (MLText
@@ -5180,7 +5180,7 @@ uid 2368,0
 decl (Decl
 n "F1"
 t "STD_LOGIC"
-o 19
+o 18
 suid 88,0
 )
 declText (MLText
@@ -5361,7 +5361,7 @@ uid 2510,0
 decl (Decl
 n "dirtyIN"
 t "STD_LOGIC"
-o 38
+o 27
 suid 93,0
 )
 declText (MLText
@@ -5380,7 +5380,7 @@ lang 2
 decl (Decl
 n "dirty"
 t "std_logic"
-o 38
+o 26
 suid 99,0
 )
 declText (MLText
@@ -5416,7 +5416,7 @@ uid 2710,0
 decl (Decl
 n "datain"
 t "lc3b_word"
-o 36
+o 15
 suid 102,0
 )
 declText (MLText
@@ -5826,7 +5826,7 @@ uid 2852,0
 decl (Decl
 n "cacheMiss"
 t "STD_LOGIC"
-o 33
+o 24
 suid 103,0
 )
 declText (MLText
@@ -6094,6 +6094,7 @@ archFileType "UNKNOWN"
 *200 (Blk
 uid 2936,0
 shape (And
+uid 3042,0
 va (VaSet
 vasetType 1
 fg "39936,56832,65280"
@@ -6420,7 +6421,7 @@ uid 3017,0
 decl (Decl
 n "LoadWrite"
 t "STD_LOGIC"
-o 38
+o 20
 suid 108,0
 )
 declText (MLText
@@ -9168,9 +9169,9 @@ uid 2997,0
 va (VaSet
 font "courier,8,0"
 )
-xt "16750,-10900,20250,-10000"
+xt "17000,-9900,20500,-9000"
 st "in_load"
-blo "16750,-10200"
+blo "17000,-9200"
 tm "WireNameMgr"
 )
 s (Text
@@ -9179,8 +9180,8 @@ va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "16750,-10000,21250,-9100"
-blo "16750,-9300"
+xt "17000,-9000,21500,-8100"
+blo "17000,-8300"
 tm "SignalTypeMgr"
 )
 )
@@ -9241,10 +9242,10 @@ uid 3011,0
 va (VaSet
 vasetType 3
 )
-xt "3000,-11000,8300,-11000"
+xt "750,-11000,8300,-11000"
 pts [
 "8300,-11000"
-"3000,-11000"
+"750,-11000"
 ]
 )
 start &208
@@ -9263,9 +9264,9 @@ uid 3015,0
 va (VaSet
 font "courier,8,0"
 )
-xt "2000,-11900,6500,-11000"
+xt "1000,-11900,5500,-11000"
 st "LoadWrite"
-blo "2000,-11200"
+blo "1000,-11200"
 tm "WireNameMgr"
 )
 )
@@ -9434,12 +9435,12 @@ tm "BdCompilerDirectivesTextMgr"
 associable 1
 )
 windowSize "-3,25,1597,1178"
-viewArea "-11688,-30208,92964,44424"
+viewArea "-31114,-29214,72491,44671"
 cachedDiagramExtent "-49000,-17900,133500,53000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-77000,-51000"
 active 1
-lastUid 3029,0
+lastUid 3125,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -10500,7 +10501,7 @@ tm "BdDeclarativeTextMgr"
 )
 commonDM (CommonDM
 ldm (LogicalDM
-suid 109,0
+suid 111,0
 usingSuid 1
 emptyRow *319 (LEmptyRow
 )
@@ -10682,7 +10683,7 @@ m 4
 decl (Decl
 n "index"
 t "lc3b_index6"
-o 31
+o 32
 suid 16,0
 )
 )
@@ -10695,7 +10696,7 @@ m 4
 decl (Decl
 n "offset"
 t "lc3b_offset"
-o 34
+o 35
 suid 19,0
 )
 )
@@ -10708,7 +10709,7 @@ m 4
 decl (Decl
 n "tag"
 t "lc3b_l1tag"
-o 35
+o 36
 suid 20,0
 )
 )
@@ -10721,7 +10722,7 @@ m 4
 decl (Decl
 n "tagOUT"
 t "lc3b_l1tag"
-o 36
+o 37
 suid 51,0
 )
 )
@@ -10734,7 +10735,7 @@ m 4
 decl (Decl
 n "match"
 t "std_logic"
-o 32
+o 33
 suid 52,0
 )
 )
@@ -10759,7 +10760,7 @@ m 4
 decl (Decl
 n "wcData"
 t "lc3b_oword"
-o 37
+o 38
 suid 60,0
 )
 )
@@ -10797,7 +10798,7 @@ m 4
 decl (Decl
 n "hitgate"
 t "std_logic"
-o 27
+o 28
 suid 68,0
 )
 )
@@ -10809,7 +10810,7 @@ m 4
 decl (Decl
 n "L1_Access"
 t "STD_LOGIC"
-o 20
+o 19
 suid 69,0
 )
 )
@@ -10833,7 +10834,7 @@ m 4
 decl (Decl
 n "in_idleHit"
 t "STD_LOGIC"
-o 28
+o 29
 suid 73,0
 )
 )
@@ -10845,7 +10846,7 @@ m 4
 decl (Decl
 n "in_writeBack"
 t "STD_LOGIC"
-o 30
+o 31
 suid 76,0
 )
 )
@@ -10857,7 +10858,7 @@ m 4
 decl (Decl
 n "miss"
 t "STD_LOGIC"
-o 33
+o 34
 suid 80,0
 )
 )
@@ -10869,7 +10870,7 @@ m 4
 decl (Decl
 n "in_load"
 t "std_logic"
-o 29
+o 30
 suid 83,0
 )
 )
@@ -10893,7 +10894,7 @@ m 4
 decl (Decl
 n "F"
 t "STD_LOGIC"
-o 18
+o 17
 suid 87,0
 )
 )
@@ -10905,7 +10906,7 @@ m 4
 decl (Decl
 n "F1"
 t "STD_LOGIC"
-o 19
+o 18
 suid 88,0
 )
 )
@@ -10917,7 +10918,7 @@ m 4
 decl (Decl
 n "dirtyIN"
 t "STD_LOGIC"
-o 38
+o 27
 suid 93,0
 )
 )
@@ -10930,7 +10931,7 @@ m 4
 decl (Decl
 n "dirty"
 t "std_logic"
-o 38
+o 26
 suid 99,0
 )
 )
@@ -10953,7 +10954,7 @@ m 1
 decl (Decl
 n "datain"
 t "lc3b_word"
-o 36
+o 15
 suid 102,0
 )
 )
@@ -10965,7 +10966,7 @@ m 4
 decl (Decl
 n "cacheMiss"
 t "STD_LOGIC"
-o 33
+o 24
 suid 103,0
 )
 )
@@ -10989,7 +10990,7 @@ m 4
 decl (Decl
 n "LoadWrite"
 t "STD_LOGIC"
-o 38
+o 20
 suid 108,0
 )
 )
@@ -11119,151 +11120,151 @@ uid 517,0
 )
 *387 (MRCItem
 litem &344
-pos 12
+pos 15
 dimension 20
 uid 584,0
 )
 *388 (MRCItem
 litem &345
-pos 13
+pos 16
 dimension 20
 uid 682,0
 )
 *389 (MRCItem
 litem &346
-pos 14
+pos 17
 dimension 20
 uid 684,0
 )
 *390 (MRCItem
 litem &347
-pos 15
+pos 18
 dimension 20
 uid 1557,0
 )
 *391 (MRCItem
 litem &348
-pos 16
+pos 19
 dimension 20
 uid 1559,0
 )
 *392 (MRCItem
 litem &349
-pos 17
+pos 20
 dimension 20
 uid 1561,0
 )
 *393 (MRCItem
 litem &350
-pos 18
+pos 21
 dimension 20
 uid 1771,0
 )
 *394 (MRCItem
 litem &351
-pos 19
+pos 22
 dimension 20
 uid 1782,0
 )
 *395 (MRCItem
 litem &352
-pos 20
+pos 23
 dimension 20
 uid 1942,0
 )
 *396 (MRCItem
 litem &353
-pos 21
+pos 24
 dimension 20
 uid 2062,0
 )
 *397 (MRCItem
 litem &354
-pos 22
+pos 25
 dimension 20
 uid 2064,0
 )
 *398 (MRCItem
 litem &355
-pos 23
+pos 26
 dimension 20
 uid 2136,0
 )
 *399 (MRCItem
 litem &356
-pos 24
+pos 27
 dimension 20
 uid 2138,0
 )
 *400 (MRCItem
 litem &357
-pos 25
+pos 28
 dimension 20
 uid 2140,0
 )
 *401 (MRCItem
 litem &358
-pos 26
+pos 29
 dimension 20
 uid 2226,0
 )
 *402 (MRCItem
 litem &359
-pos 27
+pos 30
 dimension 20
 uid 2243,0
 )
 *403 (MRCItem
 litem &360
-pos 28
+pos 31
 dimension 20
 uid 2394,0
 )
 *404 (MRCItem
 litem &361
-pos 29
+pos 32
 dimension 20
 uid 2396,0
 )
 *405 (MRCItem
 litem &362
-pos 30
+pos 33
 dimension 20
 uid 2398,0
 )
 *406 (MRCItem
 litem &363
-pos 31
+pos 34
 dimension 20
 uid 2513,0
 )
 *407 (MRCItem
 litem &364
-pos 32
+pos 35
 dimension 20
 uid 2685,0
 )
 *408 (MRCItem
 litem &365
-pos 33
+pos 12
 dimension 20
 uid 2698,0
 )
 *409 (MRCItem
 litem &366
-pos 34
+pos 13
 dimension 20
 uid 2723,0
 )
 *410 (MRCItem
 litem &367
-pos 35
+pos 36
 dimension 20
 uid 2855,0
 )
 *411 (MRCItem
 litem &368
-pos 36
+pos 14
 dimension 20
 uid 2861,0
 )

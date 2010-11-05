@@ -466,6 +466,71 @@ M2 ieee numeric_std
 M1 ece411 lc3b_types
 o-work /home/engr/tmurray5/ece411/mp3/compile -nologo -93
 tExplicit 1
+Earbiter
+w1288994160
+DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+d/home/engr/tmurray5/ece411mp3/compile
+F/home/engr/tmurray5/ece411mp3/hdl/arbiter_struct.vhd
+l0
+L16
+Vli1c7kRfk:^ZIEM0YfR^d0
+OE;C;6.1c;31
+32
+o-work /home/engr/tmurray5/ece411mp3/compile -nologo
+tExplicit 1
+Astruct
+DE ece411 wayselecter 8<@7d?FN5G;7VWWmS37>U3
+DE ece411 arbitercontrol zm^Q]D@OS[T=>j2XcBjPT0
+DE mp3lib nand2 7U:KocdU6ii`hYPK[cHI91
+DE mp3lib mux2_16 SfHdKK[GgH^288OTl;l@m3
+DE mp3lib mux2_1 Z=h;eAQ[Oll0Bhh?C81aE3
+DE ece411 demux2_128 E88AmBCee;UY@d]DYjl9P2
+DE ece411 demux2_1 K8TzaDFQzAJi]YNeYiaaj1
+DE work arbiter li1c7kRfk:^ZIEM0YfR^d0
+DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+l144
+L63
+VPOYBcFINb7^M<c]5Nj@kC2
+OE;C;6.1c;31
+32
+M3 ieee numeric_std
+M2 ieee std_logic_1164
+M1 ece411 lc3b_types
+o-work /home/engr/tmurray5/ece411mp3/compile -nologo
+tExplicit 1
+Earbitercontrol
+w1288994160
+DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+d/home/engr/tmurray5/ece411mp3/compile
+F/home/engr/tmurray5/ece411mp3/hdl/arbitercontrol_fsm.vhd
+l0
+L16
+Vzm^Q]D@OS[T=>j2XcBjPT0
+OE;C;6.1c;31
+32
+o-work /home/engr/tmurray5/ece411mp3/compile -nologo
+tExplicit 1
+Afsm
+DE work arbitercontrol zm^Q]D@OS[T=>j2XcBjPT0
+DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+l62
+L46
+VL4zWP>>e<<DEk?gQV17^D1
+OE;C;6.1c;31
+32
+M3 ieee numeric_std
+M2 ieee std_logic_1164
+M1 ece411 lc3b_types
+o-work /home/engr/tmurray5/ece411mp3/compile -nologo
+tExplicit 1
 Ebr_add
 w1288125705
 DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
@@ -840,7 +905,7 @@ M1 ece411 lc3b_types
 o-work /home/engr/tmurray5/ece411/mp3/compile -nologo
 tExplicit 1
 Ecacheblock
-w1288373626
+w1288996783
 DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
@@ -856,13 +921,14 @@ tExplicit 1
 Astruct
 DE ece411 d_mapped_cache YW<Lca`UU531z7S2a_<Pc0
 DE mp3lib dram128 flIhj6`P[HS=n:]R:Rfd_0
+DE ece411 arbiter li1c7kRfk:^ZIEM0YfR^d0
 DE work cacheblock UMGjAHKid>>3OGbF;Yo]g3
 DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-l116
+l147
 L56
-V63bOiVi8oa=c?R_b4_z2e3
+Vd84Hhm;@e[bMj7UT:P;VH1
 OE;C;6.1c;31
 32
 M3 ieee numeric_std
@@ -1277,7 +1343,7 @@ M1 ece411 lc3b_types
 o-work /home/engr/tmurray5/ece411mp3/compile -nologo -93
 tExplicit 1
 Ecopy_of_cacheblock
-w1288905958
+w1288996783
 DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
@@ -1370,7 +1436,7 @@ M1 ece411 lc3b_types
 o-work /home/engr/tmurray5/ece411mp3/compile -nologo
 tExplicit 1
 Ed_mapped_cache
-w1288373625
+w1288996783
 DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
@@ -1643,6 +1709,64 @@ OE;C;6.1c;31
 31
 M3 ieee std_logic_1164
 M2 ieee numeric_std
+M1 ece411 lc3b_types
+o-work /home/engr/tmurray5/ece411mp3/compile -nologo -93
+tExplicit 1
+Edemux2_1
+w1288992085
+DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+d/home/engr/tmurray5/ece411mp3/compile
+F/home/engr/tmurray5/ece411mp3/hdl/DEMUX2_1_untitled.vhd
+l0
+L17
+VK8TzaDFQzAJi]YNeYiaaj1
+OE;C;6.1c;31
+31
+o-work /home/engr/tmurray5/ece411mp3/compile -nologo -93
+tExplicit 1
+Auntitled
+DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DE work demux2_1 K8TzaDFQzAJi]YNeYiaaj1
+l30
+L29
+V__3FH@OlQJPbPI@de@m6G3
+OE;C;6.1c;31
+31
+M3 ieee numeric_std
+M2 ieee std_logic_1164
+M1 ece411 lc3b_types
+o-work /home/engr/tmurray5/ece411mp3/compile -nologo -93
+tExplicit 1
+Edemux2_128
+w1288989323
+DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+d/home/engr/tmurray5/ece411mp3/compile
+F/home/engr/tmurray5/ece411mp3/hdl/DEMUX2_128_untitled.vhd
+l0
+L17
+VE88AmBCee;UY@d]DYjl9P2
+OE;C;6.1c;31
+31
+o-work /home/engr/tmurray5/ece411mp3/compile -nologo -93
+tExplicit 1
+Auntitled
+DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DE work demux2_128 E88AmBCee;UY@d]DYjl9P2
+l31
+L30
+V_M18=i=K8Q^W?LK5D4[1e1
+OE;C;6.1c;31
+31
+M3 ieee numeric_std
+M2 ieee std_logic_1164
 M1 ece411 lc3b_types
 o-work /home/engr/tmurray5/ece411mp3/compile -nologo -93
 tExplicit 1
@@ -1938,7 +2062,7 @@ o-work /home/engr/tmurray5/ece411mp3/compile -nologo -93
 tExplicit 1
 Plc3b_types
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-w1288372842
+w1288992954
 d/home/engr/tmurray5/ece411mp3/compile
 F/home/engr/tmurray5/ece411mp3/hdl/ece411package.vhd
 l0
@@ -2233,7 +2357,7 @@ M1 ece411 lc3b_types
 o-work /home/engr/tmurray5/ece411/mp3/compile -nologo
 tExplicit 1
 Emp3_cpu
-w1288905960
+w1288996784
 DP ece411 lc3b_types 51@=XiLKMz=i;B6E3gAHD0
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
