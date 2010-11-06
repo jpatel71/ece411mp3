@@ -579,19 +579,19 @@ value "/home/engr/tmurray5/ece411mp3/hds/Arbiter"
 )
 (vvPair
 variable "date"
-value "11/05/10"
+value "11/06/10"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Sat"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Saturday"
 )
 (vvPair
 variable "dd"
-value "05"
+value "06"
 )
 (vvPair
 variable "entity_name"
@@ -619,7 +619,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx31.ews.illinois.edu"
+value "eelnx36.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -695,7 +695,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "16:08:41"
+value "16:40:58"
 )
 (vvPair
 variable "unit"
@@ -2309,5 +2309,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 810,0
+lastUid 822,0
 )

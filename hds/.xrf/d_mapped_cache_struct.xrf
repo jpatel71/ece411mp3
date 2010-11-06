@@ -262,7 +262,7 @@ VIEW struct.bd
 GRAPHIC 2113,0 144 0 
 DESIGN @d_@mapped_@cache
 VIEW struct.bd
-GRAPHIC 2231,0 145 0 
+GRAPHIC 2994,0 145 0 
 DESIGN @d_@mapped_@cache
 VIEW struct.bd
 GRAPHIC 2124,0 146 0 
@@ -585,7 +585,7 @@ VIEW struct.bd
 GRAPHIC 135,0 331 0 
 DESIGN @d_@mapped_@cache
 VIEW struct.bd
-GRAPHIC 2231,0 332 0 
+GRAPHIC 3021,0 332 0 
 DESIGN @d_@mapped_@cache
 VIEW struct.bd
 GRAPHIC 1774,0 333 0 
