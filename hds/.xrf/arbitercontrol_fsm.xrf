@@ -6,112 +6,108 @@ VIEW interface
 GRAPHIC 50,0 8 0 
 DESIGN arbiter@control
 VIEW interface
-GRAPHIC 379,0 17 0 
+GRAPHIC 445,0 17 0 
 DESIGN arbiter@control
 VIEW interface
-GRAPHIC 384,0 18 0 
+GRAPHIC 450,0 18 0 
 DESIGN arbiter@control
 VIEW interface
-GRAPHIC 389,0 19 0 
+GRAPHIC 460,0 19 0 
 DESIGN arbiter@control
 VIEW interface
-GRAPHIC 374,0 20 0 
+GRAPHIC 470,0 20 0 
 DESIGN arbiter@control
 VIEW interface
-GRAPHIC 394,0 21 0 
+GRAPHIC 475,0 21 0 
 DESIGN arbiter@control
 VIEW interface
-GRAPHIC 399,0 22 0 
+GRAPHIC 440,0 22 0 
 DESIGN arbiter@control
 VIEW interface
-GRAPHIC 1,0 25 0 
+GRAPHIC 480,0 23 0 
 DESIGN arbiter@control
 VIEW interface
-GRAPHIC 1,0 26 0 
+GRAPHIC 455,0 24 0 
+DESIGN arbiter@control
+VIEW interface
+GRAPHIC 465,0 25 0 
+DESIGN arbiter@control
+VIEW interface
+GRAPHIC 485,0 26 0 
+DESIGN arbiter@control
+VIEW interface
+GRAPHIC 1,0 29 0 
+DESIGN arbiter@control
+VIEW interface
+GRAPHIC 1,0 30 0 
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 27,0 38 0
+GRAPHIC 27,0 42 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 44
+NO_GRAPHIC 48
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 2,0 64 0
+GRAPHIC 2,0 68 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 65
+NO_GRAPHIC 69
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 2,0 67 0
+GRAPHIC 2,0 71 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 68
+NO_GRAPHIC 72
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 56,0 69 0
+GRAPHIC 56,0 73 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 70
+NO_GRAPHIC 74
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 2,0 72 0
+GRAPHIC 2,0 76 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 73
+NO_GRAPHIC 77
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 2,0 75 0
+GRAPHIC 2,0 79 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 76
+NO_GRAPHIC 80
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 2,0 83 0
+GRAPHIC 2,0 87 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 39,0 84 0
+GRAPHIC 39,0 88 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 243,0 85 0
+GRAPHIC 243,0 89 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 215,0 86 0
+GRAPHIC 215,0 90 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 263,0 87 0
-LIBRARY ece411
-DESIGN arbiter@control
-VIEW fsm.sm
-GRAPHIC 198,0 88 0
-LIBRARY ece411
-DESIGN arbiter@control
-VIEW fsm.sm
-NO_GRAPHIC 89
-LIBRARY ece411
-DESIGN arbiter@control
-VIEW fsm.sm
-GRAPHIC 39,0 90 0
-LIBRARY ece411
-DESIGN arbiter@control
-VIEW fsm.sm
-NO_GRAPHIC 91
+GRAPHIC 263,0 91 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
@@ -119,7 +115,7 @@ GRAPHIC 198,0 92 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 273,0 93 0
+NO_GRAPHIC 93
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
@@ -135,19 +131,19 @@ GRAPHIC 198,0 96 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 97
+GRAPHIC 273,0 97 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 215,0 98 0
+GRAPHIC 39,0 98 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 253,0 99 0
+NO_GRAPHIC 99
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 39,0 100 0
+GRAPHIC 198,0 100 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
@@ -159,68 +155,84 @@ GRAPHIC 215,0 102 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 103
+GRAPHIC 253,0 103 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 89,0 104 0
+GRAPHIC 39,0 104 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 106
+NO_GRAPHIC 105
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 2,0 107 0
+GRAPHIC 215,0 106 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 108
+NO_GRAPHIC 107
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 2,0 110 0
+GRAPHIC 89,0 108 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 111
+NO_GRAPHIC 110
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 26,0 116 0
+GRAPHIC 2,0 111 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 117
+NO_GRAPHIC 112
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 2,0 119 0
+GRAPHIC 2,0 114 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 198,0 120 0
+NO_GRAPHIC 115
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 213,0 121 0
+GRAPHIC 26,0 122 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 215,0 122 0
+NO_GRAPHIC 125
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 230,0 123 0
+GRAPHIC 2,0 127 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 124
+GRAPHIC 198,0 128 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-GRAPHIC 2,0 126 0
+GRAPHIC 213,0 129 0
 LIBRARY ece411
 DESIGN arbiter@control
 VIEW fsm.sm
-NO_GRAPHIC 128
+GRAPHIC 215,0 132 0
+LIBRARY ece411
+DESIGN arbiter@control
+VIEW fsm.sm
+GRAPHIC 230,0 133 0
+LIBRARY ece411
+DESIGN arbiter@control
+VIEW fsm.sm
+NO_GRAPHIC 136
+LIBRARY ece411
+DESIGN arbiter@control
+VIEW fsm.sm
+GRAPHIC 2,0 138 0
+LIBRARY ece411
+DESIGN arbiter@control
+VIEW fsm.sm
+NO_GRAPHIC 140
