@@ -34,14 +34,14 @@ END ControlSplit_EX ;
 --
 ARCHITECTURE untitled OF ControlSplit_EX IS
 BEGIN
-   --   13          12            11-10              9            8      7-5    4        3                2        1-0      
-   --  1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
+   --   14        13          12            11-10              9            8      7-5    4        3                2        1-0      
+   --  LoadNZP-1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
   ADDRESSMUX1Sel <= ControlWord_EX(12);
   ADDRESSMUX2Sel <= ControlWord_EX(11 downto 10);
   ADDRESSMUXSel <= ControlWord_EX(9);
   SR2MuxSel <= ControlWord_EX(8);
   ALUop <= ControlWord_EX(7 downto 5);
   ALUSHFSel <= ControlWord_EX(4);
-  storemux <= ControlWord_EX(15);
+  storemux <= ControlWord_EX(16);
 END ARCHITECTURE untitled;
 

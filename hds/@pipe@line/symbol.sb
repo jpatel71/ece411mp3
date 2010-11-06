@@ -420,23 +420,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/engr/tmurray5/ece411mp3/hdl"
+value "/home/engr/bjohns38/ece411/ece411mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/engr/tmurray5/ece411mp3/hds/@pipe@line/symbol.sb.info"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@pipe@line/symbol.sb.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/engr/tmurray5/ece411mp3/hds/@pipe@line/symbol.sb.user"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@pipe@line/symbol.sb.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -452,27 +452,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/engr/tmurray5/ece411mp3/hds/@pipe@line"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@pipe@line"
 )
 (vvPair
 variable "d_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/PipeLine"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/PipeLine"
 )
 (vvPair
 variable "date"
-value "10/29/10"
+value "11/06/10"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Sat"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Saturday"
 )
 (vvPair
 variable "dd"
-value "29"
+value "06"
 )
 (vvPair
 variable "entity_name"
@@ -500,7 +500,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx2.ews.illinois.edu"
+value "eelnx37.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -516,7 +516,7 @@ value "$HDS_PROJECT_DIR/compile"
 )
 (vvPair
 variable "mm"
-value "10"
+value "11"
 )
 (vvPair
 variable "module_name"
@@ -524,19 +524,19 @@ value "PipeLine"
 )
 (vvPair
 variable "month"
-value "Oct"
+value "Nov"
 )
 (vvPair
 variable "month_long"
-value "October"
+value "November"
 )
 (vvPair
 variable "p"
-value "/home/engr/tmurray5/ece411mp3/hds/@pipe@line/symbol.sb"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@pipe@line/symbol.sb"
 )
 (vvPair
 variable "p_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/PipeLine/symbol.sb"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/PipeLine/symbol.sb"
 )
 (vvPair
 variable "project_name"
@@ -556,7 +556,7 @@ value "<TBD>"
 )
 (vvPair
 variable "task_ModelSimPath"
-value "$HDS_HOME/../Modeltech/linux"
+value "/apps/Linux/mentor/fpgadv72/Modeltech/bin"
 )
 (vvPair
 variable "task_NC-SimPath"
@@ -576,7 +576,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "12:00:03"
+value "16:54:05"
 )
 (vvPair
 variable "unit"
@@ -584,7 +584,7 @@ value "PipeLine"
 )
 (vvPair
 variable "user"
-value "tmurray5"
+value "bjohns38"
 )
 (vvPair
 variable "version"
@@ -1832,5 +1832,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 3142,0
+lastUid 3250,0
 )

@@ -60,7 +60,7 @@ signal inscc : lc3b_nzp;
 BEGIN
 	
 	-------------------------------------------------------------------
-	VHDL_REGFILE1_WRITE: PROCESS(CLK, RESET_L)
+	VHDL_REGFILE1_WRITE: PROCESS(CLK, RESET_L, load)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS

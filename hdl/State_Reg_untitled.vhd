@@ -34,7 +34,8 @@ ENTITY State_Reg IS
       imm5_ID      : OUT    LC3b_imm5;
       trapvect8_ID : OUT    lc3b_trapvect8;
       IDATAAddress : IN     LC3b_word;
-      load         : IN     std_logic
+      load         : IN     std_logic;
+      IR_Bit4    :  OUT  std_logic
    );
 
 -- Declarations
@@ -49,6 +50,7 @@ SIGNAL srcB : lc3b_reg;
 SIGNAL opcode : lc3b_opcode;
 SIGNAL bit11 : std_logic;
 SIGNAL bit5 : std_logic;
+SIGNAL bit4 : std_logic;
 SIGNAL imm4 : lc3b_imm4;
 SIGNAL imm5 : lc3b_imm5;
 SIGNAL index6 : lc3b_index6;
@@ -81,6 +83,7 @@ BEGIN
 				opcode <= IDataIn(15 downto 12);
 				bit11 <= IDataIn(11);
 				bit5 <= IDataIn(5);
+				bit4 <= IDataIn(4);
 				imm4 <= IDataIn(3 downto 0);
 				imm5 <= IDataIn(4 downto 0);
 				index6 <= IDataIn(5 downto 0);
@@ -105,6 +108,7 @@ BEGIN
 	trapvect8_ID <= trapvect8 after DELAY_REGFILE_READ;
 	inscc_ID <= inscc;
 	IR_BIT5 <= bit5 after delay_reg;
+	IR_BIT4 <= bit4 after delay_reg;
 END UNTITLED;
 
 
