@@ -21,8 +21,8 @@ ENTITY State_Reg2 IS
       ADDRESSMUXout     : IN     LC3b_word;
       Opcode_EX         : IN     lc3b_opcode;
       ADDRESSMUXOut_MEM : OUT    lc3b_word;
-      opcode_MEM        : OUT    lc3b_opcode;
-      destReg_EX        : IN     lc3b_reg;
+      Opcode_MEM        : OUT    lc3b_opcode;
+      DESTREG_EX        : IN     lc3b_reg;
       destreg_MEM       : OUT    LC3B_REG;
       ALUSHFMuxOut_MEM  : OUT    lc3b_word;
       PCPlus2_EX        : IN     lc3b_word;
@@ -30,7 +30,9 @@ ENTITY State_Reg2 IS
       INSCC_EX          : IN     lc3b_nzp;
       INSCC_MEM         : OUT    lc3b_nzp;
       ArithOut          : IN     LC3B_WORD;
-      load              : IN     std_logic
+      load              : IN     std_logic;
+      SRCA_EX           : IN     std_logic;
+      SRCB_EX           : IN     std_logic
    );
 
 -- Declarations

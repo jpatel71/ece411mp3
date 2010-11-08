@@ -26,7 +26,7 @@ ENTITY State_Reg IS
       IR_Bit11     : OUT    std_logic;
       IR_2_0_ID    : OUT    STD_LOGIC_VECTOR (2 DOWNTO 0);
       IR8_6_ID     : OUT    LC3B_REG;
-      opcode_ID    : OUT    LC3B_Opcode;
+      Opcode_ID    : OUT    LC3B_Opcode;
       DEST_ID      : OUT    LC3b_reg;
       IMM4_ID      : OUT    lc3b_imm4;
       INSCC_ID     : OUT    lc3b_nzp;
@@ -35,7 +35,9 @@ ENTITY State_Reg IS
       trapvect8_ID : OUT    lc3b_trapvect8;
       IDATAAddress : IN     LC3b_word;
       load         : IN     std_logic;
-      IR_Bit4    :  OUT  std_logic
+      AD_ID        : OUT    lc3b_SHFTOP;
+      IR_Bit4      : OUT    std_logic;
+      Hazard       : IN     std_logic
    );
 
 -- Declarations
@@ -59,6 +61,7 @@ SIGNAL offset9 : lc3b_offset9;
 SIGNAL trapvect8 : lc3b_trapvect8;
 SIGNAL PCPlus2 : lc3b_word;
 signal inscc : lc3b_nzp;
+signal ad : lc3b_shftop;
 BEGIN
 	
 	-------------------------------------------------------------------
@@ -72,11 +75,12 @@ BEGIN
 			srcB <= "000";
 			opcode <= "0000";
 			inscc <= "000";
+			ad <= "00";
 		END IF;
 		
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
-      if(load='1') then
+      if(load='1' AND Hazard='0') then
 				dest <= IDataIN(11 downto 9);
 				srcA <= IDataIn(8 downto 6);
 				srcB <= IDataIn(2 downto 0);
@@ -92,6 +96,7 @@ BEGIN
 				trapvect8 <= IDataIn(7 downto 0);
 				pcplus2 <= idataaddress;
 				inscc <= IDATAIn(11 downto 9);
+				ad <= IDATAIn(5 downto 4);
 			end if;
 		END IF;
 	END PROCESS;
@@ -109,6 +114,7 @@ BEGIN
 	inscc_ID <= inscc;
 	IR_BIT5 <= bit5 after delay_reg;
 	IR_BIT4 <= bit4 after delay_reg;
+	ad_ID <= ad;
 END UNTITLED;
 
 

@@ -17,9 +17,11 @@ USE ece411.LC3b_types.all;
 ENTITY ControlSplit_MEM IS
    PORT( 
       ControlWord_MEM : IN     LC3b_ControlWord;
-      clk        : IN     std_logic;
-      MEMMUX_MEMSel  :  OUT    std_logic;
-      LoadNZP : OUT  std_logic
+      clk             : IN     std_logic;
+      MEMMUX_MEMSel   : OUT    std_logic;
+      LoadNZP         : OUT    std_logic;
+      DestValid_MEM    :  OUT  std_logic;
+      D_MREAD_L       : OUT    std_logic
    );
 
 -- Declarations
@@ -33,5 +35,7 @@ BEGIN
   
   MEMMUX_MEMSel <= ControlWord_MEM(3);
   LoadNZP <= ControlWord_MEM(13);
+  D_MREAD_L <= ControlWord_MEM(18);
+  DestValid_MEM <= ControlWord_MEM(19);
 END ARCHITECTURE untitled;
 

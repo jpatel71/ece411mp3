@@ -17,7 +17,7 @@ USE ece411.LC3b_types.all;
 ENTITY WriteLogic IS
    PORT( 
       D_ADDRESSOut : IN     LC3b_word;
-      opcode_MEM   : IN     lc3b_opcode;
+      Opcode_MEM   : IN     lc3b_opcode;
       clk          : IN     std_logic;
       D_MWRITEH_L  : OUT    std_logic;
       D_MWRITEL_L  : OUT    std_logic
@@ -35,6 +35,15 @@ BEGIN
     if(opcode_MEM = op_str) then
       D_MWRITEH_L <= '0' after 1ns;
       D_MWRITEL_L <= '0' after 1ns;
+    end if;
+    if(opcode_MEM = op_stb) then
+      if(D_ADDRESSOut(0)='1') then
+        D_MWRITEH_L <= '0' after 1ns;
+        D_MWRITEL_L <= '1' after 1ns;
+      else   
+        D_MWRITEH_L <= '1' after 1ns;
+        D_MWRITEL_L <= '0' after 1ns; 
+      end if;    
     else
       D_MWRITEH_L <= '1' after 1ns;
       D_MWRITEL_L <= '1' after 1ns;

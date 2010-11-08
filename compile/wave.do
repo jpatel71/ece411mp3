@@ -16,6 +16,22 @@ add wave -noupdate -format Literal /mp3_cpu/idataaddress
 add wave -noupdate -format Literal /mp3_cpu/idatain
 add wave -noupdate -divider RAM
 add wave -noupdate -format Literal -expand /mp3_cpu/thepipeline/theregfile/ram
+add wave -noupdate -divider Pipe
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_id
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_ex
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_mem
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_wb
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/controlword_ex
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/theid_reg/adj8out_ex
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/ahazarddet/destreg_ex
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/ahazarddet/ir8_6_id
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/ahazarddet/ir_2_0_id
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/hazard
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/destvalid_ex
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/destvalid_mem
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/destvalid_wb
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/theif_reg/idatain
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/idataaddress
 add wave -noupdate -divider {I Cache}
 add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/i_l1cache/d_mapped_controller/current_state
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/i_l1cache/d_mapped_controller/pmresp_h
@@ -63,7 +79,7 @@ add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/pm_mwrite_l
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/i_l1cache/loadwrite
 add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/i_l1cache/cachedatain
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {49538 ns} 0}
+WaveRestoreCursors {{Cursor 1} {2367 ns} 0}
 configure wave -namecolwidth 423
 configure wave -valuecolwidth 40
 configure wave -justifyvalue left
@@ -77,4 +93,4 @@ configure wave -gridperiod 1
 configure wave -griddelta 40
 configure wave -timeline 0
 update
-WaveRestoreZoom {142 ns} {1075 ns}
+WaveRestoreZoom {2337 ns} {2366 ns}

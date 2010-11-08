@@ -18,6 +18,7 @@ ENTITY ControlSplit_ID IS
    PORT( 
       ControlWord_ID : IN     LC3B_ControlWord;
       clk            : IN     std_logic;
+      SRCAValid      : OUT    std_logic;
       SRCMuxSel      : OUT    STD_LOGIC
    );
 
@@ -29,5 +30,6 @@ END ControlSplit_ID ;
 ARCHITECTURE untitled OF ControlSplit_ID IS
 BEGIN
   SRCMuxSel<=ControlWord_ID(15);
+  SRCAValid <= ControlWord_ID(20);
 END ARCHITECTURE untitled;
 

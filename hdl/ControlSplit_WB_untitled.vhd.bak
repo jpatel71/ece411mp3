@@ -29,9 +29,10 @@ END ControlSplit_WB ;
 --
 ARCHITECTURE untitled OF ControlSplit_WB IS
 BEGIN
+  --   13          12            11-10              9            8      7-5    4        3                2        1-0      
  --  1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
   
   WBMUXSel <= ControlWord_WB(1 downto 0);
-  regwrite_wb <= ControlWord_WB(11);
+  regwrite_wb <= ControlWord_WB(13);
 END ARCHITECTURE untitled;
 

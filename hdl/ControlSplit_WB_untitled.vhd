@@ -19,6 +19,7 @@ ENTITY ControlSplit_WB IS
       ControlWord_WB : IN     LC3b_ControlWord;
       clk        : IN     std_logic;
       WBMUXSel  :  OUT    std_logic_vector(1 downto 0);
+      DestValid_WB  :  OUT  std_logic;
       regwrite_wb : out std_logic
    );
 
@@ -34,5 +35,6 @@ BEGIN
   
   WBMUXSel <= ControlWord_WB(1 downto 0);
   regwrite_wb <= ControlWord_WB(13);
+  DestValid_WB <= ControlWord_WB(19);
 END ARCHITECTURE untitled;
 

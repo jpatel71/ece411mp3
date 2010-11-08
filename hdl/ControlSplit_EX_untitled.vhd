@@ -24,7 +24,10 @@ ENTITY ControlSplit_EX IS
       ALUop          : OUT    lc3b_aluop;
       ALUSHFSel      : OUT    std_logic;
       clk            : IN     std_logic;
-      StoreMux      :   out std_logic
+      ByteSel        : OUT    std_logic;
+      StoreMux       : OUT    std_logic;
+      DestValid_EX   : OUT    std_logic;
+      EXaJMP         : OUT    std_logic
    );
 
 -- Declarations
@@ -43,5 +46,8 @@ BEGIN
   ALUop <= ControlWord_EX(7 downto 5);
   ALUSHFSel <= ControlWord_EX(4);
   storemux <= ControlWord_EX(16);
+  byteSel <= ControlWord_EX(17);
+  DestValid_EX <= ControlWord_EX(19);
+  EXaJMP <= ControlWord_EX(21);
 END ARCHITECTURE untitled;
 

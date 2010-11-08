@@ -16,21 +16,21 @@ USE ece411.LC3b_types.all;
 
 ENTITY StateReg_3 IS
    PORT( 
-      ADDRESSMUXOut_MEM : IN     lc3b_word;
       ALUSHFMuxOut_MEM  : IN     lc3b_word;
       D_DATAIN          : IN     lc3b_word;
       PCPlus2_MEM       : IN     lc3b_word;
       RESET_L           : IN     std_logic;
       clk               : IN     std_logic;
       destreg_MEM       : IN     LC3B_REG;
-      opcode_MEM        : IN     lc3b_opcode;
+      Opcode_MEM        : IN     lc3b_opcode;
       ADDRESSMUXOut_WB  : OUT    LC3b_word;
       ALUSHFMUXOut_WB   : OUT    lc3b_word;
-      DEST              : OUT    LC3B_REG;
+      dest              : OUT    LC3B_REG;
       D_DATAIN_WB       : OUT    LC3b_word;
       Opcode_WB         : OUT    LC3b_opcode;
       PCPLus2_WB        : OUT    LC3b_word;
-      load              : in    std_logic
+      load              : IN     std_logic;
+      ADDRESSMUXOut_MEM : IN     lc3b_word
    );
 
 -- Declarations
