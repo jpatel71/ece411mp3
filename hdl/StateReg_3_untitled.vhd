@@ -30,7 +30,9 @@ ENTITY StateReg_3 IS
       Opcode_WB         : OUT    LC3b_opcode;
       PCPLus2_WB        : OUT    LC3b_word;
       load              : IN     std_logic;
-      ADDRESSMUXOut_MEM : IN     lc3b_word
+      ADDRESSMUXOut_MEM : IN     lc3b_word;
+      RegWrite_MEM      : IN     std_logic;
+      regwrite_wb       : OUT    std_logic
    );
 
 -- Declarations
@@ -45,6 +47,7 @@ signal destreg :  lc3b_reg;
 signal datain : lc3b_word;
 signal opcode: lc3b_opcode;
 signal pcplus2:  lc3b_word;
+signal regwrite:  std_logic;
 
 BEGIN
   PROCESS(clk ,reset_L, load)
@@ -56,6 +59,7 @@ BEGIN
       datain <= "0000000000000000";
       opcode <= "0000";
       pcplus2 <= "0000000000000000";
+      regwrite<='0';
   		ELSIF (CLK'EVENT AND (CLK = '1')) THEN
   		  if(load='1') then
         addressmuxout<=addressmuxout_mem;
@@ -64,6 +68,7 @@ BEGIN
         datain<=d_datain;
         opcode<=opcode_mem;
         pcplus2<=pcplus2_mem;
+        regwrite<=regwrite_MEM;
       end if;
 		END IF;
 	end process;
@@ -73,6 +78,6 @@ BEGIN
   d_datain_wb <= datain ;
   opcode_WB <= opcode;
   pcplus2_wb <= pcplus2;
-  
+  regwrite_WB<=regwrite;
 END ARCHITECTURE untitled;
 

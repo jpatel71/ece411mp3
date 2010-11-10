@@ -460,19 +460,19 @@ value "/home/engr/bjohns38/ece411/ece411mp3/hds/PipeLine"
 )
 (vvPair
 variable "date"
-value "11/08/10"
+value "11/09/10"
 )
 (vvPair
 variable "day"
-value "Mon"
+value "Tue"
 )
 (vvPair
 variable "day_long"
-value "Monday"
+value "Tuesday"
 )
 (vvPair
 variable "dd"
-value "08"
+value "09"
 )
 (vvPair
 variable "entity_name"
@@ -500,7 +500,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "gllnx14.ews.illinois.edu"
+value "dcllnx69.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -576,7 +576,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "16:30:31"
+value "22:44:43"
 )
 (vvPair
 variable "unit"
@@ -1832,5 +1832,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 4042,0
+lastUid 4594,0
 )

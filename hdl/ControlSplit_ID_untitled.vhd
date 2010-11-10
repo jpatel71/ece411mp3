@@ -19,7 +19,8 @@ ENTITY ControlSplit_ID IS
       ControlWord_ID : IN     LC3B_ControlWord;
       clk            : IN     std_logic;
       SRCAValid      : OUT    std_logic;
-      SRCMuxSel      : OUT    STD_LOGIC
+      SRCMuxSel      : OUT    STD_LOGIC;
+      RegWrite_ID    : OUT    std_logic
    );
 
 -- Declarations
@@ -31,5 +32,6 @@ ARCHITECTURE untitled OF ControlSplit_ID IS
 BEGIN
   SRCMuxSel<=ControlWord_ID(15);
   SRCAValid <= ControlWord_ID(20);
+  RegWrite_ID <= ControlWord_ID(13);
 END ARCHITECTURE untitled;
 

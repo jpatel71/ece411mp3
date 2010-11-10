@@ -37,7 +37,7 @@ BEGIN
       D_MWRITEL_L <= '0' after 1ns;
     end if;
     if(opcode_MEM = op_stb) then
-      if(D_ADDRESSOut(0)='1') then
+      if(D_ADDRESSOut(0)='0') then
         D_MWRITEH_L <= '0' after 1ns;
         D_MWRITEL_L <= '1' after 1ns;
       else   

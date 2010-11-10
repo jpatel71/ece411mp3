@@ -32,7 +32,9 @@ ENTITY State_Reg2 IS
       ArithOut          : IN     LC3B_WORD;
       load              : IN     std_logic;
       SRCA_EX           : IN     std_logic;
-      SRCB_EX           : IN     std_logic
+      SRCB_EX           : IN     std_logic;
+      RegWrite_EX       : IN     std_logic;
+      RegWrite_MEM      : OUT    std_logic
    );
 
 -- Declarations
@@ -47,7 +49,7 @@ SIGNAL alushfmux : lc3b_word;
 SIGNAL destreg : lc3b_reg;
 signal inscc : lc3b_nzp;
 signal pcplus2 : lc3b_word;
-
+signal regwrite : std_logic;
 
 BEGIN
 	
@@ -63,6 +65,7 @@ BEGIN
       DESTREG <= "000";		
       inscc <= "000";
       pcplus2 <= x"0000";
+      regwrite <= '0';
 		
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE
 		ELSIF (CLK'EVENT AND (CLK = '1')) THEN
@@ -73,6 +76,7 @@ BEGIN
 				DESTREG <= DESTREG_EX;		
 				inscc <= inscc_EX;
 				pcplus2 <= pcplus2_EX;
+				regwrite<=RegWrite_EX;
 			end if;
 		END IF;
 	END PROCESS;
@@ -82,5 +86,6 @@ BEGIN
   inscc_MEM <= inscc after DELAY_REGFILE_READ;
   pcplus2_MEM <= pcplus2 after delay_REGFILE_READ;
   alushfmuxout_MEM <= alushfmux after delay_REGFILE_READ;
+  regwrite_MEM <= regwrite after delay_REGFILE_READ;
 END ARCHITECTURE untitled;
 

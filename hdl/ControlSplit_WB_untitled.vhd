@@ -17,10 +17,10 @@ USE ece411.LC3b_types.all;
 ENTITY ControlSplit_WB IS
    PORT( 
       ControlWord_WB : IN     LC3b_ControlWord;
-      clk        : IN     std_logic;
-      WBMUXSel  :  OUT    std_logic_vector(1 downto 0);
-      DestValid_WB  :  OUT  std_logic;
-      regwrite_wb : out std_logic
+      clk            : IN     std_logic;
+      WBMUXSel       : OUT    std_logic_vector (1 DOWNTO 0);
+      DestValid_WB   : OUT    std_logic;
+      ByteSel_WB     : OUT    std_logic
    );
 
 -- Declarations
@@ -34,7 +34,7 @@ BEGIN
  --  1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
   
   WBMUXSel <= ControlWord_WB(1 downto 0);
-  regwrite_wb <= ControlWord_WB(13);
   DestValid_WB <= ControlWord_WB(19);
+  ByteSel_WB<=ControlWord_WB(17);
 END ARCHITECTURE untitled;
 

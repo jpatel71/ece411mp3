@@ -16,7 +16,9 @@ USE ece411.LC3b_types.all;
 
 ENTITY MakeByte IS
    PORT( 
-      clk : IN     std_logic
+      byteWordOut : OUT    lc3b_word;
+      clk         : IN     std_logic;
+      rfbout_ex   : IN     LC3b_word
    );
 
 -- Declarations
@@ -26,5 +28,6 @@ END MakeByte ;
 --
 ARCHITECTURE untitled OF MakeByte IS
 BEGIN
+     byteWordOut <= ALUSHFMuxOut(7 downto 0) & ALUSHFMuxOut(7 downto 0);
 END ARCHITECTURE untitled;
 

@@ -51,6 +51,8 @@ BEGIN
       end if;
     when "0110" =>  --ldr
       state := "01100001110000" & alu_pass & "00010";
+    when "0010" =>  --ldb
+      state := "01101001111100" & alu_pass & "00010";
     when "0111" =>  --str
       state := "01010110010000" & alu_pass & "10000";    
     when "0000" =>  --br
@@ -60,9 +62,7 @@ BEGIN
     when "1101" =>  --shf
       state := "01110001100000" & alu_not & "00001";
     when "0011" =>  --stb
-      state := "01011110010000" & alu_pass & "10000";
-    when "0010" =>  --ldb
-      state := "01101001110000" & alu_pass & "00010";
+      state := "01011010011100" & alu_pass & "10000";
     when "1100" =>  --jmp
       state := "10000000000000" & alu_pass & "00000";
     when others =>

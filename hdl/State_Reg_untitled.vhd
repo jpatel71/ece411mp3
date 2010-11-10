@@ -16,28 +16,29 @@ USE ece411.LC3b_types.all;
 
 ENTITY State_Reg IS
    PORT( 
-      PCPlus2_ID   : OUT    lc3b_word;
-      index6_ID    : OUT    LC3b_index6;
-      offset9_ID   : OUT    LC3b_offset9;
-      offset11_ID  : OUT    LC3b_offset11;
-      RESET_L      : IN     std_logic;
-      IDATAIn      : IN     LC3b_word;
-      IR_Bit5      : OUT    std_logic;
-      IR_Bit11     : OUT    std_logic;
-      IR_2_0_ID    : OUT    STD_LOGIC_VECTOR (2 DOWNTO 0);
-      IR8_6_ID     : OUT    LC3B_REG;
-      Opcode_ID    : OUT    LC3B_Opcode;
-      DEST_ID      : OUT    LC3b_reg;
-      IMM4_ID      : OUT    lc3b_imm4;
-      INSCC_ID     : OUT    lc3b_nzp;
-      clk          : IN     std_logic;
-      imm5_ID      : OUT    LC3b_imm5;
-      trapvect8_ID : OUT    lc3b_trapvect8;
-      IDATAAddress : IN     LC3b_word;
-      load         : IN     std_logic;
-      AD_ID        : OUT    lc3b_SHFTOP;
-      IR_Bit4      : OUT    std_logic;
-      Hazard       : IN     std_logic
+      PCPlus2_ID     : OUT    lc3b_word;
+      index6_ID      : OUT    LC3b_index6;
+      offset9_ID     : OUT    LC3b_offset9;
+      offset11_ID    : OUT    LC3b_offset11;
+      RESET_L        : IN     std_logic;
+      IDATAIn        : IN     LC3b_word;
+      IR_Bit5        : OUT    std_logic;
+      IR_Bit11       : OUT    std_logic;
+      IR_2_0_ID      : OUT    STD_LOGIC_VECTOR (2 DOWNTO 0);
+      IR8_6_ID       : OUT    LC3B_REG;
+      Opcode_ID      : OUT    LC3B_Opcode;
+      Dest_ID        : OUT    LC3b_reg;
+      IMM4_ID        : OUT    lc3b_imm4;
+      INSCC_ID       : OUT    lc3b_nzp;
+      clk            : IN     std_logic;
+      imm5_ID        : OUT    LC3b_imm5;
+      trapvect8_ID   : OUT    lc3b_trapvect8;
+      IDATAAddress   : IN     LC3b_word;
+      load           : IN     std_logic;
+      AD_ID          : OUT    lc3b_SHFTOP;
+      IR_Bit4        : OUT    std_logic;
+      Hazard         : IN     std_logic;
+      BRANCHLOAD_MEM : IN     std_logic
    );
 
 -- Declarations
@@ -69,7 +70,7 @@ BEGIN
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
-		IF (RESET_L = '0') THEN
+		IF (RESET_L = '0' or BRANCHLOAD_MEM='1') THEN
 			dest <= "000";
 			srcA <= "000";
 			srcB <= "000";

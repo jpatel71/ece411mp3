@@ -30,7 +30,8 @@ ENTITY HazardDet IS
       DestValid_MEM : IN     std_logic;
       DestValid_EX  : IN     std_logic;
       DestValid_WB  : IN     std_logic;
-      SRCAValid     : IN     std_logic
+      SRCAValid     : IN     std_logic;
+      Dest_ID       : IN     LC3b_reg
    );
 
 -- Declarations
@@ -40,18 +41,35 @@ END HazardDet ;
 --
 ARCHITECTURE untitled OF HazardDet IS
 BEGIN
-  PROCESS(IR8_6_ID,IR_2_0_ID,SRCA_EX,SRCB_EX,Opcode_EX,DESTREG_EX,DESTREG_MEM,DEST)
+  PROCESS(IR8_6_ID,IR_2_0_ID,SRCA_EX,SRCB_EX,Opcode_EX,DESTREG_EX,DESTREG_MEM,DEST,clk)
     BEGIN
       Hazard<='0';
-      IF(DESTREG_EX=IR8_6_ID AND DestValid_EX = '1' and SRCAValid='1') then 
-        Hazard <= '1' after 1 ns;
+      --check 8_6 versus every stage
+      IF(SRCAValid='1') then
+        IF(DESTREG_EX=IR8_6_ID AND DestValid_EX = '1') then 
+          Hazard <= '1' after 1 ns;
+        end if;
+        IF(DESTREG_MEM=IR8_6_ID AND DestValid_MEM = '1') then 
+          Hazard <= '1' after 1 ns;
+        end if;
+        IF(DEST=IR8_6_ID AND DestValid_WB = '1' and SRCAValid='1') then 
+          Hazard <= '1' after 1 ns;
+        end if;
       end if;
-      IF(DESTREG_MEM=IR8_6_ID AND DestValid_MEM = '1' and SRCAValid='1') then 
-        Hazard <= '1' after 1 ns;
+      
+      if(Opcode_ID=op_STB or Opcode_ID=op_STR or Opcode_ID=op_STI) then
+        --check 11_9 if store versus every stage
+        IF(DESTREG_EX=Dest_ID AND DestValid_EX = '1') then 
+          Hazard <= '1' after 1 ns;
+        end if;
+        IF(DESTREG_MEM=Dest_ID AND DestValid_MEM = '1') then 
+          Hazard <= '1' after 1 ns;
+        end if;
+        IF(DEST=Dest_ID AND DestValid_WB = '1') then 
+          Hazard <= '1' after 1 ns;
+        end if;
       end if;
-      IF(DEST=IR8_6_ID AND DestValid_WB = '1' and SRCAValid='1') then 
-        Hazard <= '1' after 1 ns;
-      end if;
+
     
 END PROCESS;
 END ARCHITECTURE untitled;

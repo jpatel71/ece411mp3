@@ -24,11 +24,11 @@ SEGMENT  CodeSegment:
 	;*only* MWRITEH_L is active (=0).
 	;M[11] = 4x60
 Halt:
-    BRnzp Halt
+    BRnzp Halt		;8
 
-    LowByte: Data1 4x0D ;8
-    HighByte: Data1 4x60 ;9
-    LowSByte: Data1 ?	;10
-    HighSByte: Data1 ? ;11
+    LowByte: Data1 4x0D ;9
+    HighByte: Data1 4x60 ;10
+    LowSByte: Data1 4xAA	;11
+    HighSByte: Data1 4xBB ;12
 
 
