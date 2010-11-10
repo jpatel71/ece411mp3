@@ -18,7 +18,6 @@ ENTITY State_Reg2 IS
    PORT( 
       clk               : IN     std_logic;
       RESET_L           : IN     std_logic;
-      ADDRESSMUXout     : IN     LC3b_word;
       Opcode_EX         : IN     lc3b_opcode;
       ADDRESSMUXOut_MEM : OUT    lc3b_word;
       Opcode_MEM        : OUT    lc3b_opcode;
@@ -34,7 +33,10 @@ ENTITY State_Reg2 IS
       SRCA_EX           : IN     std_logic;
       SRCB_EX           : IN     std_logic;
       RegWrite_EX       : IN     std_logic;
-      RegWrite_MEM      : OUT    std_logic
+      RegWrite_MEM      : OUT    std_logic;
+      ADDRESS_EX        : IN     LC3b_word;
+      DestValid_EX      : IN     std_logic;
+      DestValid_MEM     : OUT    std_logic
    );
 
 -- Declarations
@@ -71,7 +73,7 @@ BEGIN
 		ELSIF (CLK'EVENT AND (CLK = '1')) THEN
 		  IF(load='1') then
 				opcode <= Opcode_EX;
-				ADDRESSMux<= addressmuxout;
+				ADDRESSMux<= address_ex;
 				ALUSHFmux <= arithout;
 				DESTREG <= DESTREG_EX;		
 				inscc <= inscc_EX;

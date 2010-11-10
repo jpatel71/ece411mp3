@@ -20,7 +20,6 @@ ENTITY ControlSplit_MEM IS
       clk             : IN     std_logic;
       MEMMUX_MEMSel   : OUT    std_logic;
       LoadNZP         : OUT    std_logic;
-      DestValid_MEM    :  OUT  std_logic;
       D_MREAD_L       : OUT    std_logic
    );
 
@@ -36,6 +35,5 @@ BEGIN
   MEMMUX_MEMSel <= ControlWord_MEM(3);
   LoadNZP <= ControlWord_MEM(13);
   D_MREAD_L <= ControlWord_MEM(18);
-  DestValid_MEM <= ControlWord_MEM(19);
 END ARCHITECTURE untitled;
 

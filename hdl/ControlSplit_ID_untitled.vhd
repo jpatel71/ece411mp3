@@ -20,7 +20,9 @@ ENTITY ControlSplit_ID IS
       clk            : IN     std_logic;
       SRCAValid      : OUT    std_logic;
       SRCMuxSel      : OUT    STD_LOGIC;
-      RegWrite_ID    : OUT    std_logic
+      RegWrite_ID    : OUT    std_logic;
+      JSR_ID         : OUT    std_logic;
+      DestValid_ID   : OUT    std_logic
    );
 
 -- Declarations
@@ -33,5 +35,7 @@ BEGIN
   SRCMuxSel<=ControlWord_ID(15);
   SRCAValid <= ControlWord_ID(20);
   RegWrite_ID <= ControlWord_ID(13);
+  JSR_ID<=ControlWord_ID(22);
+  DestValid_ID <= ControlWord_ID(19);
 END ARCHITECTURE untitled;
 

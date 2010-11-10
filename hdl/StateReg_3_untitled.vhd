@@ -32,7 +32,8 @@ ENTITY StateReg_3 IS
       load              : IN     std_logic;
       ADDRESSMUXOut_MEM : IN     lc3b_word;
       RegWrite_MEM      : IN     std_logic;
-      regwrite_wb       : OUT    std_logic
+      regwrite_wb       : OUT    std_logic;
+      DestValid_MEM     : IN     std_logic
    );
 
 -- Declarations

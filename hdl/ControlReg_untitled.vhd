@@ -34,37 +34,45 @@ ARCHITECTURE untitled OF ControlReg IS
 BEGIN
   PROCESS(opcode_ID, IR_Bit5, IR_Bit11, clk, IR_BIT4)
     variable state : LC3b_ControlWord;
-    --  EXaJMP-SrcAValid_ID-DestValid-MEMREAD-ByteSel-Storemux-SRCMuxSel-LoadNZP-1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-3ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
+    --  JSRMuxSel-isJSR-EXaJMP-SrcAValid_ID-DestValid-MEMREAD-ByteSel-Storemux-SRCMuxSel-LoadNZP-1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-3ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
   BEGIN
     case (opcode_ID) is
     when "0001" =>  --addreg
       if(IR_bit5 = '1') then
-        state := "01110001100001" & alu_add & "10001";
+        state := "0001110001100001" & alu_add & "10001";
       else 
-        state := "01110001100000" & alu_add & "10001";
+        state := "0001110001100000" & alu_add & "10001";
     end if;
     when "0101" =>  --and
       if(IR_bit5 = '1') then
-        state := "01110001100001" & alu_and & "10001";
+        state := "0001110001100001" & alu_and & "10001";
       else
-        state := "01110001100000" & alu_and & "10001";       
+        state := "0001110001100000" & alu_and & "10001";       
       end if;
     when "0110" =>  --ldr
-      state := "01100001110000" & alu_pass & "00010";
+      state := "0001100001110000" & alu_pass & "00010";
     when "0010" =>  --ldb
-      state := "01101001111100" & alu_pass & "00010";
+      state := "0001101001111100" & alu_pass & "00010";
+    when "1110" =>  --lea
+      state := "0000100001101000" & alu_pass & "00000";
     when "0111" =>  --str
-      state := "01010110010000" & alu_pass & "10000";    
+      state := "0001010110010000" & alu_pass & "10000";    
     when "0000" =>  --br
-      state := "00010000000000" & alu_pass & "00000";
+      state := "0000010000000000" & alu_pass & "00000";
     when "1001" =>  --not
-      state := "01110001100000" & alu_not & "10001";
+      state := "0001110001100000" & alu_not & "10001";
     when "1101" =>  --shf
-      state := "01110001100000" & alu_not & "00001";
+      state := "0001110001100000" & alu_not & "00001";
     when "0011" =>  --stb
-      state := "01011010011100" & alu_pass & "10000";
+      state := "0001011010011100" & alu_pass & "10000";
     when "1100" =>  --jmp
-      state := "10000000000000" & alu_pass & "00000";
+      state := "0011000000000000" & alu_pass & "00000";
+    when "0100" =>  --jsr
+      if(IR_bit11 = '0') then
+        state := "1111100000100000" & alu_pass & "00011";
+      else
+        state := "0110100000100100" & alu_pass & "00011";        
+      end if;
     when others =>
     end case;
     

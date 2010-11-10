@@ -48,14 +48,16 @@ ENTITY State_Reg1 IS
       IR_2_0_ID      : IN     STD_LOGIC_VECTOR (2 DOWNTO 0);
       SRCA_EX        : OUT    std_logic;
       SRCB_EX        : OUT    std_logic;
-      Dest_ID        : IN     LC3b_reg;
       Hazard         : IN     std_logic;
       EXaJMP         : IN     std_logic;
       ADJ6ns_ID      : IN     lc3b_word;
       ADJ6ns_EX      : OUT    lc3b_word;
       BRANCHLOAD_MEM : IN     std_logic;
       RegWrite_EX    : OUT    std_logic;
-      RegWrite_ID    : IN     std_logic
+      RegWrite_ID    : IN     std_logic;
+      DestReg_ID     : IN     LC3B_REG;
+      DestValid_EX   : OUT    std_logic;
+      DestValid_ID   : IN     std_logic
    );
 
 -- Declarations
@@ -79,6 +81,8 @@ signal inscc : lc3b_nzp;
 signal imm4 : lc3b_imm4;
 signal ad : lc3b_shftop;
 signal regwrite : std_logic;
+signal destvalid : std_logic;
+
 
 BEGIN
 	
@@ -87,7 +91,7 @@ BEGIN
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
-		IF (RESET_L = '0' OR EXaJMP='1' OR BRANCHLOAD_MEM='1') THEN
+		IF (RESET_L = '0' OR EXaJMP='1' OR BRANCHLOAD_MEM='1' or Hazard='1') THEN
       adj6 <= x"0000";
       adj6ns <= x"0000";
       adj9 <= x"0000";
@@ -103,11 +107,12 @@ BEGIN
       ad <= "00";
       opcode <="0000";
       regwrite <= '0';
+      destvalid<='0';
 		END IF;
 		
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
-		  IF(load='1' AND Hazard/='1') then
+		  IF(load='1' AND Hazard='0') then
 				adj6 <= adj6_ID;
 				adj6ns <= adj6ns_ID;
 				adj9 <= adj9_ID;
@@ -117,13 +122,13 @@ BEGIN
 				pcplus2 <= pcplus2_ID;
 				rfa <= rfaout_ID;
 				rfb <= rfbout_ID;
-				destreg <= dest_ID;
+				destreg <= destReg_ID;
 				opcode <= opcode_ID;
 				inscc <= inscc_ID;
 				imm4 <= IMM4_ID;
 				ad <= AD_ID;
 				regwrite <= RegWrite_ID;
-				--shft
+				destvalid<=DestValid_ID;
 			end if;
 		END IF;
 	END PROCESS;
@@ -143,5 +148,6 @@ BEGIN
   inscc_EX <= inscc after DELAY_REGFILE_READ; 
   AD_EX <= ad after DELAY_REGFILE_READ;
   RegWrite_EX <= regwrite after DELAY_REGFILE_READ;
+  DestValid_EX<=destvalid after DELAY_REGFILE_READ;
 END ARCHITECTURE untitled;
 

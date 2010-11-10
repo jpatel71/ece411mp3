@@ -26,8 +26,8 @@ ENTITY ControlSplit_EX IS
       clk            : IN     std_logic;
       ByteSel        : OUT    std_logic;
       StoreMux       : OUT    std_logic;
-      DestValid_EX   : OUT    std_logic;
-      EXaJMP         : OUT    std_logic
+      EXaJMP         : OUT    std_logic;
+      JSRMuxSel      : OUT    std_logic
    );
 
 -- Declarations
@@ -47,7 +47,7 @@ BEGIN
   ALUSHFSel <= ControlWord_EX(4);
   storemux <= ControlWord_EX(16);
   byteSel <= ControlWord_EX(17);
-  DestValid_EX <= ControlWord_EX(19);
   EXaJMP <= ControlWord_EX(21);
+  JSRMuxSel <= ControlWord_EX(23);
 END ARCHITECTURE untitled;
 

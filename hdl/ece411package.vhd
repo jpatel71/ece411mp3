@@ -39,7 +39,7 @@ PACKAGE LC3B_TYPES IS
 	SUBTYPE LC3B_TAG IS STD_LOGIC_VECTOR(8 DOWNTO 0);
 	SUBTYPE LC3B_OFFSET IS STD_LOGIC_VECTOR(3 DOWNTO 0);
   --MP3 Types
-  SUBTYPE LC3B_CONTROLWORD IS STD_LOGIC_VECTOR(21 DOWNTO 0);
+  SUBTYPE LC3B_CONTROLWORD IS STD_LOGIC_VECTOR(23 DOWNTO 0);
   SUBTYPE LC3B_INDEX6 IS STD_LOGIC_VECTOR(5 DOWNTO 0);
   SUBTYPE LC3B_L1TAG IS STD_LOGIC_VECTOR(5 DOWNTO 0);
   
@@ -147,23 +147,48 @@ PACKAGE BODY LC3B_TYPES IS
 	    -- USE THE DOIFY.SH SCRIPT TO LOAD PROGRAMS INTO MEMORY, OR 
 	    -- INSERT YOUR MEMORY VECTORS HERE.
 	    -- EXAMPLE: MEM(0) := TO_STDLOGICVECTOR(X"00");
-	    mem(0) := To_stdlogicvector(X"0A");
-	mem(1) := To_stdlogicvector(X"2C");
-	mem(2) := To_stdlogicvector(X"0B");
-	mem(3) := To_stdlogicvector(X"2E");
-	mem(4) := To_stdlogicvector(X"0C");
-	mem(5) := To_stdlogicvector(X"3C");
-	mem(6) := To_stdlogicvector(X"0D");
-	mem(7) := To_stdlogicvector(X"3E");
+	    mem(0) := To_stdlogicvector(X"13");
+	mem(1) := To_stdlogicvector(X"62");
+	mem(2) := To_stdlogicvector(X"0D");
+	mem(3) := To_stdlogicvector(X"48");
+	mem(4) := To_stdlogicvector(X"14");
+	mem(5) := To_stdlogicvector(X"66");
+	mem(6) := To_stdlogicvector(X"C0");
+	mem(7) := To_stdlogicvector(X"40");
 	mem(8) := To_stdlogicvector(X"FF");
 	mem(9) := To_stdlogicvector(X"0F");
-	mem(10) := To_stdlogicvector(X"0D");
-	mem(11) := To_stdlogicvector(X"60");
-	mem(12) := To_stdlogicvector(X"AA");
-	mem(13) := To_stdlogicvector(X"BB");
-
-  
-
+	mem(10) := To_stdlogicvector(X"00");
+	mem(11) := To_stdlogicvector(X"10");
+	mem(12) := To_stdlogicvector(X"00");
+	mem(13) := To_stdlogicvector(X"10");
+	mem(14) := To_stdlogicvector(X"00");
+	mem(15) := To_stdlogicvector(X"10");
+	mem(16) := To_stdlogicvector(X"00");
+	mem(17) := To_stdlogicvector(X"10");
+	mem(18) := To_stdlogicvector(X"00");
+	mem(19) := To_stdlogicvector(X"10");
+	mem(20) := To_stdlogicvector(X"00");
+	mem(21) := To_stdlogicvector(X"10");
+	mem(22) := To_stdlogicvector(X"00");
+	mem(23) := To_stdlogicvector(X"10");
+	mem(24) := To_stdlogicvector(X"00");
+	mem(25) := To_stdlogicvector(X"10");
+	mem(26) := To_stdlogicvector(X"00");
+	mem(27) := To_stdlogicvector(X"10");
+	mem(28) := To_stdlogicvector(X"00");
+	mem(29) := To_stdlogicvector(X"10");
+	mem(30) := To_stdlogicvector(X"13");
+	mem(31) := To_stdlogicvector(X"64");
+	mem(32) := To_stdlogicvector(X"C0");
+	mem(33) := To_stdlogicvector(X"C1");
+	mem(34) := To_stdlogicvector(X"13");
+	mem(35) := To_stdlogicvector(X"68");
+	mem(36) := To_stdlogicvector(X"C0");
+	mem(37) := To_stdlogicvector(X"C1");
+	mem(38) := To_stdlogicvector(X"01");
+	mem(39) := To_stdlogicvector(X"00");
+	mem(40) := To_stdlogicvector(X"23");
+	mem(41) := To_stdlogicvector(X"00");
 	
 		--MAKE NO CHANGES AFTER THIS LINE.
 	END MYDRAMINIT_64K;
