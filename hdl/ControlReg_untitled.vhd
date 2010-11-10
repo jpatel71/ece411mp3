@@ -66,7 +66,7 @@ BEGIN
     when "0011" =>  --stb
       state := "0001011010011100" & alu_pass & "10000";
     when "1100" =>  --jmp
-      state := "0011000000000000" & alu_pass & "00000";
+      state := "1111000000000000" & alu_pass & "00000";
     when "0100" =>  --jsr
       if(IR_bit11 = '0') then
         state := "1111100000100000" & alu_pass & "00011";

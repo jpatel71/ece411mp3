@@ -22,12 +22,38 @@ add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_ex
 add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_mem
 add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_wb
 add wave -noupdate -format Logic /mp3_cpu/thepipeline/hazard
-add wave -noupdate -format Logic /mp3_cpu/thepipeline/ahazarddet/d_mread_l_ex
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/controlword_ex
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/theid_reg/adj8out_ex
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/ahazarddet/destreg_ex
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/reset_id
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/load
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/jsr_id
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/jsr_ex
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/jsr_mem
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/exajmp
 add wave -noupdate -format Literal /mp3_cpu/thepipeline/ahazarddet/ir8_6_id
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/ahazarddet/ir_2_0_id
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/srcavalid
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/ir_bit11
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/destreg_ex
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/destreg_mem
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/dest
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/destvalid_id
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/destvalid_ex
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/destvalid_mem
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/destvalid_wb
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/address_ex
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcplus2_ex
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/jsr_ex
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/jsr_mem
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/exajmp_mem
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/f1
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcmuxout
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/load1
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/addressmux1out
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/addressmux2out
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/addressmuxout_mem
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/branchload_mem
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/offset11_id
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/adj11_ex
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/inscc_mem
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/genccout
 add wave -noupdate -divider {I Cache}
 add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/i_l1cache/d_mapped_controller/current_state
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/i_l1cache/d_mapped_controller/pmresp_h
@@ -75,7 +101,7 @@ add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/pm_mwrite_l
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/i_l1cache/loadwrite
 add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/i_l1cache/cachedatain
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {1405 ns} 0}
+WaveRestoreCursors {{Cursor 1} {5487 ns} 0}
 configure wave -namecolwidth 423
 configure wave -valuecolwidth 40
 configure wave -justifyvalue left
@@ -89,4 +115,4 @@ configure wave -gridperiod 1
 configure wave -griddelta 40
 configure wave -timeline 0
 update
-WaveRestoreZoom {4114 ns} {5047 ns}
+WaveRestoreZoom {5218 ns} {6111 ns}

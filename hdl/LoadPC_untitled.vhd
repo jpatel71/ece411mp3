@@ -16,10 +16,11 @@ USE ece411.LC3b_types.all;
 
 ENTITY LoadPC IS
    PORT( 
-      Hazard : IN     std_logic;
-      clk    : IN     std_logic;
-      load   : IN     std_logic;
-      load1  : OUT    std_logic
+      Hazard  : IN     std_logic;
+      clk     : IN     std_logic;
+      load1   : OUT    std_logic;
+      load    : IN     std_logic;
+      JSR_MEM : IN     std_logic
    );
 
 -- Declarations
@@ -29,7 +30,7 @@ END LoadPC ;
 --
 ARCHITECTURE untitled OF LoadPC IS
 BEGIN
-  PROCESS (load, Hazard)
+  PROCESS (load, Hazard, JSR_MEM)
     Begin
     if(load='1' and Hazard='0') then
       load1 <='1';

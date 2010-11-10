@@ -57,7 +57,8 @@ ENTITY State_Reg1 IS
       RegWrite_ID    : IN     std_logic;
       DestReg_ID     : IN     LC3B_REG;
       DestValid_EX   : OUT    std_logic;
-      DestValid_ID   : IN     std_logic
+      DestValid_ID   : IN     std_logic;
+      JSR_EX         : IN     std_logic
    );
 
 -- Declarations
@@ -91,7 +92,7 @@ BEGIN
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
-		IF (RESET_L = '0' OR EXaJMP='1' OR BRANCHLOAD_MEM='1' or Hazard='1') THEN
+		IF (RESET_L = '0' OR (load='1' and ((EXaJMP='1' and JSR_EX='0') OR BRANCHLOAD_MEM='1' or Hazard='1' or JSR_EX='1'))) THEN
       adj6 <= x"0000";
       adj6ns <= x"0000";
       adj9 <= x"0000";
@@ -108,11 +109,10 @@ BEGIN
       opcode <="0000";
       regwrite <= '0';
       destvalid<='0';
-		END IF;
-		
+		end if;
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE
-		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
-		  IF(load='1' AND Hazard='0') then
+		if (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
+		  IF(load='1' AND Hazard='0' and JSR_EX='0') then
 				adj6 <= adj6_ID;
 				adj6ns <= adj6ns_ID;
 				adj9 <= adj9_ID;

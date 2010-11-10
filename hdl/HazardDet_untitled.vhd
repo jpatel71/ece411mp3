@@ -16,22 +16,23 @@ USE ece411.LC3b_types.all;
 
 ENTITY HazardDet IS
    PORT( 
-      IR8_6_ID      : IN     LC3B_REG;
-      IR_2_0_ID     : IN     STD_LOGIC_VECTOR (2 DOWNTO 0);
-      SRCA_EX       : IN     std_logic;
-      SRCB_EX       : IN     std_logic;
-      clk           : IN     std_logic;
-      DESTREG_EX    : IN     lc3b_reg;
-      Hazard        : OUT    std_logic;
-      Opcode_EX     : IN     lc3b_opcode;
-      Opcode_ID     : IN     LC3B_Opcode;
-      destreg_MEM   : IN     LC3B_REG;
-      dest          : IN     LC3B_REG;
-      DestValid_MEM : IN     std_logic;
-      DestValid_EX  : IN     std_logic;
-      DestValid_WB  : IN     std_logic;
-      SRCAValid     : IN     std_logic;
-      Dest_ID       : IN     LC3b_reg
+      IR8_6_ID       : IN     LC3B_REG;
+      IR_2_0_ID      : IN     STD_LOGIC_VECTOR (2 DOWNTO 0);
+      SRCA_EX        : IN     std_logic;
+      SRCB_EX        : IN     std_logic;
+      clk            : IN     std_logic;
+      DESTREG_EX     : IN     lc3b_reg;
+      Hazard         : OUT    std_logic;
+      Opcode_EX      : IN     lc3b_opcode;
+      Opcode_ID      : IN     LC3B_Opcode;
+      destreg_MEM    : IN     LC3B_REG;
+      dest           : IN     LC3B_REG;
+      DestValid_MEM  : IN     std_logic;
+      DestValid_EX   : IN     std_logic;
+      destValid_WB   : IN     std_logic;
+      SRCAValid      : IN     std_logic;
+      Dest_ID        : IN     LC3b_reg;
+      BRANCHLOAD_MEM : IN     std_logic
    );
 
 -- Declarations

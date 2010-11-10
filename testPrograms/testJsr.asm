@@ -15,37 +15,33 @@ SEGMENT  CodeSegment:
 	;; R7 holds return address 
 
 
-    LDR  R1, R0, ONE
-    
-    JSR  JSR_TEST
+    LDR  R1, R0, ONE   ;0
 
-    LDR  R3, R0, JUMP_LENGTH
-    JSRR R3
+    JSR  JSR_TEST      ;2
+
+    LDR  R3, R0, JUMP_LENGTH    ;4
+    JSRR R3  			;6
 HALT:				; Infinite loop to keep the processor
-    BRnzp HALT			; from trying to execute the data below
+    BRnzp HALT			;8 from trying to execute the data below
 				; Your own programs should also make use
 				; of an infinite loop at the end.
-
-    ;; adding no ops
-    ADD  R0, R0, R0
-    ADD  R0, R0, R0
-    ADD  R0, R0, R0
-    ADD  R0, R0, R0
-    ADD  R0, R0, R0
-    ADD  R0, R0, R0
-    ADD  R0, R0, R0
-    ADD  R0, R0, R0
-    ADD  R0, R0, R0
-    ADD  R0, R0, R0
-
+    ADD R1,R1,7 ;10
+    ADD R1,R1,6
+    ADD R1,R1,5
+    ADD R1,R1,4
+    ADD R1,R1,3
+    ADD R1,R1,2
+    ADD R1,R1,1   ;22
     ;; first jump to here hopefully
 JSR_TEST:
-    LDR  R2, R0, ONE
+    LDR  R2, R0, ONE   ;24
+    ADD  R5, R0, 5
     RET
 
     ;; then jump to here maybe
     LDR  R4, R0, ONE
+    ADD  R5, R0, 6
     RET
 
 ONE:		DATA2 4x0001
-JUMP_LENGTH:	DATA2 4x0023
+JUMP_LENGTH:	DATA2 4x0024

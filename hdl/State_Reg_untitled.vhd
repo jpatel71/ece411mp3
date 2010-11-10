@@ -16,29 +16,28 @@ USE ece411.LC3b_types.all;
 
 ENTITY State_Reg IS
    PORT( 
-      PCPlus2_ID     : OUT    lc3b_word;
-      index6_ID      : OUT    LC3b_index6;
-      offset9_ID     : OUT    LC3b_offset9;
-      offset11_ID    : OUT    LC3b_offset11;
-      RESET_L        : IN     std_logic;
-      IDATAIn        : IN     LC3b_word;
-      IR_Bit5        : OUT    std_logic;
-      IR_Bit11       : OUT    std_logic;
-      IR_2_0_ID      : OUT    STD_LOGIC_VECTOR (2 DOWNTO 0);
-      IR8_6_ID       : OUT    LC3B_REG;
-      Opcode_ID      : OUT    LC3B_Opcode;
-      Dest_ID        : OUT    LC3b_reg;
-      IMM4_ID        : OUT    lc3b_imm4;
-      INSCC_ID       : OUT    lc3b_nzp;
-      clk            : IN     std_logic;
-      imm5_ID        : OUT    LC3b_imm5;
-      trapvect8_ID   : OUT    lc3b_trapvect8;
-      IDATAAddress   : IN     LC3b_word;
-      load           : IN     std_logic;
-      AD_ID          : OUT    lc3b_SHFTOP;
-      IR_Bit4        : OUT    std_logic;
-      Hazard         : IN     std_logic;
-      BRANCHLOAD_MEM : IN     std_logic
+      PCPlus2_ID    : OUT    lc3b_word;
+      index6_ID     : OUT    LC3b_index6;
+      offset9_ID    : OUT    LC3b_offset9;
+      offset11_ID   : OUT    LC3b_offset11;
+      RESET_L       : IN     std_logic;
+      IDATAIn       : IN     LC3b_word;
+      IR_Bit5       : OUT    std_logic;
+      IR_Bit11      : OUT    std_logic;
+      IR_2_0_ID     : OUT    STD_LOGIC_VECTOR (2 DOWNTO 0);
+      IR8_6_ID      : OUT    LC3B_REG;
+      Opcode_ID     : OUT    LC3B_Opcode;
+      Dest_ID       : OUT    LC3b_reg;
+      IMM4_ID       : OUT    lc3b_imm4;
+      INSCC_ID      : OUT    lc3b_nzp;
+      clk           : IN     std_logic;
+      imm5_ID       : OUT    LC3b_imm5;
+      trapvect8_ID  : OUT    lc3b_trapvect8;
+      AD_ID         : OUT    lc3b_SHFTOP;
+      IR_Bit4       : OUT    std_logic;
+      load_ID       : IN     std_logic;
+      RESET_ID      : IN     std_logic;
+      PCPlus2out_IF : IN     LC3b_word
    );
 
 -- Declarations
@@ -66,22 +65,27 @@ signal ad : lc3b_shftop;
 BEGIN
 	
 	-------------------------------------------------------------------
-	VHDL_REGFILE1_WRITE: PROCESS(CLK, RESET_L, load)
+	VHDL_REGFILE1_WRITE: PROCESS(CLK, RESET_L, load_ID)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
-		IF (RESET_L = '0' or BRANCHLOAD_MEM='1') THEN
+		IF (RESET_L = '0' or reset_ID='1') THEN
 			dest <= "000";
 			srcA <= "000";
 			srcB <= "000";
 			opcode <= "0000";
 			inscc <= "000";
 			ad <= "00";
+			offset9<="000000000";
+			offset11<="00000000000";
+			imm4<="0000";
+			inscc<="000";
+			bit11<='0';
 		END IF;
 		
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK IF REGWRITE ACTIVE
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
-      if(load='1' AND Hazard='0') then
+      if(load_ID='1') then
 				dest <= IDataIN(11 downto 9);
 				srcA <= IDataIn(8 downto 6);
 				srcB <= IDataIn(2 downto 0);
@@ -95,7 +99,7 @@ BEGIN
 				offset11 <= IDataIn(10 downto 0);
 				offset9 <= IDataIn(8 downto 0);
 				trapvect8 <= IDataIn(7 downto 0);
-				pcplus2 <= idataaddress;
+				pcplus2 <= PCPlus2Out_IF;
 				inscc <= IDATAIn(11 downto 9);
 				ad <= IDATAIn(5 downto 4);
 			end if;
@@ -115,7 +119,8 @@ BEGIN
 	inscc_ID <= inscc;
 	IR_BIT5 <= bit5 after delay_reg;
 	IR_BIT4 <= bit4 after delay_reg;
-	ad_ID <= ad;
+	ad_ID <= ad after delay_reg;
+	ir_bit11<=bit11 after delay_reg;
 END UNTITLED;
 
 
