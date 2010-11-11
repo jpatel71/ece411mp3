@@ -36,5 +36,5 @@
 	mem(35) := To_stdlogicvector(X"C1");
 	mem(36) := To_stdlogicvector(X"01");
 	mem(37) := To_stdlogicvector(X"00");
-	mem(38) := To_stdlogicvector(X"23");
+	mem(38) := To_stdlogicvector(X"24");
 	mem(39) := To_stdlogicvector(X"00");

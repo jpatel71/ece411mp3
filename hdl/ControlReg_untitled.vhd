@@ -58,7 +58,7 @@ BEGIN
     when "0111" =>  --str
       state := "0001010110010000" & alu_pass & "10000";    
     when "0000" =>  --br
-      state := "0000010000000000" & alu_pass & "00000";
+      state := "0000010000001000" & alu_pass & "00000";
     when "1001" =>  --not
       state := "0001110001100000" & alu_not & "10001";
     when "1101" =>  --shf

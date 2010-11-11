@@ -15,7 +15,7 @@ SEGMENT  CodeSegment:
 	;; R7 holds return address 
 
 
-    LDR  R1, R0, ONE   ;0
+    LDR  R1, R0, ONE   ;0    
 
     JSR  JSR_TEST      ;2
 

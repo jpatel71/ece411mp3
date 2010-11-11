@@ -92,7 +92,7 @@ BEGIN
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
-		IF (RESET_L = '0' OR (load='1' and ((EXaJMP='1' and JSR_EX='0') OR BRANCHLOAD_MEM='1' or Hazard='1' or JSR_EX='1'))) THEN
+		IF (RESET_L = '0' OR BRANCHLOAD_MEM='1' or (load='1' and ((EXaJMP='1' and JSR_EX='0') or Hazard='1' or JSR_EX='1'))) THEN
       adj6 <= x"0000";
       adj6ns <= x"0000";
       adj9 <= x"0000";

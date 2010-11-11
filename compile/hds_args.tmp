@@ -1,1 +1,1 @@
- -do "do wave.do" -L ece411 -L mp3lib -l transcript.txt -i -t ns -multisource_delay latest +typdelays ece411.mp3_cpu(struct)
+ -do "do wavePipe.do" -L ece411 -L mp3lib -l transcript.txt -i -t ns -multisource_delay latest +typdelays ece411.mp3_cpu(struct)

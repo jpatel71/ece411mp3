@@ -25,16 +25,16 @@ HALT:				; Infinite loop to keep the processor
     BRnzp HALT			;8 from trying to execute the data below
 				; Your own programs should also make use
 				; of an infinite loop at the end.
-    ADD R1,R1,7
+    ADD R1,R1,7 ;10
     ADD R1,R1,6
     ADD R1,R1,5
     ADD R1,R1,4
     ADD R1,R1,3
     ADD R1,R1,2
-    ADD R1,R1,1
+    ADD R1,R1,1   ;22
     ;; first jump to here hopefully
 JSR_TEST:
-    LDR  R2, R0, ONE
+    LDR  R2, R0, ONE   ;24
     ADD  R5, R0, 5
     RET
 
@@ -44,4 +44,4 @@ JSR_TEST:
     RET
 
 ONE:		DATA2 4x0001
-JUMP_LENGTH:	DATA2 4x0023
+JUMP_LENGTH:	DATA2 4x0024
