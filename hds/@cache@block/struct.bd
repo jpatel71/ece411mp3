@@ -72,23 +72,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/engr/tmurray5/ece411mp3/hdl"
+value "/home/engr/jpatel71/ece411/ece411mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/jpatel71/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/engr/tmurray5/ece411mp3/hds/@cache@block/struct.bd.info"
+value "/home/engr/jpatel71/ece411/ece411mp3/hds/@cache@block/struct.bd.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/engr/tmurray5/ece411mp3/hds/@cache@block/struct.bd.user"
+value "/home/engr/jpatel71/ece411/ece411mp3/hds/@cache@block/struct.bd.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/jpatel71/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -104,27 +104,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/engr/tmurray5/ece411mp3/hds/@cache@block"
+value "/home/engr/jpatel71/ece411/ece411mp3/hds/@cache@block"
 )
 (vvPair
 variable "d_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/CacheBlock"
+value "/home/engr/jpatel71/ece411/ece411mp3/hds/CacheBlock"
 )
 (vvPair
 variable "date"
-value "11/05/10"
+value "11/06/10"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Sat"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Saturday"
 )
 (vvPair
 variable "dd"
-value "05"
+value "06"
 )
 (vvPair
 variable "entity_name"
@@ -152,7 +152,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx31.ews.illinois.edu"
+value "eelnx29.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -184,11 +184,11 @@ value "November"
 )
 (vvPair
 variable "p"
-value "/home/engr/tmurray5/ece411mp3/hds/@cache@block/struct.bd"
+value "/home/engr/jpatel71/ece411/ece411mp3/hds/@cache@block/struct.bd"
 )
 (vvPair
 variable "p_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/CacheBlock/struct.bd"
+value "/home/engr/jpatel71/ece411/ece411mp3/hds/CacheBlock/struct.bd"
 )
 (vvPair
 variable "project_name"
@@ -228,7 +228,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "15:00:06"
+value "14:16:50"
 )
 (vvPair
 variable "unit"
@@ -236,7 +236,7 @@ value "CacheBlock"
 )
 (vvPair
 variable "user"
-value "tmurray5"
+value "jpatel71"
 )
 (vvPair
 variable "version"
@@ -5385,12 +5385,12 @@ tm "BdCompilerDirectivesTextMgr"
 associable 1
 )
 windowSize "-3,25,1597,1178"
-viewArea "-6800,-14850,96475,60900"
+viewArea "-6800,-14900,102185,56810"
 cachedDiagramExtent "-47000,-1600,104000,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-74000,-51000"
 active 1
-lastUid 1753,0
+lastUid 1809,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0

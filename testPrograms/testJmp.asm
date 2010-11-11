@@ -20,9 +20,10 @@ SEGMENT  CodeSegment:
     LDR  R3, R0, JUMP_LENGTH
     JMP  R3
 
-HALT:				; Infinite loop to keep the processor
+HALT:
+    ADD  R6, R6, R1				; Infinite loop to keep the processor
     BRnzp HALT			; from trying to execute the data below
-				; Your own programs should also make use
+    ADD  R5, R5, R1				; Your own programs should also make use
 				; of an infinite loop at the end.
 
     ;; adding no ops
@@ -43,5 +44,5 @@ HALT:				; Infinite loop to keep the processor
     RET
 
 ONE:		DATA2 4x0001
-JUMP_LENGTH:	DATA2 4x001D
+JUMP_LENGTH:	DATA2 4x001F
 RET_LENGTH:	DATA2 4x0006

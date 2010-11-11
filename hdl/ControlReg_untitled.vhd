@@ -73,7 +73,10 @@ BEGIN
       else
         state := "0110100000100100" & alu_pass & "00011";        
       end if;
-    when others =>
+    when "1111" => --TRAP
+      --  JSRMuxSel-isJSR-EXaJMP-SrcAValid_ID-DestValid-MEMREAD-ByteSel-Storemux-SRCMuxSel-LoadNZP-1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-3ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
+        state := "0110100000100010" & alu_pass & "00011";
+    when others => 
     end case;
     
     ControlWord_ID <= state after delay_control; 

@@ -66,14 +66,16 @@ BEGIN
     when "0011" =>  --stb
       state := "0001011010011100" & alu_pass & "10000";
     when "1100" =>  --jmp
-      state := "1011000000000000" & alu_pass & "00000";
+      state := "1111000000000000" & alu_pass & "00000";
     when "0100" =>  --jsr
       if(IR_bit11 = '0') then
         state := "1111100000100000" & alu_pass & "00011";
       else
         state := "0110100000100100" & alu_pass & "00011";        
       end if;
-    when others =>
+    when "1111" => --TRAP
+        state := "0110000000000010" & alu_pass & "00011";
+    when others => 
     end case;
     
     ControlWord_ID <= state after delay_control; 

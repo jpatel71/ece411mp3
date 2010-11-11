@@ -21,6 +21,14 @@ add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_id
 add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_ex
 add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_mem
 add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_wb
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcplus2out_if
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcplus2_id
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcplus2_ex
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcplus2_mem
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcplus2_wb
+add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcmuxout
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/exajmp_mem
+add wave -noupdate -format Logic /mp3_cpu/thepipeline/f1
 add wave -noupdate -format Literal /mp3_cpu/thepipeline/controlword_ex
 add wave -noupdate -format Literal /mp3_cpu/thepipeline/theid_reg/adj8out_ex
 add wave -noupdate -format Literal /mp3_cpu/thepipeline/ahazarddet/destreg_ex
@@ -79,8 +87,8 @@ add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/pm_mwrite_l
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/i_l1cache/loadwrite
 add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/i_l1cache/cachedatain
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {2367 ns} 0}
-configure wave -namecolwidth 423
+WaveRestoreCursors {{Cursor 1} {9916 ns} 0}
+configure wave -namecolwidth 416
 configure wave -valuecolwidth 40
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -93,4 +101,4 @@ configure wave -gridperiod 1
 configure wave -griddelta 40
 configure wave -timeline 0
 update
-WaveRestoreZoom {2337 ns} {2366 ns}
+WaveRestoreZoom {8237 ns} {10093 ns}

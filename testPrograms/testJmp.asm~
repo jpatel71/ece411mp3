@@ -1,7 +1,7 @@
 ;; Tom Murray
 ;;
 ;; testJmp.asm
-;; This file test the functionality of JMP
+;; This file test the functionality of JMP as well as RET
 
 
 SEGMENT  CodeSegment:
@@ -20,7 +20,8 @@ SEGMENT  CodeSegment:
     LDR  R3, R0, JUMP_LENGTH
     JMP  R3
 
-HALT:				; Infinite loop to keep the processor
+HALT:
+    ADD  R6, R6, R1				; Infinite loop to keep the processor
     BRnzp HALT			; from trying to execute the data below
 				; Your own programs should also make use
 				; of an infinite loop at the end.
