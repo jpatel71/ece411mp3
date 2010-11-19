@@ -1,0 +1,224 @@
+DESIGN way512b
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 50,0 8 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 367,0 17 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 377,0 18 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 382,0 19 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 392,0 20 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 397,0 21 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 402,0 22 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 372,0 23 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 387,0 24 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 407,0 25 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 412,0 26 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 1,0 29 0 
+DESIGN way512b
+VIEW symbol.sb
+GRAPHIC 1,0 30 0 
+DESIGN way512b
+VIEW struct.bd
+NO_GRAPHIC 33
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 41,0 42 0 
+DESIGN way512b
+VIEW struct.bd
+NO_GRAPHIC 48
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 0,0 51 2 
+DESIGN way512b
+VIEW struct.bd
+NO_GRAPHIC 56
+DESIGN way512b
+VIEW struct.bd
+NO_GRAPHIC 57
+LIBRARY ece411
+DESIGN data@array512@b
+VIEW untitled
+GRAPHIC 479,0 59 0 
+DESIGN data@array512@b
+VIEW untitled
+GRAPHIC 51,0 61 0 
+DESIGN data@array512@b
+VIEW untitled
+GRAPHIC 61,0 62 0 
+DESIGN data@array512@b
+VIEW untitled
+GRAPHIC 66,0 63 0 
+DESIGN data@array512@b
+VIEW untitled
+GRAPHIC 71,0 64 0 
+DESIGN data@array512@b
+VIEW untitled
+GRAPHIC 56,0 65 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 509,0 68 0 
+DESIGN dirty@array512@b
+VIEW untitled
+GRAPHIC 51,0 70 0 
+DESIGN dirty@array512@b
+VIEW untitled
+GRAPHIC 56,0 71 0 
+DESIGN dirty@array512@b
+VIEW untitled
+GRAPHIC 66,0 72 0 
+DESIGN dirty@array512@b
+VIEW untitled
+GRAPHIC 71,0 73 0 
+DESIGN dirty@array512@b
+VIEW untitled
+GRAPHIC 61,0 74 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 449,0 77 0 
+DESIGN tag@array512@b
+VIEW untitled
+GRAPHIC 51,0 79 0 
+DESIGN tag@array512@b
+VIEW untitled
+GRAPHIC 56,0 80 0 
+DESIGN tag@array512@b
+VIEW untitled
+GRAPHIC 61,0 81 0 
+DESIGN tag@array512@b
+VIEW untitled
+GRAPHIC 66,0 82 0 
+DESIGN tag@array512@b
+VIEW untitled
+GRAPHIC 71,0 83 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 535,0 86 0 
+DESIGN valid@array512@b
+VIEW untitled
+GRAPHIC 51,0 88 0 
+DESIGN valid@array512@b
+VIEW untitled
+GRAPHIC 56,0 89 0 
+DESIGN valid@array512@b
+VIEW untitled
+GRAPHIC 61,0 90 0 
+DESIGN valid@array512@b
+VIEW untitled
+GRAPHIC 66,0 91 0 
+LIBRARY ece411
+DESIGN way512b
+VIEW struct.bd
+NO_GRAPHIC 94
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 479,0 97 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 509,0 98 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 449,0 99 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 535,0 100 0 
+DESIGN way512b
+VIEW struct.bd
+NO_GRAPHIC 103
+DESIGN way512b
+VIEW struct.bd
+NO_GRAPHIC 105
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 479,0 107 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 150,0 109 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 420,0 110 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 393,0 111 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 366,0 112 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 242,0 113 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 509,0 115 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 411,0 117 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 177,0 118 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 384,0 119 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 357,0 120 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 269,0 121 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 449,0 123 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 159,0 125 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 141,0 126 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 132,0 127 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 168,0 128 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 251,0 129 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 535,0 131 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 402,0 133 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 375,0 134 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 348,0 135 0 
+DESIGN way512b
+VIEW struct.bd
+GRAPHIC 260,0 136 0 
+DESIGN way512b
+VIEW struct.bd
+NO_GRAPHIC 139
