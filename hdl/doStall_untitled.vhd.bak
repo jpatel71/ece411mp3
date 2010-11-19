@@ -1,0 +1,36 @@
+--
+-- VHDL Architecture ece411.doStall.untitled
+--
+-- Created:
+--          by - bjohns38.stdt (gllnx4.ews.illinois.edu)
+--          at - 19:23:14 11/11/10
+--
+-- using Mentor Graphics HDL Designer(TM) 2005.3 (Build 75)
+--
+LIBRARY ieee;
+USE ieee.NUMERIC_STD.all;
+USE ieee.std_logic_1164.all;
+
+LIBRARY ece411;
+USE ece411.LC3b_types.all;
+
+ENTITY doStall IS
+   PORT( 
+      Opcode_MEM : IN     lc3b_opcode;
+      clk        : IN     std_logic;
+      stall      : OUT    std_logic;
+      D_MRESP_H  :  IN    std_logic
+   );
+
+-- Declarations
+
+END doStall ;
+
+--
+ARCHITECTURE untitled OF doStall IS
+BEGIN
+  process(opcode_MEM, D_MRESP_H)
+    begin
+  end process;
+END ARCHITECTURE untitled;
+
