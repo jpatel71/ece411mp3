@@ -88,11 +88,11 @@ signal destvalid : std_logic;
 BEGIN
 	
 	-------------------------------------------------------------------
-	PROCESS(CLK, RESET_L, load, BRANCHLOAD_MEM)
+	PROCESS(CLK, RESET_L, load, BRANCHLOAD_MEM, JSR_EX, EXaJMP, Hazard)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
-		IF (RESET_L = '0' OR (load='1' and ((EXaJMP='1' and JSR_EX='0') OR BRANCHLOAD_MEM='1' or Hazard='1' or JSR_EX='1'))) THEN
+		IF (RESET_L = '0' OR BRANCHLOAD_MEM='1' or (load='1' and ((EXaJMP='1' and JSR_EX='0') or Hazard='1' or JSR_EX='1'))) THEN
       adj6 <= x"0000";
       adj6ns <= x"0000";
       adj9 <= x"0000";
@@ -106,7 +106,7 @@ BEGIN
       inscc <= "000";
       imm4 <= "0000";
       ad <= "00";
-      opcode <="0000";
+      opcode <="0000" after 1 ns;
       regwrite <= '0';
       destvalid<='0';
 		end if;

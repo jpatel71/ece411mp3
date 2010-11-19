@@ -36,5 +36,7 @@ BEGIN
   SRCAValid <= ControlWord_ID(20);
   RegWrite_ID <= ControlWord_ID(13);
   JSR_ID<=ControlWord_ID(22);
+  DestValid_ID <= ControlWord_ID(19);
+  StallLDI<=ControlWord_ID(3);
 END ARCHITECTURE untitled;
 

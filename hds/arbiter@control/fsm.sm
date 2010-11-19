@@ -38,23 +38,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/engr/tmurray5/ece411mp3/hdl"
+value "/home/engr/bjohns38/ece411/ece411mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/engr/tmurray5/ece411mp3/hds/arbiter@control/fsm.sm.info"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/arbiter@control/fsm.sm.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/engr/tmurray5/ece411mp3/hds/arbiter@control/fsm.sm.user"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/arbiter@control/fsm.sm.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -70,27 +70,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/engr/tmurray5/ece411mp3/hds/arbiter@control"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/arbiter@control"
 )
 (vvPair
 variable "d_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/arbiterControl"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/arbiterControl"
 )
 (vvPair
 variable "date"
-value "11/06/10"
+value "11/12/10"
 )
 (vvPair
 variable "day"
-value "Sat"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Saturday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "06"
+value "12"
 )
 (vvPair
 variable "entity_name"
@@ -118,7 +118,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx36.ews.illinois.edu"
+value "gllnx4.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -150,11 +150,11 @@ value "November"
 )
 (vvPair
 variable "p"
-value "/home/engr/tmurray5/ece411mp3/hds/arbiter@control/fsm.sm"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/arbiter@control/fsm.sm"
 )
 (vvPair
 variable "p_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/arbiterControl/fsm.sm"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/arbiterControl/fsm.sm"
 )
 (vvPair
 variable "project_name"
@@ -174,7 +174,7 @@ value "<TBD>"
 )
 (vvPair
 variable "task_ModelSimPath"
-value "$HDS_HOME/../Modeltech/linux"
+value "/apps/Linux/mentor/fpgadv72/Modeltech/bin"
 )
 (vvPair
 variable "task_NC-SimPath"
@@ -194,7 +194,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "16:43:58"
+value "01:42:22"
 )
 (vvPair
 variable "unit"
@@ -202,7 +202,7 @@ value "arbiterControl"
 )
 (vvPair
 variable "user"
-value "tmurray5"
+value "bjohns38"
 )
 (vvPair
 variable "version"
@@ -968,7 +968,7 @@ lineColor "39936,56832,65280"
 lineWidth -1
 fillStyle 1
 )
-xt "51309,30025,68009,32925"
+xt "48809,30025,70509,32925"
 )
 autoResize 1
 tline (Line
@@ -979,10 +979,10 @@ isHidden 1
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "51409,29925,67909,29925"
+xt "48909,29925,70409,29925"
 pts [
-"51409,29925"
-"67909,29925"
+"48909,29925"
+"70409,29925"
 ]
 )
 bline (Line
@@ -993,10 +993,10 @@ isHidden 1
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "51409,30650,67909,30650"
+xt "48909,30650,70409,30650"
 pts [
-"51409,30650"
-"67909,30650"
+"48909,30650"
+"70409,30650"
 ]
 )
 ttri (Triangle
@@ -1010,7 +1010,7 @@ bg "0,0,0"
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "50959,29550,51309,29900"
+xt "48459,29550,48809,29900"
 )
 btri (Triangle
 uid 211,0
@@ -1023,7 +1023,7 @@ bg "0,0,0"
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "50959,28300,51309,28650"
+xt "48459,28300,48809,28650"
 )
 entryActions (MLText
 uid 212,0
@@ -1031,7 +1031,7 @@ va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "51409,29725,51409,29725"
+xt "48909,29725,48909,29725"
 tm "Actions"
 )
 inActions (MLText
@@ -1039,10 +1039,10 @@ uid 213,0
 va (VaSet
 font "courier,8,0"
 )
-xt "51409,30125,67909,32825"
+xt "48909,30125,70409,32825"
 st "sel <= '1';
-PM_MREAD_L <= PM_READ_SEL_OUT;
-PM_MWRITE_L <= PM_WRITE_SEL_OUT;"
+PM_MREAD_L <= PM_READ_SEL_OUT after 1ns;
+PM_MWRITE_L <= PM_WRITE_SEL_OUT after 1ns;"
 tm "Actions"
 )
 exitActions (MLText
@@ -1135,7 +1135,7 @@ lineColor "39936,56832,65280"
 lineWidth -1
 fillStyle 1
 )
-xt "19570,29278,36270,32178"
+xt "17070,29278,38770,32178"
 )
 autoResize 1
 tline (Line
@@ -1146,10 +1146,10 @@ isHidden 1
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "19670,29178,36170,29178"
+xt "17170,29178,38670,29178"
 pts [
-"19670,29178"
-"36170,29178"
+"17170,29178"
+"38670,29178"
 ]
 )
 bline (Line
@@ -1160,10 +1160,10 @@ isHidden 1
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "19670,29903,36170,29903"
+xt "17170,29903,38670,29903"
 pts [
-"19670,29903"
-"36170,29903"
+"17170,29903"
+"38670,29903"
 ]
 )
 ttri (Triangle
@@ -1177,7 +1177,7 @@ bg "0,0,0"
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "19220,28803,19570,29153"
+xt "16720,28803,17070,29153"
 )
 btri (Triangle
 uid 228,0
@@ -1190,7 +1190,7 @@ bg "0,0,0"
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "19220,27553,19570,27903"
+xt "16720,27553,17070,27903"
 )
 entryActions (MLText
 uid 229,0
@@ -1198,7 +1198,7 @@ va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "19670,28978,19670,28978"
+xt "17170,28978,17170,28978"
 tm "Actions"
 )
 inActions (MLText
@@ -1206,10 +1206,10 @@ uid 230,0
 va (VaSet
 font "courier,8,0"
 )
-xt "19670,29378,36170,32078"
+xt "17170,29378,38670,32078"
 st "sel <= '0';
-PM_MREAD_L <= PM_READ_SEL_OUT;
-PM_MWRITE_L <= PM_WRITE_SEL_OUT;"
+PM_MREAD_L <= PM_READ_SEL_OUT after 1ns;
+PM_MWRITE_L <= PM_WRITE_SEL_OUT after 1ns;"
 tm "Actions"
 )
 exitActions (MLText
@@ -1804,8 +1804,8 @@ tm "SmCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "-3,25,1597,1178"
-viewArea "2100,-9100,81966,47856"
+windowSize "1223,29,2509,1053"
+viewArea "6370,-9100,71213,42933"
 cachedDiagramExtent "0,-1000,77000,49000"
 hasePageBreakOrigin 1
 pageBreakOrigin "0,-2000"
@@ -2122,7 +2122,7 @@ stateOrder [
 name "csm"
 )
 ]
-lastUid 363,0
+lastUid 381,0
 commonDM (CommonDM
 ldm (LogicalDM
 emptyRow *50 (LEmptyRow

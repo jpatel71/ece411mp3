@@ -88,7 +88,7 @@ signal destvalid : std_logic;
 BEGIN
 	
 	-------------------------------------------------------------------
-	PROCESS(CLK, RESET_L, load, BRANCHLOAD_MEM)
+	PROCESS(CLK, RESET_L, load, BRANCHLOAD_MEM, JSR_EX, EXaJMP, Hazard)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
@@ -106,7 +106,7 @@ BEGIN
       inscc <= "000";
       imm4 <= "0000";
       ad <= "00";
-      opcode <="0000";
+      opcode <="0000" after 3 ns;
       regwrite <= '0';
       destvalid<='0';
 		end if;

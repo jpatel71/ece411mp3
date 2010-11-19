@@ -28,7 +28,8 @@ ENTITY ControlSplit_EX IS
       StoreMux       : OUT    std_logic;
       EXaJMP         : OUT    std_logic;
       JSRMuxSel      : OUT    std_logic;
-      JSR_EX         : OUT    std_logic
+      JSR_EX         : OUT    std_logic;
+      MEMSEL_EX      : OUT    std_logic
    );
 
 -- Declarations
@@ -51,5 +52,6 @@ BEGIN
   EXaJMP <= ControlWord_EX(21);
   JSRMuxSel <= ControlWord_EX(23);
   JSR_EX<=ControlWord_EX(22);
+  MEMSEL_EX<=ControlWord_EX(3);
 END ARCHITECTURE untitled;
 

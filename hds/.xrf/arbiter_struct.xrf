@@ -151,7 +151,7 @@ VIEW struct.bd
 GRAPHIC 1525,0 96 0 
 DESIGN @arbiter
 VIEW struct.bd
-GRAPHIC 1534,0 97 0 
+GRAPHIC 1512,0 97 0 
 DESIGN @arbiter
 VIEW struct.bd
 GRAPHIC 955,0 98 0 
@@ -318,7 +318,7 @@ VIEW struct.bd
 GRAPHIC 1044,0 190 0 
 DESIGN @arbiter
 VIEW struct.bd
-GRAPHIC 1503,0 191 0 
+GRAPHIC 1525,0 191 0 
 DESIGN @arbiter
 VIEW struct.bd
 GRAPHIC 669,0 193 0 

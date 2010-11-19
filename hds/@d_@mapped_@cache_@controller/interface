@@ -69,7 +69,7 @@ port (LogicalPort
 decl (Decl
 n "clk"
 t "std_logic"
-o 6
+o 2
 suid 114,0
 )
 )
@@ -81,7 +81,7 @@ lang 2
 decl (Decl
 n "dirty"
 t "std_logic"
-o 26
+o 3
 suid 115,0
 )
 )
@@ -93,7 +93,7 @@ m 1
 decl (Decl
 n "in_idleHit"
 t "STD_LOGIC"
-o 29
+o 8
 suid 116,0
 )
 )
@@ -105,7 +105,7 @@ m 1
 decl (Decl
 n "in_load"
 t "std_logic"
-o 30
+o 9
 suid 117,0
 )
 )
@@ -117,7 +117,7 @@ m 1
 decl (Decl
 n "in_writeBack"
 t "STD_LOGIC"
-o 31
+o 10
 suid 118,0
 )
 )
@@ -128,7 +128,7 @@ port (LogicalPort
 decl (Decl
 n "miss"
 t "STD_LOGIC"
-o 34
+o 4
 suid 119,0
 )
 )
@@ -140,7 +140,7 @@ m 1
 decl (Decl
 n "PMREAD_L"
 t "std_logic"
-o 13
+o 6
 suid 120,0
 )
 )
@@ -151,7 +151,7 @@ port (LogicalPort
 decl (Decl
 n "PMRESP_H"
 t "std_logic"
-o 5
+o 1
 suid 121,0
 )
 )
@@ -163,7 +163,7 @@ m 1
 decl (Decl
 n "PMWRITE_L"
 t "std_logic"
-o 14
+o 7
 suid 122,0
 )
 )
@@ -174,7 +174,7 @@ port (LogicalPort
 decl (Decl
 n "reset_l"
 t "std_logic"
-o 9
+o 5
 suid 123,0
 )
 )
@@ -367,23 +367,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/engr/tmurray5/ece411mp3/hdl"
+value "/home/engr/bjohns38/ece411/ece411mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/engr/tmurray5/ece411mp3/hds/@d_@mapped_@cache_@controller/interface.info"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@d_@mapped_@cache_@controller/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/engr/tmurray5/ece411mp3/hds/@d_@mapped_@cache_@controller/interface.user"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@d_@mapped_@cache_@controller/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -399,27 +399,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/engr/tmurray5/ece411mp3/hds/@d_@mapped_@cache_@controller"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@d_@mapped_@cache_@controller"
 )
 (vvPair
 variable "d_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/D_Mapped_Cache_Controller"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/D_Mapped_Cache_Controller"
 )
 (vvPair
 variable "date"
-value "11/06/10"
+value "11/12/10"
 )
 (vvPair
 variable "day"
-value "Sat"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Saturday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "06"
+value "12"
 )
 (vvPair
 variable "entity_name"
@@ -447,7 +447,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx36.ews.illinois.edu"
+value "gllnx4.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -479,11 +479,11 @@ value "November"
 )
 (vvPair
 variable "p"
-value "/home/engr/tmurray5/ece411mp3/hds/@d_@mapped_@cache_@controller/interface"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@d_@mapped_@cache_@controller/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/D_Mapped_Cache_Controller/interface"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/D_Mapped_Cache_Controller/interface"
 )
 (vvPair
 variable "project_name"
@@ -503,7 +503,7 @@ value "<TBD>"
 )
 (vvPair
 variable "task_ModelSimPath"
-value "$HDS_HOME/../Modeltech/linux"
+value "/apps/Linux/mentor/fpgadv72/Modeltech/bin"
 )
 (vvPair
 variable "task_NC-SimPath"
@@ -523,7 +523,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "15:42:25"
+value "01:06:31"
 )
 (vvPair
 variable "unit"
@@ -531,7 +531,7 @@ value "D_Mapped_Cache_Controller"
 )
 (vvPair
 variable "user"
-value "tmurray5"
+value "bjohns38"
 )
 (vvPair
 variable "version"
@@ -597,7 +597,7 @@ thePort (LogicalPort
 decl (Decl
 n "clk"
 t "std_logic"
-o 6
+o 2
 suid 114,0
 )
 )
@@ -643,7 +643,7 @@ lang 2
 decl (Decl
 n "dirty"
 t "std_logic"
-o 26
+o 3
 suid 115,0
 )
 )
@@ -690,7 +690,7 @@ m 1
 decl (Decl
 n "in_idleHit"
 t "STD_LOGIC"
-o 29
+o 8
 suid 116,0
 )
 )
@@ -737,7 +737,7 @@ m 1
 decl (Decl
 n "in_load"
 t "std_logic"
-o 30
+o 9
 suid 117,0
 )
 )
@@ -783,7 +783,7 @@ m 1
 decl (Decl
 n "in_writeBack"
 t "STD_LOGIC"
-o 31
+o 10
 suid 118,0
 )
 )
@@ -828,7 +828,7 @@ thePort (LogicalPort
 decl (Decl
 n "miss"
 t "STD_LOGIC"
-o 34
+o 4
 suid 119,0
 )
 )
@@ -875,7 +875,7 @@ m 1
 decl (Decl
 n "PMREAD_L"
 t "std_logic"
-o 13
+o 6
 suid 120,0
 )
 )
@@ -922,7 +922,7 @@ thePort (LogicalPort
 decl (Decl
 n "PMRESP_H"
 t "std_logic"
-o 5
+o 1
 suid 121,0
 )
 )
@@ -969,7 +969,7 @@ m 1
 decl (Decl
 n "PMWRITE_L"
 t "std_logic"
-o 14
+o 7
 suid 122,0
 )
 )
@@ -1014,7 +1014,7 @@ thePort (LogicalPort
 decl (Decl
 n "reset_l"
 t "std_logic"
-o 9
+o 5
 suid 123,0
 )
 )
@@ -1702,5 +1702,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 1169,0
+lastUid 1181,0
 )

@@ -21,7 +21,6 @@ ENTITY State_Reg IS
       offset9_ID    : OUT    LC3b_offset9;
       offset11_ID   : OUT    LC3b_offset11;
       RESET_L       : IN     std_logic;
-      IDATAIn       : IN     LC3b_word;
       IR_Bit5       : OUT    std_logic;
       IR_Bit11      : OUT    std_logic;
       IR_2_0_ID     : OUT    STD_LOGIC_VECTOR (2 DOWNTO 0);
@@ -37,7 +36,8 @@ ENTITY State_Reg IS
       IR_Bit4       : OUT    std_logic;
       load_ID       : IN     std_logic;
       RESET_ID      : IN     std_logic;
-      PCPlus2out_IF : IN     LC3b_word
+      PCPlus2out_IF : IN     LC3b_word;
+      IDATAIn       : IN     LC3b_word
    );
 
 -- Declarations

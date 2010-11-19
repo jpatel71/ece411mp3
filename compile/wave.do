@@ -2,8 +2,7 @@ onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate -divider {CPU STUFF}
 add wave -noupdate -format Logic /mp3_cpu/reset_l
-add wave -noupdate -format Logic /mp3_cpu/clk
-add wave -noupdate -format Literal /mp3_cpu/d_addressout
+add wave -noupdate -format Literal -radix hexadecimal /mp3_cpu/d_addressout
 add wave -noupdate -format Literal /mp3_cpu/d_datain
 add wave -noupdate -format Literal /mp3_cpu/d_dataout
 add wave -noupdate -format Logic /mp3_cpu/d_mread_l
@@ -15,39 +14,49 @@ add wave -noupdate -format Logic /mp3_cpu/i_mresp_h
 add wave -noupdate -format Literal /mp3_cpu/idataaddress
 add wave -noupdate -format Literal /mp3_cpu/idatain
 add wave -noupdate -divider RAM
-add wave -noupdate -format Literal -expand /mp3_cpu/thepipeline/theregfile/ram
-add wave -noupdate -divider Pipe
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_id
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_ex
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_mem
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/opcode_wb
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcplus2out_if
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcplus2_id
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcplus2_ex
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcplus2_mem
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcplus2_wb
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/pcmuxout
-add wave -noupdate -format Logic /mp3_cpu/thepipeline/exajmp_mem
-add wave -noupdate -format Logic /mp3_cpu/thepipeline/f1
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/controlword_ex
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/theid_reg/adj8out_ex
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/ahazarddet/destreg_ex
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/ahazarddet/ir8_6_id
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/ahazarddet/ir_2_0_id
-add wave -noupdate -format Logic /mp3_cpu/thepipeline/hazard
-add wave -noupdate -format Logic /mp3_cpu/thepipeline/destvalid_ex
-add wave -noupdate -format Logic /mp3_cpu/thepipeline/destvalid_mem
-add wave -noupdate -format Logic /mp3_cpu/thepipeline/destvalid_wb
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/theif_reg/idatain
-add wave -noupdate -format Literal /mp3_cpu/thepipeline/idataaddress
+add wave -noupdate -format Literal -radix hexadecimal -expand /mp3_cpu/thepipeline/theregfile/ram
+add wave -noupdate -format Literal -radix hexadecimal /mp3_cpu/thepipeline/opcode_id
+add wave -noupdate -format Literal -radix hexadecimal /mp3_cpu/thepipeline/opcode_ex
+add wave -noupdate -format Literal -radix hexadecimal /mp3_cpu/thepipeline/opcode_mem
+add wave -noupdate -format Literal -radix hexadecimal /mp3_cpu/thepipeline/opcode_wb
 add wave -noupdate -divider {I Cache}
+add wave -noupdate -format Literal -radix hexadecimal /mp3_cpu/thecacheblockworker/i_l1cache/address
+add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/i_l1cache/ad_mapped_cache1k/adataarray1k/data
 add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/i_l1cache/d_mapped_controller/current_state
+add wave -noupdate -format Logic /mp3_cpu/clk
+add wave -noupdate -format Literal -radix hexadecimal /mp3_cpu/thecacheblockworker/thel2_cache/address
+add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/thel2_cache/a_l2_cachecontroller/current_state
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/miss
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/mem_access
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/hitgate
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/hit
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/protohit
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/prehit0
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/tagmatch0
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/validout0
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/prehit1
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/prehit2
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/prehit3
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/prehit4
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/prehit5
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/prehit6
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thel2_cache/prehit7
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/i_l1cache/d_mapped_controller/pmresp_h
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/i_l1cache/d_mapped_controller/dirty
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/i_l1cache/d_mapped_controller/miss
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/i_l1cache/d_mapped_controller/pmread_l
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/i_l1cache/d_mapped_controller/pmwrite_l
+add wave -noupdate -divider Arbiter
+add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/thearbiter/thearbitercontrol/current_state
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thearbiter/thearbitercontrol/pm_mread_l
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thearbiter/thearbitercontrol/pm_mresp_h
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thearbiter/thearbitercontrol/pm_mwrite_l
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thearbiter/thearbitercontrol/sel
+add wave -noupdate -format Literal -radix hexadecimal /mp3_cpu/thecacheblockworker/thearbiter/d_pmaddress
+add wave -noupdate -format Literal -radix hexadecimal /mp3_cpu/thecacheblockworker/thearbiter/i_pmaddress
+add wave -noupdate -format Literal -radix hexadecimal /mp3_cpu/thecacheblockworker/thearbiter/pm_address
 add wave -noupdate -divider {D Cache}
+add wave -noupdate -format Literal -radix hexadecimal /mp3_cpu/thecacheblockworker/d_l1cache/address
 add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/d_l1cache/d_mapped_controller/current_state
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/d_l1cache/d_mapped_controller/pmresp_h
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/d_l1cache/d_mapped_controller/dirty
@@ -79,16 +88,15 @@ add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/d_pmresp_h
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/d_pmwrite_l
 add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/d_wdata
 add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/pm_address
-add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/pm_datain
 add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/pm_dataout
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/pm_mread_l
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/pm_mresp_h
 add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/pm_mwrite_l
-add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/i_l1cache/loadwrite
-add wave -noupdate -format Literal /mp3_cpu/thecacheblockworker/i_l1cache/cachedatain
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thearbiter/thearbitercontrol/sel
+add wave -noupdate -format Logic /mp3_cpu/thecacheblockworker/thearbiter/thearbitercontrol/sel
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {9916 ns} 0}
-configure wave -namecolwidth 416
+WaveRestoreCursors {{Cursor 1} {32960 ns} 0}
+configure wave -namecolwidth 619
 configure wave -valuecolwidth 40
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -101,4 +109,4 @@ configure wave -gridperiod 1
 configure wave -griddelta 40
 configure wave -timeline 0
 update
-WaveRestoreZoom {8237 ns} {10093 ns}
+WaveRestoreZoom {32423 ns} {33207 ns}

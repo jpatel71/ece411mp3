@@ -42,10 +42,10 @@ BEGIN
         load_ID<='1';
       end if;
       if(load='1' and Hazard='0' and  JSR_ID='1') then
-        reset_ID<='1';
+        reset_ID<='1' after 3ns;
       end if;
       if(BRANCHLOAD_MEM='1') then
-        reset_ID<='1';
+        reset_ID<='1' after 3ns;
       end if;
        
   END PROCESS;

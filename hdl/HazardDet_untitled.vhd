@@ -32,7 +32,8 @@ ENTITY HazardDet IS
       destValid_WB   : IN     std_logic;
       SRCAValid      : IN     std_logic;
       Dest_ID        : IN     LC3b_reg;
-      BRANCHLOAD_MEM : IN     std_logic
+      BRANCHLOAD_MEM : IN     std_logic;
+      IR_Bit5        : IN     std_logic
    );
 
 -- Declarations
@@ -53,10 +54,22 @@ BEGIN
         IF(DESTREG_MEM=IR8_6_ID AND DestValid_MEM = '1') then 
           Hazard <= '1' after 1 ns;
         end if;
-        IF(DEST=IR8_6_ID AND DestValid_WB = '1' and SRCAValid='1') then 
+        IF(DEST=IR8_6_ID AND DestValid_WB = '1') then 
           Hazard <= '1' after 1 ns;
         end if;
       end if;
+      
+      if((opcode_id=op_add or opcode_id=op_and)and ir_bit5='0') then
+         IF(DESTREG_EX=IR_2_0_ID AND DestValid_EX = '1') then 
+           Hazard <= '1' after 1 ns;
+         end if;
+         IF(DESTREG_MEM=IR_2_0_ID AND DestValid_MEM = '1') then 
+           Hazard <= '1' after 1 ns;
+         end if;
+         IF(DEST=IR_2_0_ID AND DestValid_WB = '1') then 
+           Hazard <= '1' after 1 ns;
+         end if;
+       end if;       
       
       if(Opcode_ID=op_STB or Opcode_ID=op_STR or Opcode_ID=op_STI) then
         --check 11_9 if store versus every stage

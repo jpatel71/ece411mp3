@@ -6,25 +6,25 @@ VIEW interface
 GRAPHIC 50,0 8 0 
 DESIGN @load@generator
 VIEW interface
-GRAPHIC 135,0 17 0 
+GRAPHIC 514,0 17 0 
 DESIGN @load@generator
 VIEW interface
-GRAPHIC 140,0 18 0 
+GRAPHIC 519,0 18 0 
 DESIGN @load@generator
 VIEW interface
-GRAPHIC 145,0 19 0 
+GRAPHIC 524,0 19 0 
 DESIGN @load@generator
 VIEW interface
-GRAPHIC 150,0 20 0 
+GRAPHIC 529,0 20 0 
 DESIGN @load@generator
 VIEW interface
-GRAPHIC 155,0 21 0 
+GRAPHIC 534,0 21 0 
 DESIGN @load@generator
 VIEW interface
-GRAPHIC 165,0 22 0 
+GRAPHIC 544,0 22 0 
 DESIGN @load@generator
 VIEW interface
-GRAPHIC 160,0 23 0 
+GRAPHIC 539,0 23 0 
 DESIGN @load@generator
 VIEW interface
 GRAPHIC 1,0 26 0 
@@ -143,7 +143,7 @@ VIEW struct.bd
 GRAPHIC 409,0 103 0 
 DESIGN @load@generator
 VIEW struct.bd
-GRAPHIC 193,0 104 0 
+GRAPHIC 500,0 104 0 
 DESIGN @load@generator
 VIEW struct.bd
 GRAPHIC 338,0 106 0 

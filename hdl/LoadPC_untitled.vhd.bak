@@ -19,8 +19,8 @@ ENTITY LoadPC IS
       Hazard  : IN     std_logic;
       clk     : IN     std_logic;
       load1   : OUT    std_logic;
-      load    : IN     std_logic;
-      JSR_MEM : IN     std_logic
+      JSR_MEM : IN     std_logic;
+      load    : IN     std_logic
    );
 
 -- Declarations
@@ -30,9 +30,9 @@ END LoadPC ;
 --
 ARCHITECTURE untitled OF LoadPC IS
 BEGIN
-  PROCESS (load, Hazard, JSR_MEM)
+  PROCESS (load2, Hazard, JSR_MEM)
     Begin
-    if(load='1' and Hazard='0' and JSR_MEM='0') then
+    if(load2='1' and Hazard='0') then
       load1 <='1';
     else
       load1 <= '0';

@@ -19,8 +19,8 @@ ENTITY LoadPC IS
       Hazard  : IN     std_logic;
       clk     : IN     std_logic;
       load1   : OUT    std_logic;
-      load    : IN     std_logic;
-      JSR_MEM : IN     std_logic
+      JSR_MEM : IN     std_logic;
+      load    : IN     std_logic
    );
 
 -- Declarations

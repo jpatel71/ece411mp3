@@ -23,6 +23,7 @@ SEGMENT  CodeSegment:
 	;MAR <= 4xA 
 	;MDR <= (R7 = 4x600D) 
 	;M[10] <= 4x600D
+    ldr r4, r0, 5
 
 Halt:
     BRnzp Halt

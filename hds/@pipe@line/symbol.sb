@@ -103,7 +103,7 @@ uid 462,0
 *17 (LogPort
 port (LogicalPort
 decl (Decl
-n "D_DATAIN"
+n "D_Datain"
 t "lc3b_word"
 o 1
 suid 8,0
@@ -460,19 +460,19 @@ value "/home/engr/bjohns38/ece411/ece411mp3/hds/PipeLine"
 )
 (vvPair
 variable "date"
-value "11/10/10"
+value "11/12/10"
 )
 (vvPair
 variable "day"
-value "Wed"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Wednesday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "10"
+value "12"
 )
 (vvPair
 variable "entity_name"
@@ -500,7 +500,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx26.ews.illinois.edu"
+value "eelnx29.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -576,7 +576,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "17:40:21"
+value "12:22:47"
 )
 (vvPair
 variable "unit"
@@ -762,7 +762,7 @@ uid 485,0
 va (VaSet
 )
 xt "16000,7500,20800,8500"
-st "D_DATAIN"
+st "D_Datain"
 blo "16000,8300"
 tm "CptPortNameMgr"
 )
@@ -772,11 +772,11 @@ uid 486,0
 va (VaSet
 )
 xt "44000,2000,65000,3000"
-st "D_DATAIN     : IN     lc3b_word  ;"
+st "D_Datain     : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
-n "D_DATAIN"
+n "D_Datain"
 t "lc3b_word"
 o 1
 suid 8,0
@@ -1832,5 +1832,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 5254,0
+lastUid 6214,0
 )

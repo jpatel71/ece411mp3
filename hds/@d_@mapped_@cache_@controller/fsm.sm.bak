@@ -38,23 +38,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/engr/tmurray5/ece411mp3/hdl"
+value "/home/engr/bjohns38/ece411/ece411mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/engr/tmurray5/ece411mp3/hds/@d_@mapped_@cache_@controller/fsm.sm.info"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@d_@mapped_@cache_@controller/fsm.sm.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/engr/tmurray5/ece411mp3/hds/@d_@mapped_@cache_@controller/fsm.sm.user"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@d_@mapped_@cache_@controller/fsm.sm.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -70,27 +70,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/engr/tmurray5/ece411mp3/hds/@d_@mapped_@cache_@controller"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@d_@mapped_@cache_@controller"
 )
 (vvPair
 variable "d_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/D_Mapped_Cache_Controller"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/D_Mapped_Cache_Controller"
 )
 (vvPair
 variable "date"
-value "10/28/10"
+value "11/12/10"
 )
 (vvPair
 variable "day"
-value "Thu"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Thursday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "28"
+value "12"
 )
 (vvPair
 variable "entity_name"
@@ -118,7 +118,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx25.ews.illinois.edu"
+value "gllnx4.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -134,7 +134,7 @@ value "$HDS_PROJECT_DIR/compile"
 )
 (vvPair
 variable "mm"
-value "10"
+value "11"
 )
 (vvPair
 variable "module_name"
@@ -142,19 +142,19 @@ value "D_Mapped_Cache_Controller"
 )
 (vvPair
 variable "month"
-value "Oct"
+value "Nov"
 )
 (vvPair
 variable "month_long"
-value "October"
+value "November"
 )
 (vvPair
 variable "p"
-value "/home/engr/tmurray5/ece411mp3/hds/@d_@mapped_@cache_@controller/fsm.sm"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@d_@mapped_@cache_@controller/fsm.sm"
 )
 (vvPair
 variable "p_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/D_Mapped_Cache_Controller/fsm.sm"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/D_Mapped_Cache_Controller/fsm.sm"
 )
 (vvPair
 variable "project_name"
@@ -174,7 +174,7 @@ value "<TBD>"
 )
 (vvPair
 variable "task_ModelSimPath"
-value "$HDS_HOME/../Modeltech/linux"
+value "/apps/Linux/mentor/fpgadv72/Modeltech/bin"
 )
 (vvPair
 variable "task_NC-SimPath"
@@ -194,7 +194,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "23:06:22"
+value "01:06:31"
 )
 (vvPair
 variable "unit"
@@ -202,7 +202,7 @@ value "D_Mapped_Cache_Controller"
 )
 (vvPair
 variable "user"
-value "tmurray5"
+value "bjohns38"
 )
 (vvPair
 variable "version"
@@ -702,7 +702,7 @@ font "courier,8,0"
 )
 xt "20547,32919,34747,34719"
 st "in_writeBack <= '1';
-pmwrite_l <= '0' after 2ns;"
+pmwrite_l <= '0' after 3ns;"
 tm "Actions"
 )
 exitActions (MLText
@@ -1033,7 +1033,7 @@ font "courier,8,0"
 )
 xt "52612,30607,66312,32407"
 st "in_load <= '1';
-pmread_l <= '0' after 2ns;"
+pmread_l <= '0' after 3ns;"
 tm "Actions"
 )
 exitActions (MLText
@@ -2088,8 +2088,8 @@ tm "SmCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "-108,150,1492,1303"
-viewArea "-12500,-12400,67366,44556"
+windowSize "-3,0,1283,1024"
+viewArea "8298,-14800,73141,37233"
 cachedDiagramExtent "0,-1000,77000,49000"
 hasePageBreakOrigin 1
 pageBreakOrigin "0,-2000"
@@ -2303,13 +2303,13 @@ uid 26,0
 va (VaSet
 font "courier,8,0"
 )
-xt "40500,-100,63500,5300"
+xt "40500,-100,63700,5300"
 st "SIGNAL        MODE    DEFAULT  RESET  SCHEME 
-in_idleHit    OUT                     COMB   
-in_load       OUT                     COMB   
-in_writeBack  OUT                     COMB   
-PMREAD_L      OUT                     COMB   
-PMWRITE_L     OUT                     COMB   
+in_idleHit    OUT     '0'             COMB   
+in_load       OUT     '0'             COMB   
+in_writeBack  OUT     '0'             COMB   
+PMREAD_L      OUT     '1'             COMB   
+PMWRITE_L     OUT     '1'             COMB   
 "
 tm "SmSignalsGenStatusTextMgr"
 )
@@ -2408,7 +2408,7 @@ stateOrder [
 name "csm"
 )
 ]
-lastUid 432,0
+lastUid 450,0
 commonDM (CommonDM
 ldm (LogicalDM
 emptyRow *53 (LEmptyRow
@@ -2490,6 +2490,7 @@ o 8
 )
 uid 296,0
 scheme 0
+defVal "'0'"
 )
 *74 (LeafLogPort
 port (LogicalPort
@@ -2502,6 +2503,7 @@ o 9
 )
 uid 298,0
 scheme 0
+defVal "'0'"
 )
 *75 (LeafLogPort
 port (LogicalPort
@@ -2514,6 +2516,7 @@ o 10
 )
 uid 300,0
 scheme 0
+defVal "'0'"
 )
 *76 (LeafLogPort
 port (LogicalPort
@@ -2537,6 +2540,7 @@ o 6
 )
 uid 306,0
 scheme 0
+defVal "'1'"
 )
 *78 (LeafLogPort
 port (LogicalPort
@@ -2549,6 +2553,7 @@ o 7
 )
 uid 308,0
 scheme 0
+defVal "'1'"
 )
 *79 (LeafLogPort
 port (LogicalPort

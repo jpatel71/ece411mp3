@@ -16,7 +16,7 @@ USE ece411.LC3b_types.all;
 
 ENTITY BRlog IS
    PORT( 
-      Opcode_MEM     : IN     lc3b_opcode;
+      opcode_mem     : IN     lc3b_opcode;
       CheckN         : IN     std_logic;
       CheckP         : IN     std_logic;
       CheckZ         : IN     std_logic;

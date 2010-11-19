@@ -28,7 +28,8 @@ ENTITY ControlSplit_EX IS
       StoreMux       : OUT    std_logic;
       EXaJMP         : OUT    std_logic;
       JSRMuxSel      : OUT    std_logic;
-      JSR_EX         : OUT    std_logic
+      JSR_EX         : OUT    std_logic;
+      MEMSEL_EX      : OUT    std_logic
    );
 
 -- Declarations

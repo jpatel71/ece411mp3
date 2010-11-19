@@ -41,9 +41,13 @@ BEGIN
       if(load='1' AND Hazard='0' and JSR_ID='0' and JSR_EX='0' and JSR_MEM='0') then
         load_ID<='1';
       end if;
-      if(load='1' and Hazard='0' and  (BRANCHLOAD_MEM='1' or JSR_ID='1')) then
+      if(load='1' and Hazard='0' and  JSR_ID='1') then
         reset_ID<='1';
       end if;
+      if(BRANCHLOAD_MEM='1') then
+        reset_ID<='1';
+      end if;
+       
   END PROCESS;
 END ARCHITECTURE untitled;
 

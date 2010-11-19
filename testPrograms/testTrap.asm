@@ -32,7 +32,7 @@ HALT:				; Infinite loop to keep the processor
     ADD  R0, R0, R0
 
 cagey:  DATA2 Weasel
-
+ADD R5, R1, R0
 ; Insert NO Ops
     ADD  R0, R0, R0
     ADD  R0, R0, R0

@@ -32,7 +32,7 @@ BEGIN
       IF (tag = cacheTag) then
         match <= '1' after DELAY_COMPARATOR;
       else
-        match <= '0' after DELAY_COMPARATOR;
+        match <= '0' ; --DELAY_COMPARATOR;
       end if;
     end process;
 END ARCHITECTURE untitled;

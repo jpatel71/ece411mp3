@@ -17,12 +17,12 @@ USE ece411.LC3b_types.all;
 ENTITY StateReg_3 IS
    PORT( 
       ALUSHFMuxOut_MEM  : IN     lc3b_word;
-      D_DATAIN          : IN     lc3b_word;
+      D_Datain          : IN     lc3b_word;
       PCPlus2_MEM       : IN     lc3b_word;
       RESET_L           : IN     std_logic;
       clk               : IN     std_logic;
       destreg_MEM       : IN     LC3B_REG;
-      Opcode_MEM        : IN     lc3b_opcode;
+      opcode_mem        : IN     lc3b_opcode;
       ADDRESSMUXOut_WB  : OUT    LC3b_word;
       ALUSHFMUXOut_WB   : OUT    lc3b_word;
       dest              : OUT    LC3B_REG;

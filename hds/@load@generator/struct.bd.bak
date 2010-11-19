@@ -57,23 +57,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/engr/tmurray5/ece411mp3/hdl"
+value "/home/engr/bjohns38/ece411/ece411mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/engr/tmurray5/ece411mp3/hds/@load@generator/struct.bd.info"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@load@generator/struct.bd.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/engr/tmurray5/ece411mp3/hds/@load@generator/struct.bd.user"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@load@generator/struct.bd.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/engr/tmurray5/ece411mp3/hds"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -89,27 +89,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/engr/tmurray5/ece411mp3/hds/@load@generator"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@load@generator"
 )
 (vvPair
 variable "d_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/LoadGenerator"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/LoadGenerator"
 )
 (vvPair
 variable "date"
-value "10/29/10"
+value "11/11/10"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Thu"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Thursday"
 )
 (vvPair
 variable "dd"
-value "29"
+value "11"
 )
 (vvPair
 variable "entity_name"
@@ -137,7 +137,7 @@ value "stdt"
 )
 (vvPair
 variable "host"
-value "eelnx2.ews.illinois.edu"
+value "gllnx4.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -153,7 +153,7 @@ value "$HDS_PROJECT_DIR/compile"
 )
 (vvPair
 variable "mm"
-value "10"
+value "11"
 )
 (vvPair
 variable "module_name"
@@ -161,19 +161,19 @@ value "LoadGenerator"
 )
 (vvPair
 variable "month"
-value "Oct"
+value "Nov"
 )
 (vvPair
 variable "month_long"
-value "October"
+value "November"
 )
 (vvPair
 variable "p"
-value "/home/engr/tmurray5/ece411mp3/hds/@load@generator/struct.bd"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/@load@generator/struct.bd"
 )
 (vvPair
 variable "p_logical"
-value "/home/engr/tmurray5/ece411mp3/hds/LoadGenerator/struct.bd"
+value "/home/engr/bjohns38/ece411/ece411mp3/hds/LoadGenerator/struct.bd"
 )
 (vvPair
 variable "project_name"
@@ -193,7 +193,7 @@ value "<TBD>"
 )
 (vvPair
 variable "task_ModelSimPath"
-value "$HDS_HOME/../Modeltech/linux"
+value "/apps/Linux/mentor/fpgadv72/Modeltech/bin"
 )
 (vvPair
 variable "task_NC-SimPath"
@@ -213,7 +213,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "11:49:05"
+value "21:05:22"
 )
 (vvPair
 variable "unit"
@@ -221,7 +221,7 @@ value "LoadGenerator"
 )
 (vvPair
 variable "user"
-value "tmurray5"
+value "bjohns38"
 )
 (vvPair
 variable "version"
@@ -983,73 +983,10 @@ xt "18000,46000,59000,51000"
 )
 oxt "14000,66000,55000,71000"
 )
-*25 (PortIoOut
-uid 187,0
-shape (CompositeShape
-uid 188,0
-va (VaSet
-vasetType 1
-fg "0,0,32768"
-)
-optionalChildren [
-(Pentagon
-uid 189,0
-sl 0
-ro 270
-xt "47500,30625,49000,31375"
-)
-(Line
-uid 190,0
-sl 0
-ro 270
-xt "47000,31000,47500,31000"
-pts [
-"47000,31000"
-"47500,31000"
-]
-)
-]
-)
-stc 0
-sf 1
-tg (WTG
-uid 191,0
-ps "PortIoTextPlaceStrategy"
-stg "STSignalDisplayStrategy"
-f (Text
-uid 192,0
-va (VaSet
-font "courier,8,0"
-)
-xt "50000,30500,52000,31400"
-st "load"
-blo "50000,31200"
-tm "WireNameMgr"
-)
-)
-)
-*26 (Net
-uid 200,0
-decl (Decl
-n "load"
-t "std_logic"
-o 7
-suid 7,0
-)
-declText (MLText
-uid 201,0
-va (VaSet
-font "courier,8,0"
-)
-xt "22000,7200,34000,8100"
-st "load        : std_logic
-"
-)
-)
-*27 (SaComponent
+*25 (SaComponent
 uid 338,0
 optionalChildren [
-*28 (CptPort
+*26 (CptPort
 uid 321,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1092,7 +1029,7 @@ suid 1,0
 )
 )
 )
-*29 (CptPort
+*27 (CptPort
 uid 325,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1135,7 +1072,7 @@ suid 2,0
 )
 )
 )
-*30 (CptPort
+*28 (CptPort
 uid 329,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1178,10 +1115,10 @@ suid 3,0
 )
 )
 )
-*31 (CptPort
+*29 (CptPort
 uid 333,0
 optionalChildren [
-*32 (Circle
+*30 (Circle
 uid 337,0
 va (VaSet
 vasetType 1
@@ -1250,7 +1187,7 @@ uid 340,0
 ps "CenterOffsetStrategy"
 stg "VerticalLayoutStrategy"
 textVec [
-*33 (Text
+*31 (Text
 uid 341,0
 va (VaSet
 isHidden 1
@@ -1260,7 +1197,7 @@ st "mp3lib"
 blo "13800,16600"
 tm "BdLibraryNameMgr"
 )
-*34 (Text
+*32 (Text
 uid 342,0
 va (VaSet
 )
@@ -1269,7 +1206,7 @@ st "NAND3"
 blo "13800,17600"
 tm "CptNameMgr"
 )
-*35 (Text
+*33 (Text
 uid 343,0
 va (VaSet
 )
@@ -1316,10 +1253,10 @@ selT 0
 )
 archFileType "UNKNOWN"
 )
-*36 (SaComponent
+*34 (SaComponent
 uid 364,0
 optionalChildren [
-*37 (CptPort
+*35 (CptPort
 uid 352,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1364,7 +1301,7 @@ suid 1,0
 )
 )
 )
-*38 (CptPort
+*36 (CptPort
 uid 356,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1409,7 +1346,7 @@ suid 2,0
 )
 )
 )
-*39 (CptPort
+*37 (CptPort
 uid 360,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1472,7 +1409,7 @@ uid 366,0
 ps "CenterOffsetStrategy"
 stg "VerticalLayoutStrategy"
 textVec [
-*40 (Text
+*38 (Text
 uid 367,0
 va (VaSet
 isHidden 1
@@ -1482,7 +1419,7 @@ st "mp3lib"
 blo "12800,27600"
 tm "BdLibraryNameMgr"
 )
-*41 (Text
+*39 (Text
 uid 368,0
 va (VaSet
 )
@@ -1491,7 +1428,7 @@ st "AND2"
 blo "12800,28600"
 tm "CptNameMgr"
 )
-*42 (Text
+*40 (Text
 uid 369,0
 va (VaSet
 )
@@ -1540,10 +1477,10 @@ selT 0
 )
 archFileType "UNKNOWN"
 )
-*43 (SaComponent
+*41 (SaComponent
 uid 393,0
 optionalChildren [
-*44 (CptPort
+*42 (CptPort
 uid 377,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1586,7 +1523,7 @@ suid 1,0
 )
 )
 )
-*45 (CptPort
+*43 (CptPort
 uid 381,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1629,7 +1566,7 @@ suid 2,0
 )
 )
 )
-*46 (CptPort
+*44 (CptPort
 uid 385,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1676,7 +1613,7 @@ suid 3,0
 )
 )
 )
-*47 (CptPort
+*45 (CptPort
 uid 389,0
 ps "OnEdgeStrategy"
 shape (Triangle
@@ -1737,7 +1674,7 @@ uid 395,0
 ps "CenterOffsetStrategy"
 stg "VerticalLayoutStrategy"
 textVec [
-*48 (Text
+*46 (Text
 uid 396,0
 va (VaSet
 isHidden 1
@@ -1747,7 +1684,7 @@ st "mp3lib"
 blo "29800,29600"
 tm "BdLibraryNameMgr"
 )
-*49 (Text
+*47 (Text
 uid 397,0
 va (VaSet
 )
@@ -1756,7 +1693,7 @@ st "MUX2_1"
 blo "29800,30600"
 tm "CptNameMgr"
 )
-*50 (Text
+*48 (Text
 uid 398,0
 va (VaSet
 )
@@ -1803,7 +1740,7 @@ selT 0
 )
 archFileType "UNKNOWN"
 )
-*51 (Net
+*49 (Net
 uid 414,0
 decl (Decl
 n "F1"
@@ -1821,21 +1758,84 @@ st "SIGNAL F1          : STD_LOGIC
 "
 )
 )
-*52 (Net
-uid 441,0
+*50 (Net
+uid 445,0
 decl (Decl
-n "accessNAND"
+n "accessN"
 t "STD_LOGIC"
-o 8
-suid 14,0
+o 10
+suid 15,0
 )
 declText (MLText
-uid 442,0
+uid 446,0
 va (VaSet
 font "courier,8,0"
 )
 xt "22000,9900,37500,10800"
-st "SIGNAL accessNAND  : STD_LOGIC
+st "SIGNAL accessN     : STD_LOGIC
+"
+)
+)
+*51 (PortIoOut
+uid 494,0
+shape (CompositeShape
+uid 495,0
+va (VaSet
+vasetType 1
+fg "0,0,32768"
+)
+optionalChildren [
+(Pentagon
+uid 496,0
+sl 0
+ro 270
+xt "51500,30625,53000,31375"
+)
+(Line
+uid 497,0
+sl 0
+ro 270
+xt "51000,31000,51500,31000"
+pts [
+"51000,31000"
+"51500,31000"
+]
+)
+]
+)
+stc 0
+sf 1
+tg (WTG
+uid 498,0
+ps "PortIoTextPlaceStrategy"
+stg "STSignalDisplayStrategy"
+f (Text
+uid 499,0
+va (VaSet
+font "courier,8,0"
+)
+xt "54000,30500,56000,31400"
+st "load"
+blo "54000,31200"
+tm "WireNameMgr"
+)
+)
+)
+*52 (Net
+uid 507,0
+decl (Decl
+n "load"
+t "std_logic"
+o 10
+suid 17,0
+)
+declText (MLText
+uid 508,0
+va (VaSet
+font "courier,8,0"
+)
+xt "22000,7200,34000,8100"
+st "load        : std_logic
 "
 )
 )
@@ -1853,7 +1853,7 @@ pts [
 ]
 )
 start &1
-end &28
+end &26
 es 0
 sat 32
 eat 32
@@ -1902,7 +1902,7 @@ pts [
 ]
 )
 start &3
-end &38
+end &36
 es 0
 sat 32
 eat 32
@@ -1951,7 +1951,7 @@ pts [
 ]
 )
 start &5
-end &29
+end &27
 sat 32
 eat 32
 sf 1
@@ -1999,7 +1999,7 @@ pts [
 ]
 )
 start &7
-end &30
+end &28
 sat 32
 eat 32
 sf 1
@@ -2061,7 +2061,7 @@ pts [
 ]
 )
 start &9
-end &37
+end &35
 es 0
 sat 32
 eat 32
@@ -2145,53 +2145,6 @@ tm "SignalTypeMgr"
 on &13
 )
 *60 (Wire
-uid 193,0
-shape (OrthoPolyLine
-uid 194,0
-va (VaSet
-vasetType 3
-)
-xt "35750,31000,47000,31000"
-pts [
-"35750,31000"
-"47000,31000"
-]
-)
-start &47
-end &25
-sat 32
-eat 32
-sf 1
-si 0
-tg (WTG
-uid 197,0
-ps "ConnStartEndStrategy"
-stg "VerticalLayoutStrategy"
-f (Text
-uid 198,0
-va (VaSet
-isHidden 1
-font "courier,8,0"
-)
-xt "38000,30100,40000,31000"
-st "load"
-blo "38000,30800"
-tm "WireNameMgr"
-)
-s (Text
-uid 199,0
-va (VaSet
-font "courier,8,0"
-)
-xt "38000,31000,42500,31900"
-st "std_logic"
-blo "38000,31700"
-tm "SignalTypeMgr"
-)
-)
-on &26
-)
-*61 (Wire
 uid 409,0
 shape (OrthoPolyLine
 uid 410,0
@@ -2205,8 +2158,8 @@ pts [
 "33000,27249"
 ]
 )
-start &31
-end &46
+start &29
+end &44
 sat 32
 eat 32
 st 0
@@ -2221,8 +2174,8 @@ uid 412,0
 va (VaSet
 font "courier,8,0"
 )
-xt "23450,17100,28950,18000"
-st "accessNAND"
+xt "23450,17100,26950,18000"
+st "accessN"
 blo "23450,17800"
 tm "WireNameMgr"
 )
@@ -2236,9 +2189,9 @@ blo "23450,18700"
 tm "SignalTypeMgr"
 )
 )
-on &52
+on &50
 )
-*62 (Wire
+*61 (Wire
 uid 416,0
 shape (OrthoPolyLine
 uid 417,0
@@ -2251,8 +2204,8 @@ pts [
 "29250,29000"
 ]
 )
-start &39
-end &45
+start &37
+end &43
 sat 32
 eat 32
 stc 0
@@ -2275,9 +2228,9 @@ blo "23700,35800"
 tm "WireNameMgr"
 )
 )
-on &51
+on &49
 )
-*63 (Wire
+*62 (Wire
 uid 421,0
 shape (OrthoPolyLine
 uid 422,0
@@ -2292,7 +2245,7 @@ pts [
 ]
 )
 start &58
-end &44
+end &42
 sat 32
 eat 32
 stc 0
@@ -2324,6 +2277,54 @@ tm "SignalTypeMgr"
 )
 )
 on &10
+)
+*63 (Wire
+uid 500,0
+shape (OrthoPolyLine
+uid 501,0
+va (VaSet
+vasetType 3
+)
+xt "35750,31000,51000,31000"
+pts [
+"35750,31000"
+"51000,31000"
+]
+)
+start &45
+end &51
+ss 0
+sat 32
+eat 32
+sf 1
+si 0
+tg (WTG
+uid 504,0
+ps "ConnStartEndStrategy"
+stg "VerticalLayoutStrategy"
+f (Text
+uid 505,0
+va (VaSet
+isHidden 1
+font "courier,8,0"
+)
+xt "38000,30100,40000,31000"
+st "load"
+blo "38000,30800"
+tm "WireNameMgr"
+)
+s (Text
+uid 506,0
+va (VaSet
+font "courier,8,0"
+)
+xt "38000,31000,42500,31900"
+st "std_logic"
+blo "38000,31700"
+tm "SignalTypeMgr"
+)
+)
+on &52
 )
 ]
 bg "65535,65535,65535"
@@ -2442,13 +2443,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "-8,25,1608,1182"
-viewArea "-14572,-19608,81266,50155"
+windowSize "-3,0,1283,1024"
+viewArea "-25600,-6000,58377,59333"
 cachedDiagramExtent "-9000,0,59000,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-10000,0"
 active 1
-lastUid 444,0
+lastUid 583,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -3509,7 +3510,7 @@ tm "BdDeclarativeTextMgr"
 )
 commonDM (CommonDM
 ldm (LogicalDM
-suid 14,0
+suid 18,0
 usingSuid 1
 emptyRow *96 (LEmptyRow
 )
@@ -3616,18 +3617,6 @@ uid 110,0
 )
 *115 (LeafLogPort
 port (LogicalPort
-m 1
-decl (Decl
-n "load"
-t "std_logic"
-o 7
-suid 7,0
-)
-)
-uid 186,0
-)
-*116 (LeafLogPort
-port (LogicalPort
 m 4
 decl (Decl
 n "F1"
@@ -3638,17 +3627,29 @@ suid 12,0
 )
 uid 439,0
 )
-*117 (LeafLogPort
+*116 (LeafLogPort
 port (LogicalPort
 m 4
 decl (Decl
-n "accessNAND"
+n "accessN"
 t "STD_LOGIC"
-o 8
-suid 14,0
+o 10
+suid 15,0
 )
 )
-uid 443,0
+uid 447,0
+)
+*117 (LeafLogPort
+port (LogicalPort
+m 1
+decl (Decl
+n "load"
+t "std_logic"
+o 10
+suid 17,0
+)
+)
+uid 491,0
 )
 ]
 )
@@ -3738,21 +3739,21 @@ uid 111,0
 )
 *129 (MRCItem
 litem &115
-pos 5
-dimension 20
-uid 185,0
-)
-*130 (MRCItem
-litem &116
 pos 7
 dimension 20
 uid 440,0
 )
-*131 (MRCItem
-litem &117
+*130 (MRCItem
+litem &116
 pos 8
 dimension 20
-uid 444,0
+uid 448,0
+)
+*131 (MRCItem
+litem &117
+pos 5
+dimension 20
+uid 490,0
 )
 ]
 )

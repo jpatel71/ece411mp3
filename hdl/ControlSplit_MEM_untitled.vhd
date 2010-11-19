@@ -18,11 +18,11 @@ ENTITY ControlSplit_MEM IS
    PORT( 
       ControlWord_MEM : IN     LC3b_ControlWord;
       clk             : IN     std_logic;
-      MEMMUX_MEMSel   : OUT    std_logic;
+      MEMMUX_MEMSEL   : OUT    std_logic;
       LoadNZP         : OUT    std_logic;
       D_MREAD_L       : OUT    std_logic;
       JSR_MEM         : OUT    std_logic;
-      EXaJMP_MEM      :  OUT    std_logic
+      EXaJMP_MEM      : OUT    std_logic
    );
 
 -- Declarations

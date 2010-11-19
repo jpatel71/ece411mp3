@@ -76,6 +76,10 @@ BEGIN
     when "1111" => --TRAP
       --  JSRMuxSel-isJSR-EXaJMP-SrcAValid_ID-DestValid-MEMREAD-ByteSel-Storemux-SRCMuxSel-LoadNZP-1RegWrite-ADDRESSMUX1Sel-2ADDRESSMUX2Sel-ADDRESSMUXSel-SR2MuxSel-3ALUop-ALUSHFSel-MEMMUX_MEMSel-DRMUXSEL-2WBMUXSEL
         state := "0110100000100010" & alu_pass & "00011";
+    when "1010" =>  --ldi
+        state := "0001100001110000" & alu_pass & "00010";
+    when "1011" =>  --sti
+        state := "0001010110010000" & alu_pass & "10000";
     when others => 
     end case;
     
